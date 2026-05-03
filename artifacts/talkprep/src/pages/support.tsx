@@ -221,6 +221,15 @@ export default function Support() {
         </div>
       </section>
 
+      <div style={{ width: "100%", height: "380px", overflow: "hidden", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
+        <img
+          src="https://images.pexels.com/photos/9050619/pexels-photo-9050619.jpeg?auto=compress&cs=tinysrgb&w=1440"
+          alt="Two people having a warm, helpful conversation through a café window"
+          loading="eager"
+          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 45%" }}
+        />
+      </div>
+
       <section className="section section-alt" style={{ paddingTop: "1rem" }}>
         <div className="container">
           <div className="support-grid">

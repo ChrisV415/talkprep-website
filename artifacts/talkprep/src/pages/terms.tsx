@@ -30,6 +30,14 @@ export default function Terms() {
         breadcrumbs={[{ name: "Terms of Service", path: "/terms" }]}
       />
       <SiteNav />
+      <div style={{ width: "100%", height: "320px", overflow: "hidden", borderBottom: "1px solid var(--border)" }}>
+        <img
+          src="https://images.stockcake.com/public/e/0/4/e0411436-10b1-4687-bd70-2fb5f9acad70_large/partnership-through-trust-stockcake.jpg"
+          alt="Two professionals shaking hands, symbolising trust and a clear agreement"
+          loading="eager"
+          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
+        />
+      </div>
       <article className="legal-page">
         <div className="container" style={{ maxWidth: "680px" }}>
           <div className="legal-header">

@@ -1,0 +1,20 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "8cEG5niYLYNtNOzXNjF16"
+uri = "file://attached_assets/image_search/privacy_laptop.jpg"
+type = "image"
+title = "Privacy — focused person at laptop"
+
+[[outputs]]
+id = "bVbVSLU9MomzzusntIhtg"
+uri = "file://attached_assets/image_search/terms_handshake.jpg"
+type = "image"
+title = "Terms — handshake trust"
+
+[[outputs]]
+id = "SqaEicwGmyJ3tFyySuJbl"
+uri = "file://attached_assets/image_search/support_conversation.jpg"
+type = "image"
+title = "Support — warm conversation"

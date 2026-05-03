@@ -30,6 +30,14 @@ export default function Privacy() {
         breadcrumbs={[{ name: "Privacy Policy", path: "/privacy" }]}
       />
       <SiteNav />
+      <div style={{ width: "100%", height: "320px", overflow: "hidden", borderBottom: "1px solid var(--border)" }}>
+        <img
+          src="https://images.pexels.com/photos/7034447/pexels-photo-7034447.jpeg?auto=compress&cs=tinysrgb&w=1440"
+          alt="Person working privately on a laptop in a calm, focused setting"
+          loading="eager"
+          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 28%" }}
+        />
+      </div>
       <article className="legal-page">
         <div className="container" style={{ maxWidth: "680px" }}>
           <div className="legal-header">
