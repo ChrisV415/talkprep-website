@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
+import { Door, CurrencyDollar, ChatCircle, UsersThree, Heart, ClipboardText, Handshake, Prohibit, Megaphone, House, PlusCircle } from "@phosphor-icons/react";
 
 function useReveal() {
   useEffect(() => {
@@ -24,7 +25,7 @@ function useReveal() {
 
 const scenarios = [
   {
-    icon: "🚪",
+    icon: <Door weight="duotone" size={32} color="var(--rust)" />,
     title: "Resigning from a job",
     desc: "Leave with your relationships and reputation intact. Handle counter-offers, guilt trips, and awkward questions without caving.",
     note: "Opening script · Counter-offer handling · Resignation email",
@@ -32,70 +33,70 @@ const scenarios = [
     internal: true,
   },
   {
-    icon: "💰",
+    icon: <CurrencyDollar weight="duotone" size={32} color="var(--rust)" />,
     title: "Asking for a raise",
     desc: 'Know exactly what to say, how to anchor your number, and what to do when they say \u201cnot right now.\u201d',
     note: "Opening framing · Pushback responses · Walk-away threshold",
     href: "#",
   },
   {
-    icon: "💬",
+    icon: <ChatCircle weight="duotone" size={32} color="var(--rust)" />,
     title: "Giving difficult feedback",
     desc: "Tell someone the truth in a way they can actually hear — without destroying the relationship.",
     note: "Specific vs vague · Defensive responses · Follow-up",
     href: "#",
   },
   {
-    icon: "👨‍👩‍👧",
+    icon: <UsersThree weight="duotone" size={32} color="var(--rust)" />,
     title: "Family conversations",
     desc: "Setting boundaries, sharing hard news, or finally saying something unsaid for too long.",
     note: "Boundary language · Guilt deflection · Keeping the relationship",
     href: "#",
   },
   {
-    icon: "❤️",
+    icon: <Heart weight="duotone" size={32} color="var(--rust)" />,
     title: "Relationship talks",
     desc: "The conversations that could change everything — said with care and clarity instead of fear.",
     note: "Opening vulnerability · Defensiveness · What you actually need",
     href: "#",
   },
   {
-    icon: "📋",
+    icon: <ClipboardText weight="duotone" size={32} color="var(--rust)" />,
     title: "Firing or letting someone go",
     desc: "One of the hardest conversations in management — done with clarity and dignity for both people.",
     note: "Legal language · Emotional reactions · Next steps",
     href: "#",
   },
   {
-    icon: "🤝",
+    icon: <Handshake weight="duotone" size={32} color="var(--rust)" />,
     title: "Confronting a friend",
     desc: "When someone you care about has crossed a line and you need to say something without blowing up the friendship.",
     note: 'Non-accusatory framing · "I" language · What needs to change',
     href: "#",
   },
   {
-    icon: "🛑",
+    icon: <Prohibit weight="duotone" size={32} color="var(--rust)" />,
     title: "Setting a boundary",
     desc: "Saying no, or not this way, clearly and without excessive apology — with someone who doesn't always respect limits.",
     note: "Clear statement · Pushback · Enforcement language",
     href: "#",
   },
   {
-    icon: "📢",
+    icon: <Megaphone weight="duotone" size={32} color="var(--rust)" />,
     title: "Bad news to a client",
     desc: "Delivering project delays or failed deliverables in a way that keeps the relationship and your credibility intact.",
     note: "Ownership · Solution framing · Anger handling",
     href: "#",
   },
   {
-    icon: "🏠",
+    icon: <House weight="duotone" size={32} color="var(--rust)" />,
     title: "Landlord or housing disputes",
     desc: "Asking for repairs, disputing charges, or addressing lease problems — with the person who has power over your home.",
     note: "Power dynamic · Documentation language · Escalation",
     href: "#",
   },
   {
-    icon: "✦",
+    icon: <PlusCircle weight="duotone" size={32} color="var(--rust)" />,
     title: "Something else entirely",
     desc: "Any difficult conversation not covered above. TalkPrep adapts to whatever you describe — no template it can't work from.",
     note: "Fully custom · Your situation · Your person",

@@ -394,7 +394,7 @@
   transition: background 0.15s; text-decoration: none; display: block;
 }
 .tp-page .dg-item:hover { background: rgba(249, 245, 239, 0.07); }
-.tp-page .dg-icon { font-size: 1.4rem; margin-bottom: 0.7rem; display: block; }
+.tp-page .dg-icon { margin-bottom: 0.8rem; display: flex; align-items: center; }
 .tp-page .dg-title {
   font-family: 'Lora', serif; font-size: 1rem; font-weight: 600;
   color: var(--cream); margin-bottom: 0.3rem; line-height: 1.3;
@@ -625,7 +625,7 @@
 .support-hero { padding: 5rem 0 3rem; text-align: center; }
 .support-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 2rem; }
 .support-card { padding: 1.75rem; border: 1px solid var(--border); border-radius: 4px; background: white; }
-.support-card-icon { font-size: 1.5rem; margin-bottom: 1rem; }
+.support-card-icon { display: flex; align-items: center; margin-bottom: 1rem; }
 .support-card h3 { font-family: 'Lora', serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
 .support-card p { font-size: 0.85rem; color: var(--ink3); line-height: 1.65; }
 .support-accordion { display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
@@ -966,7 +966,7 @@
   text-decoration: none; transition: all 0.15s; display: block;
 }
 .tp-page .sc-full:hover { border-color: var(--rust); transform: translateY(-2px); box-shadow: 0 4px 16px var(--shadow); }
-.tp-page .sc-full-icon { font-size: 1.6rem; margin-bottom: 0.875rem; display: block; }
+.tp-page .sc-full-icon { margin-bottom: 0.875rem; display: flex; align-items: center; }
 .tp-page .sc-full-title {
   font-family: 'Lora', serif; font-size: 1rem; font-weight: 600;
   color: var(--ink); margin-bottom: 0.4rem; line-height: 1.3;

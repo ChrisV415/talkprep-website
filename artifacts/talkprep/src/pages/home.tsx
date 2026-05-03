@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
+import { Lock, Lightning, Sparkle, Target, ChatCircle, ArrowsClockwise, Warning, ArrowCounterClockwise, CurrencyDollar, EyeSlash, NotePencil, Robot, Lightbulb, ChartBar, Door, UsersThree, Heart, ArrowUpRight } from "@phosphor-icons/react";
 
 const homeSchema = {
   "@context": "https://schema.org",
@@ -87,10 +88,10 @@ export default function Home() {
             <Link href="/how-it-works" className="btn btn-secondary btn-lg">See how it works</Link>
           </div>
           <div className="hero-proof">
-            <span>🔒 Completely private</span>
-            <span>⚡ Ready in 5 minutes</span>
-            <span>✦ Word-for-word scripts</span>
-            <span>🎯 No generic advice</span>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}><Lock weight="duotone" size={14} color="var(--ink)" /> Completely private</span>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}><Lightning weight="duotone" size={14} color="var(--ink)" /> Ready in 5 minutes</span>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}><Sparkle weight="duotone" size={14} color="var(--ink)" /> Word-for-word scripts</span>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}><Target weight="duotone" size={14} color="var(--ink)" /> No generic advice</span>
           </div>
 
           <div className="mockup-wrap reveal">
@@ -110,7 +111,7 @@ export default function Home() {
               </div>
               <div className="mockup-body">
                 <div className="mockup-panel">
-                  <span className="mockup-rs-label">💬 Your opening script</span>
+                  <span className="mockup-rs-label" style={{ display: "inline-flex", alignItems: "center", gap: 4 }}><ChatCircle weight="duotone" size={13} /> Your opening script</span>
                   <p className="mockup-rs-title">Exactly what to say first</p>
                   <div className="mockup-script">
                     "Hey, do you have a few minutes? There's something important I need to share
@@ -120,7 +121,7 @@ export default function Home() {
                   <span className="tag tag-rust">Scroll to see more ↓</span>
                 </div>
                 <div className="mockup-panel">
-                  <span className="mockup-rs-label">🔄 What they might say</span>
+                  <span className="mockup-rs-label" style={{ display: "inline-flex", alignItems: "center", gap: 4 }}><ArrowsClockwise weight="duotone" size={13} /> What they might say</span>
                   <p className="mockup-rs-title">3 responses, handled</p>
                   <div className="mockup-response">
                     <strong>If they offer more money</strong>
@@ -188,19 +189,19 @@ export default function Home() {
             </div>
             <ul className="pain-list reveal reveal-d1">
               <li className="pain-item">
-                <div className="pain-icon">😰</div>
+                <div className="pain-icon"><Warning weight="duotone" size={20} color="var(--rust2)" /></div>
                 <p className="pain-text"><strong>You freeze when it matters most.</strong> The moment they respond defensively, everything you prepared disappears.</p>
               </li>
               <li className="pain-item">
-                <div className="pain-icon">🔁</div>
+                <div className="pain-icon"><ArrowCounterClockwise weight="duotone" size={20} color="var(--rust2)" /></div>
                 <p className="pain-text"><strong>You rehearse in an echo chamber.</strong> Your internal practice doesn't anticipate what they'll actually say.</p>
               </li>
               <li className="pain-item">
-                <div className="pain-icon">💸</div>
+                <div className="pain-icon"><CurrencyDollar weight="duotone" size={20} color="var(--rust2)" /></div>
                 <p className="pain-text"><strong>Good coaching costs $300/hour.</strong> Most people just go in and wing it.</p>
               </li>
               <li className="pain-item">
-                <div className="pain-icon">🤐</div>
+                <div className="pain-icon"><EyeSlash weight="duotone" size={20} color="var(--rust2)" /></div>
                 <p className="pain-text"><strong>You can't tell anyone.</strong> The most personal conversations are the ones you can't practice with a friend.</p>
               </li>
             </ul>
@@ -312,28 +313,28 @@ export default function Home() {
               <h2 className="section-title reveal">Built for the real conversation.</h2>
               <div style={{ marginTop: "2rem", display: "flex", flexDirection: "column", gap: "1.75rem" }} className="reveal">
                 <div className="feature-row">
-                  <div className="feature-icon">📝</div>
+                  <div className="feature-icon"><NotePencil weight="duotone" size={22} color="var(--rust)" /></div>
                   <div>
                     <h3 className="feature-title">Exact scripts — not generic advice</h3>
                     <p className="feature-desc">Real words for your specific situation. Not "be direct." The actual sentence to say.</p>
                   </div>
                 </div>
                 <div className="feature-row">
-                  <div className="feature-icon">🎭</div>
+                  <div className="feature-icon"><Robot weight="duotone" size={22} color="var(--rust)" /></div>
                   <div>
                     <h3 className="feature-title">Persona-depth role-play</h3>
                     <p className="feature-desc">Set their emotional intensity, defensiveness, and communication style. The AI plays them realistically.</p>
                   </div>
                 </div>
                 <div className="feature-row">
-                  <div className="feature-icon">💡</div>
+                  <div className="feature-icon"><Lightbulb weight="duotone" size={22} color="var(--rust)" /></div>
                   <div>
                     <h3 className="feature-title">Live strategy nudges</h3>
                     <p className="feature-desc">During practice, coaching tips appear in real time — focused on strategy, not delivery.</p>
                   </div>
                 </div>
                 <div className="feature-row">
-                  <div className="feature-icon">📊</div>
+                  <div className="feature-icon"><ChartBar weight="duotone" size={22} color="var(--rust)" /></div>
                   <div>
                     <h3 className="feature-title">Progress dashboard</h3>
                     <p className="feature-desc">Track your clarity, composure, and outcome scores. See what you're getting better at.</p>
@@ -362,7 +363,7 @@ export default function Home() {
                     <div className="cb-user">Nothing happened here — I've genuinely valued this place. This is about where I need to go next for my own growth.</div>
                   </div>
                   <div className="nudge">
-                    <span>💡</span>
+                    <span style={{ display: "flex", alignItems: "center" }}><Lightbulb weight="duotone" size={15} color="var(--rust)" /></span>
                     <span><strong>Coach:</strong> Good — you didn't take the bait. Now redirect to the handover before they probe further.</span>
                   </div>
                 </div>
@@ -378,12 +379,12 @@ export default function Home() {
           <span className="section-tag reveal" style={{ color: "var(--rust2)" }}>Scenarios</span>
           <h2 className="section-title reveal" style={{ color: "var(--cream)" }}>Every conversation that matters.</h2>
           <div className="dark-grid reveal" style={{ gridTemplateColumns: "repeat(3,1fr)", marginTop: "2rem" }}>
-            <Link href="/how-to-resign-from-a-job" className="dg-item"><span className="dg-icon">🚪</span><h3 className="dg-title">Resigning from a job</h3><p className="dg-desc">Leave gracefully. Handle counter-offers. Keep the relationship.</p></Link>
-            <a href="/scenarios" className="dg-item"><span className="dg-icon">💰</span><h3 className="dg-title">Asking for a raise</h3><p className="dg-desc">Know your worth. Hold your ground. Get what you deserve.</p></a>
-            <a href="/scenarios" className="dg-item"><span className="dg-icon">👨‍👩‍👧</span><h3 className="dg-title">Family conversations</h3><p className="dg-desc">Boundaries, hard truths, and things left unsaid too long.</p></a>
-            <a href="/scenarios" className="dg-item"><span className="dg-icon">❤️</span><h3 className="dg-title">Relationship talks</h3><p className="dg-desc">The conversations that could change everything — said with care.</p></a>
-            <a href="/scenarios" className="dg-item"><span className="dg-icon">💬</span><h3 className="dg-title">Giving hard feedback</h3><p className="dg-desc">Tell someone the truth in a way they can actually hear.</p></a>
-            <Link href="/scenarios" className="dg-item"><span className="dg-icon">→</span><h3 className="dg-title">See all 11 scenarios</h3><p className="dg-desc">Firings, client bad news, landlords, setting boundaries, and more.</p></Link>
+            <Link href="/how-to-resign-from-a-job" className="dg-item"><span className="dg-icon"><Door weight="duotone" size={28} color="var(--rust2)" /></span><h3 className="dg-title">Resigning from a job</h3><p className="dg-desc">Leave gracefully. Handle counter-offers. Keep the relationship.</p></Link>
+            <a href="/scenarios" className="dg-item"><span className="dg-icon"><CurrencyDollar weight="duotone" size={28} color="var(--rust2)" /></span><h3 className="dg-title">Asking for a raise</h3><p className="dg-desc">Know your worth. Hold your ground. Get what you deserve.</p></a>
+            <a href="/scenarios" className="dg-item"><span className="dg-icon"><UsersThree weight="duotone" size={28} color="var(--rust2)" /></span><h3 className="dg-title">Family conversations</h3><p className="dg-desc">Boundaries, hard truths, and things left unsaid too long.</p></a>
+            <a href="/scenarios" className="dg-item"><span className="dg-icon"><Heart weight="duotone" size={28} color="var(--rust2)" /></span><h3 className="dg-title">Relationship talks</h3><p className="dg-desc">The conversations that could change everything — said with care.</p></a>
+            <a href="/scenarios" className="dg-item"><span className="dg-icon"><ChatCircle weight="duotone" size={28} color="var(--rust2)" /></span><h3 className="dg-title">Giving hard feedback</h3><p className="dg-desc">Tell someone the truth in a way they can actually hear.</p></a>
+            <Link href="/scenarios" className="dg-item"><span className="dg-icon"><ArrowUpRight weight="duotone" size={26} color="var(--rust2)" /></span><h3 className="dg-title">See all 11 scenarios</h3><p className="dg-desc">Firings, client bad news, landlords, setting boundaries, and more.</p></Link>
           </div>
         </div>
       </section>

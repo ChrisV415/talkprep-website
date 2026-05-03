@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
+import { Lock, Target, Heart } from "@phosphor-icons/react";
 
 function useReveal() {
   useEffect(() => {
@@ -106,17 +107,17 @@ export default function About() {
 
           <div className="card-grid reveal" style={{ gridTemplateColumns: "repeat(3,1fr)", marginTop: "3rem" }}>
             <div className="cg-item cg-item-white">
-              <span style={{ fontSize: "1.5rem", display: "block", marginBottom: "0.75rem" }}>🔒</span>
+              <span style={{ display: "flex", marginBottom: "0.75rem" }}><Lock weight="duotone" size={34} color="var(--rust)" /></span>
               <h3 style={{ fontFamily: "'Lora',serif", fontSize: "1rem", fontWeight: 600, marginBottom: "0.4rem" }}>Private by default</h3>
               <p style={{ fontSize: "0.85rem", color: "var(--ink3)", lineHeight: 1.65 }}>Your conversations never leave your control. No ads, no data selling, no judgment.</p>
             </div>
             <div className="cg-item cg-item-white">
-              <span style={{ fontSize: "1.5rem", display: "block", marginBottom: "0.75rem" }}>🎯</span>
+              <span style={{ display: "flex", marginBottom: "0.75rem" }}><Target weight="duotone" size={34} color="var(--rust)" /></span>
               <h3 style={{ fontFamily: "'Lora',serif", fontSize: "1rem", fontWeight: 600, marginBottom: "0.4rem" }}>Specific, not generic</h3>
               <p style={{ fontSize: "0.85rem", color: "var(--ink3)", lineHeight: 1.65 }}>Real scripts for your exact situation — not advice that could apply to anyone.</p>
             </div>
             <div className="cg-item cg-item-white">
-              <span style={{ fontSize: "1.5rem", display: "block", marginBottom: "0.75rem" }}>💙</span>
+              <span style={{ display: "flex", marginBottom: "0.75rem" }}><Heart weight="duotone" size={34} color="var(--rust)" /></span>
               <h3 style={{ fontFamily: "'Lora',serif", fontSize: "1rem", fontWeight: 600, marginBottom: "0.4rem" }}>Human outcomes first</h3>
               <p style={{ fontSize: "0.85rem", color: "var(--ink3)", lineHeight: 1.65 }}>We measure success by whether conversations actually go better — not engagement metrics.</p>
             </div>

@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
+import { RocketLaunch, Lock, CreditCard } from "@phosphor-icons/react";
 
 const supportFaqSchema = {
   "@context": "https://schema.org",
@@ -234,19 +235,19 @@ export default function Support() {
         <div className="container">
           <div className="support-grid">
             <div className="support-card">
-              <div className="support-card-icon">🚀</div>
+              <div className="support-card-icon"><RocketLaunch weight="duotone" size={34} color="var(--rust)" /></div>
               <h3>Getting started</h3>
               <p>New to TalkPrep? Start here to learn how it works and get your first prep done in under 5 minutes.</p>
               <Link href="/how-it-works" style={{ display: "inline-block", marginTop: "1rem", fontSize: "0.85rem", color: "var(--rust)", textDecoration: "none", fontWeight: 600 }}>How it works →</Link>
             </div>
             <div className="support-card">
-              <div className="support-card-icon">🔒</div>
+              <div className="support-card-icon"><Lock weight="duotone" size={34} color="var(--rust)" /></div>
               <h3>Privacy & security</h3>
               <p>Your conversations are stored locally in your browser — not on our servers. Nobody sees your prep but you.</p>
               <Link href="/privacy" style={{ display: "inline-block", marginTop: "1rem", fontSize: "0.85rem", color: "var(--rust)", textDecoration: "none", fontWeight: 600 }}>Privacy policy →</Link>
             </div>
             <div className="support-card">
-              <div className="support-card-icon">💳</div>
+              <div className="support-card-icon"><CreditCard weight="duotone" size={34} color="var(--rust)" /></div>
               <h3>Billing & plans</h3>
               <p>Start free, no card needed. Cancel anytime. 7-day money-back guarantee on all paid plans.</p>
               <Link href="/pricing" style={{ display: "inline-block", marginTop: "1rem", fontSize: "0.85rem", color: "var(--rust)", textDecoration: "none", fontWeight: 600 }}>See pricing →</Link>
