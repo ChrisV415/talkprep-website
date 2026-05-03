@@ -295,7 +295,7 @@ export default function Support() {
       <div className="contact-strip">
         <div className="container">
           <h2 className="text-[#1b1815]">Still have questions?</h2>
-          <p>We're a small team and we read every email. Usually reply within a few hours.</p>
+          <p className="text-[#1b1815]">We're a small team and we read every email. Usually reply within a few hours.</p>
           <div className="contact-options">
             <a href="mailto:hello@talkprep.co" className="btn btn-rust btn-lg">Email us →</a>
             <Link href="/how-it-works" className="btn btn-secondary btn-lg" style={{ color: "rgba(249,245,239,0.9)", borderColor: "rgba(249,245,239,0.35)" }}>How it works</Link>
