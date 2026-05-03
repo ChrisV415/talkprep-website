@@ -302,7 +302,7 @@ export default function Support() {
           <p>We're a small team and we read every email. Usually reply within a few hours.</p>
           <div className="contact-options">
             <a href="mailto:hello@talkprep.co" className="btn btn-rust btn-lg">Email us →</a>
-            <Link href="/how-it-works" className="btn btn-secondary btn-lg" style={{ color: "rgba(249,245,239,0.7)", borderColor: "rgba(249,245,239,0.2)" }}>How it works</Link>
+            <Link href="/how-it-works" className="btn btn-secondary btn-lg" style={{ color: "rgba(249,245,239,0.9)", borderColor: "rgba(249,245,239,0.35)" }}>How it works</Link>
           </div>
         </div>
       </div>
