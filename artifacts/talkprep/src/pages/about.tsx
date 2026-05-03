@@ -36,19 +36,31 @@ export default function About() {
 
       <section className="about-page-hero">
         <div className="container-md">
-          <span className="section-tag">About TalkPrep</span>
-          <h1 className="section-title" style={{ fontSize: "clamp(2rem,4vw,3rem)", maxWidth: "680px", marginBottom: "1rem" }}>
-            Built for the conversation you keep putting off.
-          </h1>
-          <div className="mission-pull">
-            <p>"The most important conversations in people's lives are also the ones they're least prepared for. We built TalkPrep to change that."</p>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 420px", gap: "4rem", alignItems: "center" }}>
+            <div>
+              <span className="section-tag">About TalkPrep</span>
+              <h1 className="section-title" style={{ fontSize: "clamp(2rem,4vw,3rem)", maxWidth: "680px", marginBottom: "1rem" }}>
+                Built for the conversation you keep putting off.
+              </h1>
+              <div className="mission-pull">
+                <p>"The most important conversations in people's lives are also the ones they're least prepared for. We built TalkPrep to change that."</p>
+              </div>
+              <p style={{ fontSize: "0.95rem", color: "var(--ink2)", lineHeight: 1.8, maxWidth: "560px" }}>
+                Every day, people go into difficult conversations — resignations, raises, family confrontations,
+                relationship talks — completely unprepared. Not because they don't care, but because real
+                preparation requires a thinking partner, and most people don't have one available at 11pm
+                the night before a hard conversation.
+              </p>
+            </div>
+            <div style={{ height: "460px", overflow: "hidden", borderRadius: "3px", border: "1px solid var(--border)", flexShrink: 0 }}>
+              <img
+                src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=900"
+                alt="People having meaningful conversations"
+                loading="lazy"
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 20%" }}
+              />
+            </div>
           </div>
-          <p style={{ fontSize: "0.95rem", color: "var(--ink2)", lineHeight: 1.8, maxWidth: "560px" }}>
-            Every day, people go into difficult conversations — resignations, raises, family confrontations,
-            relationship talks — completely unprepared. Not because they don't care, but because real
-            preparation requires a thinking partner, and most people don't have one available at 11pm
-            the night before a hard conversation.
-          </p>
         </div>
       </section>
 

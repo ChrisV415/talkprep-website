@@ -67,6 +67,15 @@ export default function HowItWorks() {
         </div>
       </section>
 
+      <div style={{ width: "100%", height: "400px", overflow: "hidden", borderBottom: "1px solid var(--border)" }}>
+        <img
+          src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1440"
+          alt="Person preparing for an important conversation"
+          loading="lazy"
+          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
+        />
+      </div>
+
       <section style={{ padding: "2rem 0 4rem" }}>
         <div className="container-md">
           {[

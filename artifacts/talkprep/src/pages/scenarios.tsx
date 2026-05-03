@@ -129,6 +129,15 @@ export default function Scenarios() {
         </div>
       </section>
 
+      <div style={{ width: "100%", height: "360px", overflow: "hidden", borderBottom: "1px solid var(--border)" }}>
+        <img
+          src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1440"
+          alt="People in various professional and personal conversation settings"
+          loading="lazy"
+          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }}
+        />
+      </div>
+
       <section style={{ padding: "3rem 0 4rem" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.5rem" }} className="reveal">

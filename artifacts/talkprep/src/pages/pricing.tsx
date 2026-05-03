@@ -198,6 +198,15 @@ export default function Pricing() {
         </div>
       </section>
 
+      <div style={{ width: "100%", height: "320px", overflow: "hidden", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
+        <img
+          src="https://images.pexels.com/photos/3182781/pexels-photo-3182781.jpeg?auto=compress&cs=tinysrgb&w=1440"
+          alt="Professionals collaborating and preparing"
+          loading="lazy"
+          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
+        />
+      </div>
+
       <section style={{ padding: "4rem 0" }}>
         <div className="container-sm">
           <span className="section-tag reveal" style={{ textAlign: "center", display: "block" }}>Questions</span>

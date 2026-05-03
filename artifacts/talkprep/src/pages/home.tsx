@@ -137,6 +137,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Hero image strip */}
+      <div style={{ width: "100%", height: "440px", overflow: "hidden", borderTop: "1px solid var(--border)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+        <img
+          src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1440"
+          alt="Professionals having a serious conversation"
+          loading="lazy"
+          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 35%" }}
+        />
+      </div>
+
       {/* PROBLEM */}
       <section className="section-dark">
         <div className="container">
