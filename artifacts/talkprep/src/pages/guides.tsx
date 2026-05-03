@@ -98,6 +98,20 @@ const upcomingGuides = [
   },
 ];
 
+const guidesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "TalkPrep Guides — Scripts for Hard Conversations",
+  description: "Free guides with exact scripts for the hardest conversations — how to resign, fire someone, set a boundary, give feedback, and more.",
+  url: "https://talkprep.co/guides",
+  itemListElement: liveGuides.map((guide, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: guide.title,
+    url: `https://talkprep.co${guide.href}`,
+  })),
+};
+
 export default function Guides() {
   useReveal();
   const [email, setEmail] = useState("");
@@ -109,6 +123,8 @@ export default function Guides() {
         title="Conversation Scripts & Guides — How to Say the Hard Thing"
         description="Free guides with word-for-word scripts for the hardest conversations: how to resign, ask for a raise, set a boundary, fire someone, and more. New guide every two weeks."
         canonical="/guides"
+        keywords="conversation scripts, how to resign, how to fire someone, how to give feedback, difficult conversation guides, word-for-word scripts"
+        schema={guidesSchema}
         breadcrumbs={[{ name: "Guides", path: "/guides" }]}
       />
       <SiteNav />

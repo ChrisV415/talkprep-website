@@ -8,8 +8,9 @@ const schema = {
   "@type": "Article",
   headline: "How to Tell Your Partner Something Difficult (Without It Becoming a Fight)",
   description: "The conversation you've been avoiding. Said with care, not fear — and without it turning into a fight.",
-  datePublished: "2026-05-01",
-  dateModified: "2026-05-03",
+  image: "https://images.pexels.com/photos/5616236/pexels-photo-5616236.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  datePublished: "2026-05-01T00:00:00Z",
+  dateModified: "2026-05-03T00:00:00Z",
   author: { "@type": "Organization", name: "TalkPrep Editorial", url: "https://talkprep.co" },
   publisher: { "@type": "Organization", name: "TalkPrep", url: "https://talkprep.co" },
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talkprep.co/how-to-tell-partner-something-difficult" },
@@ -25,6 +26,10 @@ export default function PartnerDifficult() {
         type="article"
         publishedAt="2026-05-01T00:00:00Z"
         modifiedAt="2026-05-03T00:00:00Z"
+        image="https://images.pexels.com/photos/5616236/pexels-photo-5616236.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        imageAlt="Couple having an honest and caring difficult conversation"
+        articleSection="Relationships"
+        keywords="how to tell your partner something difficult, difficult relationship conversation, couples communication script, relationship talk, saying hard things to partner"
         schema={schema}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
@@ -58,7 +63,8 @@ export default function PartnerDifficult() {
         <img
           src="https://images.pexels.com/photos/5616236/pexels-photo-5616236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="Couple having a serious conversation"
-          loading="lazy"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
 

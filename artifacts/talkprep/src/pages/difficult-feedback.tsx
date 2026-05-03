@@ -8,8 +8,9 @@ const schema = {
   "@type": "Article",
   headline: "How to Give Difficult Feedback (Without Being Cruel or Vague)",
   description: "Most difficult feedback fails because it's either too soft to land or too blunt to be heard. Here's how to get it exactly right.",
-  datePublished: "2026-05-01",
-  dateModified: "2026-05-03",
+  image: "https://images.pexels.com/photos/8866744/pexels-photo-8866744.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  datePublished: "2026-05-01T00:00:00Z",
+  dateModified: "2026-05-03T00:00:00Z",
   author: { "@type": "Organization", name: "TalkPrep Editorial", url: "https://talkprep.co" },
   publisher: { "@type": "Organization", name: "TalkPrep", url: "https://talkprep.co" },
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talkprep.co/how-to-give-difficult-feedback" },
@@ -25,6 +26,10 @@ export default function DifficultFeedback() {
         type="article"
         publishedAt="2026-05-01T00:00:00Z"
         modifiedAt="2026-05-03T00:00:00Z"
+        image="https://images.pexels.com/photos/8866744/pexels-photo-8866744.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        imageAlt="Two colleagues having a direct and honest feedback conversation"
+        articleSection="Management"
+        keywords="how to give difficult feedback, giving hard feedback, difficult feedback script, constructive criticism, honest feedback conversation"
         schema={schema}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
@@ -58,7 +63,8 @@ export default function DifficultFeedback() {
         <img
           src="https://images.pexels.com/photos/8866744/pexels-photo-8866744.jpeg?auto=compress&cs=tinysrgb&w=1200"
           alt="Manager giving feedback to a team member"
-          loading="lazy"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
 

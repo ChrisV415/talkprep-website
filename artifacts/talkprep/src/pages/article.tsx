@@ -8,9 +8,9 @@ const articleSchema = {
   headline: "How to Resign from a Job Gracefully (With Exact Scripts)",
   description:
     "The exact words to say in the first 60 seconds of your resignation conversation — and how to handle counter-offers, guilt trips, and every manager response.",
-  image: "https://talkprep.co/opengraph.jpg",
-  datePublished: "2026-05-01",
-  dateModified: "2026-05-03",
+  image: "https://images.pexels.com/photos/7581040/pexels-photo-7581040.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  datePublished: "2026-05-01T00:00:00Z",
+  dateModified: "2026-05-03T00:00:00Z",
   author: {
     "@type": "Organization",
     name: "TalkPrep Editorial",
@@ -154,7 +154,10 @@ export default function Article() {
         publishedAt="2026-05-01T00:00:00Z"
         modifiedAt="2026-05-03T00:00:00Z"
         schema={articleSchema}
+        image="https://images.pexels.com/photos/7581040/pexels-photo-7581040.jpeg?auto=compress&cs=tinysrgb&w=1200"
         imageAlt="How to resign from a job — TalkPrep guide with exact scripts"
+        articleSection="Career"
+        keywords="how to resign from a job, resignation conversation, what to say when quitting, resign gracefully, resignation script, how to give notice"
         breadcrumbs={[
           { name: "Guides", path: "/guides" },
           { name: "How to Resign from a Job", path: "/how-to-resign-from-a-job" },

@@ -8,8 +8,9 @@ const schema = {
   "@type": "Article",
   headline: "How to Deliver Bad News to a Client (Without Losing the Relationship)",
   description: "Delays, missed targets, scope changes, failures — things go wrong in client relationships. What determines whether the relationship survives is almost never the bad news itself. It's how you deliver it.",
-  datePublished: "2026-05-03",
-  dateModified: "2026-05-03",
+  image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  datePublished: "2026-05-03T00:00:00Z",
+  dateModified: "2026-05-03T00:00:00Z",
   author: { "@type": "Organization", name: "TalkPrep Editorial", url: "https://talkprep.co" },
   publisher: { "@type": "Organization", name: "TalkPrep", url: "https://talkprep.co" },
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talkprep.co/how-to-deliver-bad-news-to-a-client" },
@@ -25,6 +26,10 @@ export default function DeliverBadNewsClient() {
         type="article"
         publishedAt="2026-05-03T00:00:00Z"
         modifiedAt="2026-05-03T00:00:00Z"
+        image="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        imageAlt="Professional delivering difficult news to a client with composure"
+        articleSection="Management"
+        keywords="how to deliver bad news to a client, client communication script, project delays conversation, bad news client call, client relationship management"
         schema={schema}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
@@ -61,7 +66,8 @@ export default function DeliverBadNewsClient() {
         <img
           src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200"
           alt="Professional having a serious conversation with a client"
-          loading="lazy"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
 

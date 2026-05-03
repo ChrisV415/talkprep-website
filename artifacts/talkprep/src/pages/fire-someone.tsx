@@ -8,8 +8,9 @@ const schema = {
   "@type": "Article",
   headline: "How to Fire Someone (Clearly, Humanely, and Legally)",
   description: "One of the hardest conversations in management. Done with clarity and dignity for both people.",
-  datePublished: "2026-05-01",
-  dateModified: "2026-05-03",
+  image: "https://images.pexels.com/photos/6632536/pexels-photo-6632536.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  datePublished: "2026-05-01T00:00:00Z",
+  dateModified: "2026-05-03T00:00:00Z",
   author: { "@type": "Organization", name: "TalkPrep Editorial", url: "https://talkprep.co" },
   publisher: { "@type": "Organization", name: "TalkPrep", url: "https://talkprep.co" },
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talkprep.co/how-to-fire-someone" },
@@ -25,6 +26,10 @@ export default function FireSomeone() {
         type="article"
         publishedAt="2026-05-01T00:00:00Z"
         modifiedAt="2026-05-03T00:00:00Z"
+        image="https://images.pexels.com/photos/6632536/pexels-photo-6632536.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        imageAlt="Manager having a difficult conversation about employee termination"
+        articleSection="Management"
+        keywords="how to fire someone, termination conversation, letting someone go, firing an employee, employee dismissal script"
         schema={schema}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
@@ -58,7 +63,8 @@ export default function FireSomeone() {
         <img
           src="https://images.pexels.com/photos/6632536/pexels-photo-6632536.jpeg?auto=compress&cs=tinysrgb&w=1200"
           alt="Manager having a serious conversation with an employee"
-          loading="lazy"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
 

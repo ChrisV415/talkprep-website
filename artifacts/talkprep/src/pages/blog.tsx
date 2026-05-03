@@ -147,6 +147,20 @@ const posts = [
 
 const categories = ["All", "Career", "Management", "Family", "Relationships", "Friendship", "Negotiation", "Psychology"];
 
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "TalkPrep Blog",
+  description: "Scripts and thinking for the conversations that matter — word for word, with the psychology behind why it works.",
+  url: "https://talkprep.co/blog",
+  publisher: {
+    "@type": "Organization",
+    name: "TalkPrep",
+    url: "https://talkprep.co",
+    logo: { "@type": "ImageObject", url: "https://talkprep.co/favicon.svg" },
+  },
+};
+
 export default function Blog() {
   useReveal();
 
@@ -156,6 +170,8 @@ export default function Blog() {
         title="TalkPrep Blog — Scripts and Thinking for Hard Conversations"
         description="Practical guides on how to say the hard thing — word for word, with the psychology behind why it works. Resignations, raises, boundaries, feedback, and more."
         canonical="/blog"
+        keywords="conversation scripts, hard conversation guides, workplace communication, resignation scripts, salary negotiation guide, difficult conversations"
+        schema={blogSchema}
         breadcrumbs={[{ name: "Blog", path: "/blog" }]}
       />
       <SiteNav />

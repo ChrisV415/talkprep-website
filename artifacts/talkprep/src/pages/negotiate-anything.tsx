@@ -8,8 +8,9 @@ const schema = {
   "@type": "Article",
   headline: "How to Negotiate Anything (Without Feeling Like a Jerk)",
   description: "Most people think negotiation means being pushy or playing hardball. It doesn't. The most effective negotiators are the ones who understand what the other side actually needs — and find a way to get there together.",
-  datePublished: "2026-05-03",
-  dateModified: "2026-05-03",
+  image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  datePublished: "2026-05-03T00:00:00Z",
+  dateModified: "2026-05-03T00:00:00Z",
   author: { "@type": "Organization", name: "TalkPrep Editorial", url: "https://talkprep.co" },
   publisher: { "@type": "Organization", name: "TalkPrep", url: "https://talkprep.co" },
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talkprep.co/how-to-negotiate-anything" },
@@ -25,6 +26,10 @@ export default function NegotiateAnything() {
         type="article"
         publishedAt="2026-05-03T00:00:00Z"
         modifiedAt="2026-05-03T00:00:00Z"
+        image="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        imageAlt="Two professionals negotiating effectively and collaboratively"
+        articleSection="Negotiation"
+        keywords="how to negotiate, negotiation scripts, salary negotiation, how to negotiate a raise, negotiation tips, negotiation conversation"
         schema={schema}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
@@ -61,7 +66,8 @@ export default function NegotiateAnything() {
         <img
           src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200"
           alt="Two professionals negotiating at a table"
-          loading="lazy"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
 

@@ -8,8 +8,9 @@ const schema = {
   "@type": "Article",
   headline: "How to Set a Boundary With a Family Member (Without the Guilt)",
   description: "What to actually say to someone you love — without the guilt spiral that usually follows.",
-  datePublished: "2026-05-01",
-  dateModified: "2026-05-03",
+  image: "https://images.pexels.com/photos/8489322/pexels-photo-8489322.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  datePublished: "2026-05-01T00:00:00Z",
+  dateModified: "2026-05-03T00:00:00Z",
   author: { "@type": "Organization", name: "TalkPrep Editorial", url: "https://talkprep.co" },
   publisher: { "@type": "Organization", name: "TalkPrep", url: "https://talkprep.co" },
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talkprep.co/how-to-set-a-boundary-with-family" },
@@ -25,6 +26,10 @@ export default function BoundaryFamily() {
         type="article"
         publishedAt="2026-05-01T00:00:00Z"
         modifiedAt="2026-05-03T00:00:00Z"
+        image="https://images.pexels.com/photos/8489322/pexels-photo-8489322.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        imageAlt="Family members having a difficult but caring conversation"
+        articleSection="Family"
+        keywords="how to set a boundary with family, family boundary script, setting limits with parents, saying no to family, family boundary conversation"
         schema={schema}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
@@ -58,7 +63,8 @@ export default function BoundaryFamily() {
         <img
           src="https://images.pexels.com/photos/8489322/pexels-photo-8489322.jpeg?auto=compress&cs=tinysrgb&w=1200"
           alt="Adult conversation with family member"
-          loading="lazy"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
 

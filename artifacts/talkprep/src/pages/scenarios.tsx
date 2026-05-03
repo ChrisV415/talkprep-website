@@ -103,6 +103,22 @@ const scenarios = [
   },
 ];
 
+const scenariosSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "TalkPrep Conversation Scenarios",
+  description: "TalkPrep covers 11 conversation types — resignations, raises, feedback, family boundaries, relationship talks, and more.",
+  url: "https://talkprep.co/scenarios",
+  itemListElement: scenarios
+    .filter((sc) => sc.href && sc.href !== "#")
+    .map((sc, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: sc.title,
+      url: `https://talkprep.co${sc.href}`,
+    })),
+};
+
 export default function Scenarios() {
   useReveal();
 
@@ -112,6 +128,8 @@ export default function Scenarios() {
         title="Hard Conversation Scenarios — Resignation, Raise, Family & More"
         description="TalkPrep covers 11 conversation types: resigning, asking for a raise, giving feedback, family boundaries, relationship talks, firing someone, and more. Get your exact script."
         canonical="/scenarios"
+        keywords="difficult conversation scenarios, resignation conversation, asking for raise script, family boundary conversation, relationship communication scripts"
+        schema={scenariosSchema}
         breadcrumbs={[{ name: "Scenarios", path: "/scenarios" }]}
       />
       <SiteNav />

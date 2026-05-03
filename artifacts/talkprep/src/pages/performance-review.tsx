@@ -8,8 +8,9 @@ const schema = {
   "@type": "Article",
   headline: "How to Have a Performance Review Conversation (Without the Awkwardness)",
   description: "Performance reviews are often the most avoided, most botched conversation in management. Here is how to make them honest, productive, and human.",
-  datePublished: "2026-05-01",
-  dateModified: "2026-05-03",
+  image: "https://images.pexels.com/photos/7651557/pexels-photo-7651557.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  datePublished: "2026-05-01T00:00:00Z",
+  dateModified: "2026-05-03T00:00:00Z",
   author: { "@type": "Organization", name: "TalkPrep Editorial", url: "https://talkprep.co" },
   publisher: { "@type": "Organization", name: "TalkPrep", url: "https://talkprep.co" },
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talkprep.co/how-to-have-a-performance-review-conversation" },
@@ -25,6 +26,10 @@ export default function PerformanceReview() {
         type="article"
         publishedAt="2026-05-01T00:00:00Z"
         modifiedAt="2026-05-03T00:00:00Z"
+        image="https://images.pexels.com/photos/7651557/pexels-photo-7651557.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        imageAlt="Manager conducting a productive performance review conversation"
+        articleSection="Management"
+        keywords="performance review conversation, how to give performance feedback, performance review script, employee performance discussion, management feedback"
         schema={schema}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
@@ -58,7 +63,8 @@ export default function PerformanceReview() {
         <img
           src="https://images.pexels.com/photos/7651557/pexels-photo-7651557.jpeg?auto=compress&cs=tinysrgb&w=1200"
           alt="Two professionals having a performance review discussion"
-          loading="lazy"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
 

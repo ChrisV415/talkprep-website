@@ -65,6 +65,16 @@ const faqs = [
   { q: "Do you offer refunds?", a: "If you're not satisfied within 7 days of subscribing, contact us and we'll refund you in full — no questions asked." },
 ];
 
+const pricingFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 const compareRows = [
   { feature: "Full prep guide (script + responses + fallback)", s: true, m: true, a: true },
   { feature: "Persona depth setup", s: true, m: true, a: true },
@@ -96,7 +106,8 @@ export default function Pricing() {
         title="TalkPrep Pricing — Less Than One Hour of Coaching"
         description="Single session $4.99 · Monthly $12.99 · Annual $79. First 3 sessions free, no credit card required. Cancel anytime."
         canonical="/pricing"
-        schema={pricingSchema}
+        keywords="TalkPrep pricing, conversation prep cost, AI coaching price, conversation prep subscription, free conversation tool"
+        schema={[pricingSchema, pricingFaqSchema]}
         breadcrumbs={[{ name: "Pricing", path: "/pricing" }]}
       />
       <SiteNav />

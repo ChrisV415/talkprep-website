@@ -8,8 +8,9 @@ const schema = {
   "@type": "Article",
   headline: "Why You Freeze in Hard Conversations (And What to Do About It)",
   description: "You rehearsed exactly what to say. Then the moment arrived and your mind went blank. This isn't a character flaw — it's neuroscience. Here's what's actually happening and how to work with it.",
-  datePublished: "2026-05-03",
-  dateModified: "2026-05-03",
+  image: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  datePublished: "2026-05-03T00:00:00Z",
+  dateModified: "2026-05-03T00:00:00Z",
   author: { "@type": "Organization", name: "TalkPrep Editorial", url: "https://talkprep.co" },
   publisher: { "@type": "Organization", name: "TalkPrep", url: "https://talkprep.co" },
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talkprep.co/why-you-freeze-in-hard-conversations" },
@@ -25,6 +26,10 @@ export default function FreezeConversations() {
         type="article"
         publishedAt="2026-05-03T00:00:00Z"
         modifiedAt="2026-05-03T00:00:00Z"
+        image="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        imageAlt="Person experiencing anxiety before a difficult conversation"
+        articleSection="Psychology"
+        keywords="why you freeze in conversations, conversation anxiety, mind goes blank, fight or flight conversation, how to stop freezing, conversation preparation psychology"
         schema={schema}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
@@ -61,7 +66,8 @@ export default function FreezeConversations() {
         <img
           src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=1200"
           alt="Person in contemplation before a difficult conversation"
-          loading="lazy"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
 

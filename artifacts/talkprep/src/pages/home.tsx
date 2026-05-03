@@ -62,6 +62,7 @@ export default function Home() {
         title="TalkPrep — Walk Into Every Hard Conversation Ready"
         description="Get word-for-word scripts, anticipate every response, and practice with AI before the real conversation. Resignations, raises, family talks — prepared in 5 minutes."
         canonical="/"
+        keywords="conversation prep, difficult conversations, resignation script, salary negotiation script, AI conversation coach, hard conversation preparation"
         schema={homeSchema}
       />
       <SiteNav />

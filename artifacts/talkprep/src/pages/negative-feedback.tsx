@@ -8,8 +8,9 @@ const schema = {
   "@type": "Article",
   headline: "How to Give Negative Feedback That Actually Lands",
   description: "Most negative feedback either softens to the point of meaninglessness or lands so hard it creates defensiveness. The structure that actually works sits between those two failure modes.",
-  datePublished: "2026-05-03",
-  dateModified: "2026-05-03",
+  image: "https://images.pexels.com/photos/5699431/pexels-photo-5699431.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  datePublished: "2026-05-03T00:00:00Z",
+  dateModified: "2026-05-03T00:00:00Z",
   author: { "@type": "Organization", name: "TalkPrep Editorial", url: "https://talkprep.co" },
   publisher: { "@type": "Organization", name: "TalkPrep", url: "https://talkprep.co" },
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talkprep.co/how-to-give-negative-feedback-that-actually-lands" },
@@ -25,6 +26,10 @@ export default function NegativeFeedback() {
         type="article"
         publishedAt="2026-05-03T00:00:00Z"
         modifiedAt="2026-05-03T00:00:00Z"
+        image="https://images.pexels.com/photos/5699431/pexels-photo-5699431.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        imageAlt="Professional giving clear and actionable negative feedback"
+        articleSection="Career"
+        keywords="how to give negative feedback, negative feedback that lands, feedback script, constructive criticism that works, honest feedback"
         schema={schema}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
@@ -61,7 +66,8 @@ export default function NegativeFeedback() {
         <img
           src="https://images.pexels.com/photos/5699431/pexels-photo-5699431.jpeg?auto=compress&cs=tinysrgb&w=1200"
           alt="Manager giving feedback to an employee"
-          loading="lazy"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
 

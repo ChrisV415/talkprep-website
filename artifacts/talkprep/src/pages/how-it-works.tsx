@@ -40,6 +40,16 @@ const faqs = [
   },
 ];
 
+const howItWorksFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function HowItWorks() {
   useReveal();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -50,6 +60,8 @@ export default function HowItWorks() {
         title="How TalkPrep Works — From Dreading a Conversation to Walking in Ready"
         description="Five steps: describe your situation, get your exact script, practice with AI role-play, review your annotated transcript, and debrief after the real conversation."
         canonical="/how-it-works"
+        keywords="how TalkPrep works, conversation preparation, AI role-play practice, conversation prep tool, how to prepare for a difficult conversation"
+        schema={howItWorksFaqSchema}
         breadcrumbs={[{ name: "How It Works", path: "/how-it-works" }]}
       />
       <SiteNav />

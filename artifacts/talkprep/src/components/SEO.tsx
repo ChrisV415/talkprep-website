@@ -24,6 +24,8 @@ interface SEOProps {
   schema?: object | object[];
   breadcrumbs?: Breadcrumb[];
   noIndex?: boolean;
+  keywords?: string;
+  articleSection?: string;
 }
 
 function buildBreadcrumbSchema(crumbs: Breadcrumb[]) {
@@ -54,6 +56,8 @@ export default function SEO({
   schema,
   breadcrumbs,
   noIndex = false,
+  keywords,
+  articleSection,
 }: SEOProps) {
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
   const canonicalUrl = canonical ? `${SITE_URL}${canonical}` : SITE_URL;
@@ -74,6 +78,7 @@ export default function SEO({
       <meta name="description" content={description} />
       <link rel="canonical" href={canonicalUrl} />
       {noIndex && <meta name="robots" content="noindex, nofollow" />}
+      {keywords && <meta name="keywords" content={keywords} />}
 
       {/* Open Graph */}
       <meta property="og:site_name" content={SITE_NAME} />
@@ -82,6 +87,8 @@ export default function SEO({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content={type} />
       <meta property="og:image" content={image} />
+      <meta property="og:image:secure_url" content={image} />
+      <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:alt" content={imageAlt} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
@@ -94,6 +101,7 @@ export default function SEO({
       <meta name="twitter:image" content={image} />
       <meta name="twitter:image:alt" content={imageAlt} />
       <meta name="twitter:site" content="@talkprep" />
+      <meta name="twitter:creator" content="@talkprep" />
 
       {/* Article-specific */}
       {type === "article" && publishedAt && (
@@ -104,6 +112,9 @@ export default function SEO({
       )}
       {type === "article" && (
         <meta property="article:author" content="TalkPrep Editorial" />
+      )}
+      {type === "article" && articleSection && (
+        <meta property="article:section" content={articleSection} />
       )}
 
       {/* JSON-LD — one <script> per schema object */}

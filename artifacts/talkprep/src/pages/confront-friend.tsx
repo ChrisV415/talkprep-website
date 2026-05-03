@@ -8,8 +8,9 @@ const schema = {
   "@type": "Article",
   headline: "How to Confront a Friend (Without Losing the Friendship)",
   description: "Most friendships don't end in fights. They fade because no one was willing to say the hard thing. Here is exactly what to say — and how to say it.",
-  datePublished: "2026-05-01",
-  dateModified: "2026-05-03",
+  image: "https://plus.unsplash.com/premium_photo-1726718514261-7b67197b4b47?fm=jpg&q=60&w=1200&ixlib=rb-4.1.0",
+  datePublished: "2026-05-01T00:00:00Z",
+  dateModified: "2026-05-03T00:00:00Z",
   author: { "@type": "Organization", name: "TalkPrep Editorial", url: "https://talkprep.co" },
   publisher: { "@type": "Organization", name: "TalkPrep", url: "https://talkprep.co" },
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talkprep.co/how-to-confront-a-friend" },
@@ -25,6 +26,10 @@ export default function ConfrontFriend() {
         type="article"
         publishedAt="2026-05-01T00:00:00Z"
         modifiedAt="2026-05-03T00:00:00Z"
+        image="https://plus.unsplash.com/premium_photo-1726718514261-7b67197b4b47?fm=jpg&q=60&w=1200&ixlib=rb-4.1.0"
+        imageAlt="Two friends having a difficult but honest conversation"
+        articleSection="Friendship"
+        keywords="how to confront a friend, friendship confrontation, difficult friend conversation, say hard thing to friend, friendship conflict script"
         schema={schema}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
@@ -58,7 +63,8 @@ export default function ConfrontFriend() {
         <img
           src="https://plus.unsplash.com/premium_photo-1726718514261-7b67197b4b47?fm=jpg&q=60&w=1200&ixlib=rb-4.1.0"
           alt="Two friends having a serious conversation"
-          loading="lazy"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
 
