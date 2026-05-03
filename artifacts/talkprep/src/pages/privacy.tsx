@@ -2,6 +2,22 @@ import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
 
+const privacySchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Privacy Policy — TalkPrep",
+  description:
+    "TalkPrep's privacy policy. We collect only what's necessary. Your conversations are never stored on our servers and are never shared.",
+  url: "https://talkprep.co/privacy",
+  publisher: {
+    "@type": "Organization",
+    name: "TalkPrep",
+    url: "https://talkprep.co",
+  },
+  dateModified: "2026-05-03",
+  inLanguage: "en-US",
+};
+
 export default function Privacy() {
   return (
     <div className="tp-page">
@@ -9,6 +25,9 @@ export default function Privacy() {
         title="Privacy Policy — TalkPrep"
         description="TalkPrep's privacy policy. We collect only what's necessary. Your conversations are never stored on our servers and are never shared."
         canonical="/privacy"
+        keywords="TalkPrep privacy, data privacy, conversation privacy, AI privacy policy, no data storage"
+        schema={privacySchema}
+        breadcrumbs={[{ name: "Privacy Policy", path: "/privacy" }]}
       />
       <SiteNav />
       <article className="legal-page">

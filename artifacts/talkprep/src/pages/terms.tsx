@@ -2,13 +2,32 @@ import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
 
+const termsSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Terms of Service — TalkPrep",
+  description:
+    "TalkPrep's terms of service. Simple, plain language. Covers subscriptions, refunds, acceptable use, and your rights.",
+  url: "https://talkprep.co/terms",
+  publisher: {
+    "@type": "Organization",
+    name: "TalkPrep",
+    url: "https://talkprep.co",
+  },
+  dateModified: "2026-05-03",
+  inLanguage: "en-US",
+};
+
 export default function Terms() {
   return (
     <div className="tp-page">
       <SEO
         title="Terms of Service — TalkPrep"
-        description="TalkPrep's terms of service. Simple, plain language. Read before using the service."
+        description="TalkPrep's terms of service. Simple, plain language. Covers subscriptions, the 7-day money-back guarantee, acceptable use, and your rights."
         canonical="/terms"
+        keywords="TalkPrep terms, terms of service, subscription terms, refund policy, money back guarantee"
+        schema={termsSchema}
+        breadcrumbs={[{ name: "Terms of Service", path: "/terms" }]}
       />
       <SiteNav />
       <article className="legal-page">

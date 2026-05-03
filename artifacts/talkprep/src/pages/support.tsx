@@ -4,6 +4,108 @@ import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
 
+const supportFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How do I get started with TalkPrep?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Click 'Start free' from any page — no credit card required. Your first 3 sessions are completely free. Describe your situation, and TalkPrep will generate your prep guide in under a minute.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What counts as a session in TalkPrep?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A session is one full conversation prep: one situation, one set of scripts, one role-play. Each session covers a specific conversation — for example, your resignation meeting, or a salary negotiation with your manager.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Who can see my conversations on TalkPrep?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nobody. Your prep guides and role-play transcripts are stored locally in your browser — not on our servers. TalkPrep never sees your conversation content and never shares it.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is my data used to train AI by TalkPrep?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. TalkPrep uses a reputable AI provider under a data processing agreement that explicitly prohibits using your data to train AI models.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need a credit card to start TalkPrep?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Your first 3 sessions are completely free with no card required. You only need to add payment when you want to continue after your free sessions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does TalkPrep offer a money-back guarantee?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — 7 days, full refund, no questions asked. If you subscribe and aren't satisfied within 7 days, email hello@talkprep.co and we'll refund you immediately.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I cancel my TalkPrep subscription?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You can cancel anytime from your account settings. No cancellation fee, no questions asked. You keep access until the end of your current billing period.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What conversation types does TalkPrep cover?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "TalkPrep currently covers 11 conversation types: resignations, salary negotiations, giving difficult feedback, performance reviews, family boundaries, relationship conversations, confronting a friend, firing someone, delivering bad news to a client, negotiating, and more.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does TalkPrep offer team or HR pricing?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. TalkPrep offers team plans at $6–8 per manager per month. Email hello@talkprep.co to discuss your team's needs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How realistic is the TalkPrep role-play?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Very realistic. You set the other person's emotional state, defensiveness level, and communication style before the practice session. The AI plays them accordingly and won't just roll over — it pushes back the way a real person would.",
+      },
+    },
+  ],
+};
+
+const supportPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "TalkPrep Help Center — Support & FAQ",
+  description:
+    "Answers to common questions about TalkPrep — getting started, privacy, billing, and using the product.",
+  url: "https://talkprep.co/support",
+  publisher: {
+    "@type": "Organization",
+    name: "TalkPrep",
+    url: "https://talkprep.co",
+  },
+  inLanguage: "en-US",
+};
+
 const faqs = [
   {
     category: "Getting started",
@@ -102,7 +204,9 @@ export default function Support() {
         title="Support — TalkPrep Help Center"
         description="Answers to common questions about TalkPrep — getting started, privacy, billing, and using the product. Can't find what you need? Email us."
         canonical="/support"
-        keywords="TalkPrep help, TalkPrep support, TalkPrep FAQ, conversation prep questions"
+        keywords="TalkPrep help, TalkPrep support, TalkPrep FAQ, TalkPrep questions, conversation prep help, how does TalkPrep work, TalkPrep refund, TalkPrep privacy"
+        schema={[supportPageSchema, supportFaqSchema]}
+        breadcrumbs={[{ name: "Support", path: "/support" }]}
       />
       <SiteNav />
 
