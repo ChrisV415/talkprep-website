@@ -210,7 +210,6 @@ export default function Support() {
         breadcrumbs={[{ name: "Support", path: "/support" }]}
       />
       <SiteNav />
-
       <section className="support-hero">
         <div className="container">
           <span className="section-tag" style={{ display: "block", marginBottom: "0.5rem" }}>Help Center</span>
@@ -221,7 +220,6 @@ export default function Support() {
           </p>
         </div>
       </section>
-
       <div style={{ width: "100%", height: "380px", overflow: "hidden", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
         <img
           src="https://images.pexels.com/photos/9050619/pexels-photo-9050619.jpeg?auto=compress&cs=tinysrgb&w=1440"
@@ -230,7 +228,6 @@ export default function Support() {
           style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 45%" }}
         />
       </div>
-
       <section className="section section-alt" style={{ paddingTop: "1rem" }}>
         <div className="container">
           <div className="support-grid">
@@ -255,7 +252,6 @@ export default function Support() {
           </div>
         </div>
       </section>
-
       <section className="section">
         <div className="container" style={{ maxWidth: "760px" }}>
           <h2 className="section-title" style={{ marginBottom: "0.5rem" }}>Frequently asked questions</h2>
@@ -296,10 +292,9 @@ export default function Support() {
           ))}
         </div>
       </section>
-
       <div className="contact-strip">
         <div className="container">
-          <h2>Still have questions?</h2>
+          <h2 className="text-[#1b1815]">Still have questions?</h2>
           <p>We're a small team and we read every email. Usually reply within a few hours.</p>
           <div className="contact-options">
             <a href="mailto:hello@talkprep.co" className="btn btn-rust btn-lg">Email us →</a>
@@ -307,7 +302,6 @@ export default function Support() {
           </div>
         </div>
       </div>
-
       <SiteFooter />
     </div>
   );
