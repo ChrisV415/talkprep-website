@@ -5,17 +5,41 @@ const SITE_URL = "https://talkprep.co";
 const DEFAULT_DESCRIPTION =
   "TalkPrep is an AI-powered conversation prep tool. Get word-for-word scripts, anticipate every response, and walk into hard conversations ready — resignations, raises, family talks, and more.";
 const DEFAULT_IMAGE = `${SITE_URL}/opengraph.jpg`;
+const DEFAULT_IMAGE_ALT = "TalkPrep — AI-powered conversation preparation";
+
+export interface Breadcrumb {
+  name: string;
+  path: string;
+}
 
 interface SEOProps {
   title: string;
   description?: string;
   canonical?: string;
   image?: string;
+  imageAlt?: string;
   type?: "website" | "article";
   publishedAt?: string;
   modifiedAt?: string;
-  schema?: object;
+  schema?: object | object[];
+  breadcrumbs?: Breadcrumb[];
   noIndex?: boolean;
+}
+
+function buildBreadcrumbSchema(crumbs: Breadcrumb[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL + "/" },
+      ...crumbs.map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 2,
+        name: c.name,
+        item: SITE_URL + c.path,
+      })),
+    ],
+  };
 }
 
 export default function SEO({
@@ -23,14 +47,25 @@ export default function SEO({
   description = DEFAULT_DESCRIPTION,
   canonical,
   image = DEFAULT_IMAGE,
+  imageAlt = DEFAULT_IMAGE_ALT,
   type = "website",
   publishedAt,
   modifiedAt,
   schema,
+  breadcrumbs,
   noIndex = false,
 }: SEOProps) {
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
   const canonicalUrl = canonical ? `${SITE_URL}${canonical}` : SITE_URL;
+
+  const schemas: object[] = [];
+  if (schema) {
+    if (Array.isArray(schema)) schemas.push(...schema);
+    else schemas.push(schema);
+  }
+  if (breadcrumbs && breadcrumbs.length > 0) {
+    schemas.push(buildBreadcrumbSchema(breadcrumbs));
+  }
 
   return (
     <Helmet>
@@ -47,6 +82,7 @@ export default function SEO({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content={type} />
       <meta property="og:image" content={image} />
+      <meta property="og:image:alt" content={imageAlt} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:locale" content="en_US" />
@@ -56,6 +92,7 @@ export default function SEO({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+      <meta name="twitter:image:alt" content={imageAlt} />
       <meta name="twitter:site" content="@talkprep" />
 
       {/* Article-specific */}
@@ -69,10 +106,12 @@ export default function SEO({
         <meta property="article:author" content="TalkPrep Editorial" />
       )}
 
-      {/* JSON-LD */}
-      {schema && (
-        <script type="application/ld+json">{JSON.stringify(schema)}</script>
-      )}
+      {/* JSON-LD — one <script> per schema object */}
+      {schemas.map((s, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(s)}
+        </script>
+      ))}
     </Helmet>
   );
 }

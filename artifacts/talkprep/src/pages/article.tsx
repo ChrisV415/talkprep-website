@@ -154,6 +154,11 @@ export default function Article() {
         publishedAt="2026-05-01T00:00:00Z"
         modifiedAt="2026-05-03T00:00:00Z"
         schema={articleSchema}
+        imageAlt="How to resign from a job — TalkPrep guide with exact scripts"
+        breadcrumbs={[
+          { name: "Guides", path: "/guides" },
+          { name: "How to Resign from a Job", path: "/how-to-resign-from-a-job" },
+        ]}
       />
       {/* Sticky Nav */}
       <nav className="sticky top-0 z-50 bg-ink text-white h-[52px] flex items-center justify-between px-6">

@@ -50,6 +50,7 @@ export default function HowItWorks() {
         title="How TalkPrep Works — From Dreading a Conversation to Walking in Ready"
         description="Five steps: describe your situation, get your exact script, practice with AI role-play, review your annotated transcript, and debrief after the real conversation."
         canonical="/how-it-works"
+        breadcrumbs={[{ name: "How It Works", path: "/how-it-works" }]}
       />
       <SiteNav />
 

@@ -30,6 +30,7 @@ export default function About() {
         title="About TalkPrep — Built for the Conversation You Keep Putting Off"
         description="TalkPrep is a private, AI-powered preparation tool for difficult conversations. We built it because the most important conversations in people's lives are the ones they're least prepared for."
         canonical="/about"
+        breadcrumbs={[{ name: "About", path: "/about" }]}
       />
       <SiteNav />
 

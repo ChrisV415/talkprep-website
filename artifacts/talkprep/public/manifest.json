@@ -1,0 +1,20 @@
+{
+  "name": "TalkPrep",
+  "short_name": "TalkPrep",
+  "description": "AI-powered prep for hard conversations. Word-for-word scripts, role-play practice, and a debrief — for resignations, raises, family talks, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9f5ef",
+  "theme_color": "#f9f5ef",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "lifestyle", "education"],
+  "lang": "en-US",
+  "orientation": "portrait-primary"
+}

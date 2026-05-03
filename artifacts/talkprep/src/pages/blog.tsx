@@ -118,6 +118,7 @@ export default function Blog() {
         title="TalkPrep Blog — Scripts and Thinking for Hard Conversations"
         description="Practical guides on how to say the hard thing — word for word, with the psychology behind why it works. Resignations, raises, boundaries, feedback, and more."
         canonical="/blog"
+        breadcrumbs={[{ name: "Blog", path: "/blog" }]}
       />
       <SiteNav />
 

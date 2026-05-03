@@ -97,6 +97,7 @@ export default function Pricing() {
         description="Single session $4.99 · Monthly $12.99 · Annual $79. First 3 sessions free, no credit card required. Cancel anytime."
         canonical="/pricing"
         schema={pricingSchema}
+        breadcrumbs={[{ name: "Pricing", path: "/pricing" }]}
       />
       <SiteNav />
 

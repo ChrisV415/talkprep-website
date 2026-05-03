@@ -56,6 +56,7 @@ export default function Guides() {
         title="Conversation Scripts & Guides — How to Say the Hard Thing"
         description="Free guides with word-for-word scripts for the hardest conversations: how to resign, ask for a raise, set a boundary, fire someone, and more. New guide every two weeks."
         canonical="/guides"
+        breadcrumbs={[{ name: "Guides", path: "/guides" }]}
       />
       <SiteNav />
 

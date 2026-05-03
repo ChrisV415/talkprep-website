@@ -112,6 +112,7 @@ export default function Scenarios() {
         title="Hard Conversation Scenarios — Resignation, Raise, Family & More"
         description="TalkPrep covers 11 conversation types: resigning, asking for a raise, giving feedback, family boundaries, relationship talks, firing someone, and more. Get your exact script."
         canonical="/scenarios"
+        breadcrumbs={[{ name: "Scenarios", path: "/scenarios" }]}
       />
       <SiteNav />
 
