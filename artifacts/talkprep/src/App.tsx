@@ -10,6 +10,7 @@ import Pricing from "@/pages/pricing";
 import Scenarios from "@/pages/scenarios";
 import Guides from "@/pages/guides";
 import About from "@/pages/about";
+import Blog from "@/pages/blog";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ function Router() {
       <Route path="/scenarios" component={Scenarios} />
       <Route path="/guides" component={Guides} />
       <Route path="/about" component={About} />
+      <Route path="/blog" component={Blog} />
       <Route component={NotFound} />
     </Switch>
   );

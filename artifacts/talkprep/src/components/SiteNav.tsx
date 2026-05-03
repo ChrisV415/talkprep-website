@@ -9,6 +9,7 @@ export default function SiteNav() {
     { label: "How it works", path: "/how-it-works" },
     { label: "Scenarios", path: "/scenarios" },
     { label: "Guides", path: "/guides" },
+    { label: "Blog", path: "/blog" },
     { label: "Pricing", path: "/pricing" },
     { label: "About", path: "/about" },
   ];
