@@ -33,7 +33,7 @@ export default function SiteNav() {
           ))}
         </div>
         <div className="nav-right">
-          <a href="#" className="nav-pill nav-pill-filled">
+          <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="nav-pill nav-pill-filled">
             Start free →
           </a>
           <button

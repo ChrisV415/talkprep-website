@@ -82,7 +82,7 @@ export default function Home() {
             resignations, raises, family talks, and anything keeping you up at night.
           </p>
           <div className="hero-actions">
-            <a href="#" className="btn btn-primary btn-lg">Prepare my conversation <span>→</span></a>
+            <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">Prepare my conversation <span>→</span></a>
             <Link href="/how-it-works" className="btn btn-secondary btn-lg">See how it works</Link>
           </div>
           <div className="hero-proof">
@@ -284,10 +284,10 @@ export default function Home() {
           <h2 className="section-title reveal" style={{ color: "var(--cream)" }}>Every conversation that matters.</h2>
           <div className="dark-grid reveal" style={{ gridTemplateColumns: "repeat(3,1fr)", marginTop: "2rem" }}>
             <Link href="/how-to-resign-from-a-job" className="dg-item"><span className="dg-icon">🚪</span><h3 className="dg-title">Resigning from a job</h3><p className="dg-desc">Leave gracefully. Handle counter-offers. Keep the relationship.</p></Link>
-            <a href="#" className="dg-item"><span className="dg-icon">💰</span><h3 className="dg-title">Asking for a raise</h3><p className="dg-desc">Know your worth. Hold your ground. Get what you deserve.</p></a>
-            <a href="#" className="dg-item"><span className="dg-icon">👨‍👩‍👧</span><h3 className="dg-title">Family conversations</h3><p className="dg-desc">Boundaries, hard truths, and things left unsaid too long.</p></a>
-            <a href="#" className="dg-item"><span className="dg-icon">❤️</span><h3 className="dg-title">Relationship talks</h3><p className="dg-desc">The conversations that could change everything — said with care.</p></a>
-            <a href="#" className="dg-item"><span className="dg-icon">💬</span><h3 className="dg-title">Giving hard feedback</h3><p className="dg-desc">Tell someone the truth in a way they can actually hear.</p></a>
+            <a href="/scenarios" className="dg-item"><span className="dg-icon">💰</span><h3 className="dg-title">Asking for a raise</h3><p className="dg-desc">Know your worth. Hold your ground. Get what you deserve.</p></a>
+            <a href="/scenarios" className="dg-item"><span className="dg-icon">👨‍👩‍👧</span><h3 className="dg-title">Family conversations</h3><p className="dg-desc">Boundaries, hard truths, and things left unsaid too long.</p></a>
+            <a href="/scenarios" className="dg-item"><span className="dg-icon">❤️</span><h3 className="dg-title">Relationship talks</h3><p className="dg-desc">The conversations that could change everything — said with care.</p></a>
+            <a href="/scenarios" className="dg-item"><span className="dg-icon">💬</span><h3 className="dg-title">Giving hard feedback</h3><p className="dg-desc">Tell someone the truth in a way they can actually hear.</p></a>
             <Link href="/scenarios" className="dg-item"><span className="dg-icon">→</span><h3 className="dg-title">See all 11 scenarios</h3><p className="dg-desc">Firings, client bad news, landlords, setting boundaries, and more.</p></Link>
           </div>
         </div>
@@ -345,7 +345,7 @@ export default function Home() {
                 <li><span className="pp-check">✓</span> Role-play practice</li>
                 <li><span className="pp-check">✓</span> Debrief included</li>
               </ul>
-              <a href="#" className="btn btn-secondary btn-sm" style={{ marginTop: "1.5rem", width: "100%", justifyContent: "center" }}>Get started</a>
+              <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-sm" style={{ marginTop: "1.5rem", width: "100%", justifyContent: "center" }}>Get started</a>
             </div>
             <div className="pp-card cg-item-ink">
               <span className="pp-plan">Monthly</span>
@@ -357,7 +357,7 @@ export default function Home() {
                 <li><span className="pp-check">✓</span> Annotated transcripts</li>
                 <li><span className="pp-check">✓</span> Cancel anytime</li>
               </ul>
-              <a href="#" className="btn btn-rust btn-sm" style={{ marginTop: "1.5rem", width: "100%", justifyContent: "center" }}>Start free trial →</a>
+              <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="btn btn-rust btn-sm" style={{ marginTop: "1.5rem", width: "100%", justifyContent: "center" }}>Start free trial →</a>
             </div>
             <div className="pp-card cg-item-white">
               <span className="pp-plan">Annual</span>
@@ -414,7 +414,7 @@ export default function Home() {
           <span className="fca-eyebrow">You already know what you need to say.</span>
           <h2 className="fca-title">Stop rehearsing alone.<br /><em>Walk in ready.</em></h2>
           <p className="fca-sub">The conversation isn't going to get easier by waiting. Prepare in five minutes.</p>
-          <a href="#" className="btn btn-rust btn-lg">Prepare my conversation →</a>
+          <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="btn btn-rust btn-lg">Prepare my conversation →</a>
           <p className="fca-note">First 3 sessions free · No credit card required</p>
         </div>
       </section>

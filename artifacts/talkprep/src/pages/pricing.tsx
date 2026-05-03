@@ -124,7 +124,7 @@ export default function Pricing() {
                 <li><span className="pf-check">✓</span>Annotated transcript review</li>
                 <li><span className="pf-check">✓</span>Post-conversation debrief</li>
               </ul>
-              <a href="#" className="btn btn-secondary" style={{ width: "100%", justifyContent: "center" }}>Get started</a>
+              <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ width: "100%", justifyContent: "center" }}>Get started</a>
             </div>
             <div className="plan-card featured">
               <span className="plan-badge">Most popular</span>
@@ -139,7 +139,7 @@ export default function Pricing() {
                 <li><span className="pf-check">✓</span>Live strategy nudges</li>
                 <li><span className="pf-check">✓</span>Session sharing links</li>
               </ul>
-              <a href="#" className="btn btn-rust" style={{ width: "100%", justifyContent: "center" }}>Start free trial →</a>
+              <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="btn btn-rust" style={{ width: "100%", justifyContent: "center" }}>Start free trial →</a>
             </div>
             <div className="plan-card cg-item-white">
               <span className="plan-badge">Best value</span>
@@ -152,7 +152,7 @@ export default function Pricing() {
                 <li><span className="pf-check">✓</span>Export conversation history</li>
                 <li><span className="pf-check">✓</span>Priority response speed</li>
               </ul>
-              <a href="#" className="btn btn-secondary" style={{ width: "100%", justifyContent: "center" }}>Get annual →</a>
+              <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ width: "100%", justifyContent: "center" }}>Get annual →</a>
             </div>
           </div>
 

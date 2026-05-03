@@ -160,7 +160,7 @@ export default function Scenarios() {
         <p style={{ fontSize: "0.875rem", color: "rgba(249,245,239,0.4)", marginBottom: "1.5rem" }}>
           First 3 sessions free. No credit card.
         </p>
-        <a href="#" className="btn btn-rust btn-lg">Start preparing →</a>
+        <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="btn btn-rust btn-lg">Start preparing →</a>
       </div>
 
       <SiteFooter />

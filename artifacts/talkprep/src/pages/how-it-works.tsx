@@ -194,7 +194,7 @@ export default function HowItWorks() {
             ))}
           </div>
           <div style={{ textAlign: "center", marginTop: "2rem" }}>
-            <a href="#" className="btn btn-primary btn-lg">Try it free →</a>
+            <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">Try it free →</a>
           </div>
         </div>
       </section>

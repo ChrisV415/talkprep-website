@@ -170,9 +170,9 @@ export default function Article() {
           <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
           <Link href="/guides" className="hover:text-white transition-colors">Guides</Link>
         </div>
-        <Link href="#" className="bg-rust hover:bg-rust-2 text-white px-4 py-1.5 rounded text-sm font-medium transition-colors">
+        <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="bg-rust hover:bg-rust-2 text-white px-4 py-1.5 rounded text-sm font-medium transition-colors">
           Start free &rarr;
-        </Link>
+        </a>
       </nav>
 
       {/* Article Header */}
@@ -513,10 +513,10 @@ export default function Article() {
             <span>Talk</span><span className="text-rust">Prep</span>
           </div>
           <div className="flex gap-6 font-mono text-sm text-ink-4">
-            <Link href="#" className="hover:text-white transition-colors">Pricing</Link>
+            <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
             <Link href="#" className="hover:text-white transition-colors">Privacy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms</Link>
-            <Link href="#" className="hover:text-white transition-colors">Open app</Link>
+            <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Open app</a>
           </div>
           <div className="font-mono text-xs text-ink-4 opacity-50">
             © 2026 TalkPrep

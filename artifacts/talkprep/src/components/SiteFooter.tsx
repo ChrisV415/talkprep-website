@@ -19,7 +19,7 @@ export default function SiteFooter() {
             <li><Link href="/how-it-works">How it works</Link></li>
             <li><Link href="/scenarios">Scenarios</Link></li>
             <li><Link href="/pricing">Pricing</Link></li>
-            <li><a href="#">Open app</a></li>
+            <li><a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer">Open app</a></li>
           </ul>
         </div>
         <div>
