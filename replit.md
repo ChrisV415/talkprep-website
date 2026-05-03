@@ -25,3 +25,24 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - `pnpm --filter @workspace/api-server run dev` — run API server locally
 
 See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+
+## Artifacts
+
+### `artifacts/talkprep` — TalkPrep web app
+- **Framework**: React + Vite + Wouter (client-side routing)
+- **Styling**: TailwindCSS v4 (article page only) + scoped plain CSS under `.tp-page` (all other pages)
+- **Design tokens**: Two coexisting systems — article uses HSL-format Tailwind CSS vars; new pages use hex CSS vars scoped under `.tp-page` to avoid conflicts
+- **Fonts**: Lora (serif headings), DM Sans (body), DM Mono (labels/mono), Playfair Display + Source Serif 4 (article only)
+- **Routes**:
+  - `/` → Home (landing page)
+  - `/how-to-resign-from-a-job` → Article (with AI script generator via SSE)
+  - `/how-it-works` → How it works (5-step walkthrough + FAQ)
+  - `/pricing` → Pricing (3-tier cards + comparison table + FAQ)
+  - `/scenarios` → Scenarios (11 conversation types)
+  - `/guides` → Guides (featured guide + grid + newsletter)
+  - `/about` → About (story + stats + values)
+- **Shared components**: `SiteNav.tsx` (sticky nav, active tab detection, mobile menu), `SiteFooter.tsx`
+- **API**: SSE stream from `/api/resignation-script` on the API server artifact
+
+### `artifacts/api-server` — Express API server
+- Serves `/api/resignation-script` (SSE streaming endpoint)

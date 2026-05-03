@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TalkPrep — Prepare for conversations that matter</title>
+<meta name="description" content="Get your exact opening script, anticipate every response, and walk into any difficult conversation fully prepared. AI-powered. Private. Ready in minutes.">
+<link rel="canonical" href="https://talkprep.co">
+<link rel="stylesheet" href="shared.css">
+<style>
+/* PAGE-SPECIFIC STYLES */
+.hero{padding:7rem 0 4rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;width:900px;height:900px;background:radial-gradient(ellipse,rgba(196,98,45,0.06) 0%,transparent 65%);top:-300px;left:50%;transform:translateX(-50%);pointer-events:none}
+.hero-title{font-family:'Lora',serif;font-size:clamp(2.6rem,5.5vw,4.2rem);font-weight:700;line-height:1.05;letter-spacing:-0.03em;margin-bottom:1.25rem;max-width:780px;margin-left:auto;margin-right:auto}
+.hero-title em{font-style:italic;color:var(--rust)}
+.hero-sub{font-size:1.05rem;color:var(--ink2);line-height:1.75;max-width:480px;margin:0 auto 2.25rem;font-weight:300}
+.hero-actions{display:flex;align-items:center;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hero-proof{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink4)}
+/* MOCKUP */
+.mockup-wrap{max-width:720px;margin:3.5rem auto 0}
+.mockup-shell{background:white;border:1px solid var(--border);border-radius:4px;overflow:hidden;box-shadow:0 12px 48px var(--shadow),0 2px 8px rgba(28,24,20,0.05)}
+.mockup-bar{background:var(--cream2);border-bottom:1px solid var(--border);padding:10px 16px;display:flex;align-items:center;gap:8px}
+.mockup-dots{display:flex;gap:5px}
+.mockup-dot{width:10px;height:10px;border-radius:50%}
+.mockup-title{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink4);letter-spacing:0.08em;margin-left:auto;margin-right:auto}
+.mockup-tabs{display:flex;padding:0 1.25rem;border-bottom:1px solid var(--border);background:white}
+.mockup-tab{padding:8px 14px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink4);border-bottom:2px solid transparent;margin-bottom:-1px}
+.mockup-tab.on{color:var(--rust);border-bottom-color:var(--rust)}
+.mockup-body{display:grid;grid-template-columns:1fr 1fr;background:white}
+.mockup-panel{padding:1.5rem 1.75rem;border-right:1px solid var(--border)}
+.mockup-panel:last-child{border-right:none}
+.mockup-rs-label{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:0.15em;text-transform:uppercase;color:var(--rust);margin-bottom:0.4rem;display:block}
+.mockup-rs-title{font-family:'Lora',serif;font-size:0.875rem;font-weight:600;color:var(--ink);margin-bottom:0.75rem}
+.mockup-script{background:var(--rust-pale);border-left:2px solid var(--rust);padding:0.75rem 1rem;font-size:0.75rem;line-height:1.65;color:var(--ink2);font-style:italic;border-radius:0 2px 2px 0;margin-bottom:0.75rem}
+.mockup-response{background:var(--cream2);border:1px solid var(--border);border-radius:3px;padding:0.6rem 0.875rem;margin-bottom:6px;font-size:0.72rem;color:var(--ink2);line-height:1.55}
+.mockup-response strong{color:var(--ink);font-weight:500;display:block;font-size:0.68rem;font-family:'DM Mono',monospace;letter-spacing:0.06em;margin-bottom:2px}
+/* SECTIONS */
+.section{padding:5rem 0}
+.section-alt{background:var(--cream2)}
+.section-dark{background:var(--ink);padding:5rem 0}
+/* PROBLEM */
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.problem-title{font-family:'Lora',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;line-height:1.1;letter-spacing:-0.02em;color:var(--cream);margin-bottom:1.25rem}
+.problem-title em{font-style:italic;color:var(--rust2)}
+.problem-body{font-size:0.9rem;color:rgba(249,245,239,0.5);line-height:1.8;font-weight:300;margin-bottom:2rem}
+.pain-list{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.pain-item{display:flex;gap:1rem;align-items:flex-start}
+.pain-icon{width:36px;height:36px;background:rgba(249,245,239,0.05);border:1px solid rgba(249,245,239,0.1);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:0.95rem;flex-shrink:0}
+.pain-text{font-size:0.875rem;color:rgba(249,245,239,0.6);line-height:1.65;padding-top:8px}
+.pain-text strong{color:var(--cream);font-weight:500}
+/* HOW IT WORKS */
+.step-icon{width:44px;height:44px;background:var(--rust-light);border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;font-weight:500;color:var(--rust);margin-bottom:1rem;letter-spacing:0.05em}
+.step-title{font-family:'Lora',serif;font-size:1.05rem;font-weight:600;margin-bottom:0.5rem}
+.step-body{font-size:0.85rem;color:var(--ink3);line-height:1.7}
+.step-time{display:inline-block;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:0.12em;text-transform:uppercase;background:var(--cream3);color:var(--ink3);padding:2px 7px;border-radius:2px;margin-top:0.75rem}
+/* FEATURES */
+.features-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.feature-row{display:flex;gap:1.25rem;align-items:flex-start;padding-bottom:1.75rem;border-bottom:1px solid var(--border)}
+.feature-row:last-child{border-bottom:none;padding-bottom:0}
+.feature-icon{width:40px;height:40px;border:1px solid var(--border2);border-radius:3px;background:white;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.feature-title{font-family:'Lora',serif;font-size:0.95rem;font-weight:600;margin-bottom:0.25rem}
+.feature-desc{font-size:0.82rem;color:var(--ink3);line-height:1.65}
+/* FEATURE PREVIEW */
+.fp-shell{border:1px solid var(--border);border-radius:4px;overflow:hidden;box-shadow:0 4px 20px var(--shadow)}
+.fp-bar{background:var(--cream2);border-bottom:1px solid var(--border);padding:0.75rem 1.25rem;display:flex;gap:6px}
+.fp-tab{font-family:'DM Mono',monospace;font-size:9px;color:var(--ink4);padding:3px 10px;border-radius:2px;text-transform:uppercase;letter-spacing:0.08em}
+.fp-tab.on{background:white;color:var(--rust)}
+.fp-body{background:white;padding:1.5rem;display:flex;flex-direction:column;gap:10px}
+.fp-row{display:flex;flex-direction:column;gap:2px}
+.fp-row.user{align-items:flex-end}
+/* TESTIMONIALS */
+.tcard{background:white;border:1px solid var(--border);border-radius:4px;padding:1.75rem}
+.tcard-stars{color:var(--rust);font-size:11px;letter-spacing:2px;margin-bottom:0.75rem}
+.tcard-quote{font-family:'Lora',serif;font-style:italic;font-size:0.9rem;line-height:1.7;color:var(--ink2);margin-bottom:1.25rem}
+.tcard-av{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0}
+.tcard-name{font-size:12px;font-weight:500;color:var(--ink)}
+.tcard-role{font-size:11px;color:var(--ink4)}
+/* PRICING PREVIEW */
+.pp-card{padding:2.25rem 1.75rem}
+.pp-card.featured{background:var(--ink);color:var(--cream)}
+.pp-plan{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink3);margin-bottom:0.75rem;display:block}
+.pp-card.featured .pp-plan{color:rgba(249,245,239,0.35)}
+.pp-price{font-family:'Lora',serif;font-size:2.2rem;font-weight:700;line-height:1;color:var(--ink);margin-bottom:0.25rem}
+.pp-card.featured .pp-price{color:var(--cream)}
+.pp-per{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink4);margin-bottom:1.25rem;display:block}
+.pp-card.featured .pp-per{color:rgba(249,245,239,0.35)}
+.pp-features{list-style:none;font-size:0.8rem;color:var(--ink3);line-height:2}
+.pp-card.featured .pp-features{color:rgba(249,245,239,0.55)}
+.pp-features li{display:flex;align-items:baseline;gap:6px}
+.pp-check{color:var(--sage);font-size:0.75rem}
+.pp-card.featured .pp-check{color:var(--rust2)}
+/* GUIDE CARDS */
+.guide-card{background:white;border:1px solid var(--border);border-radius:3px;padding:1.75rem;text-decoration:none;transition:all 0.15s;display:block}
+.guide-card:hover{border-color:var(--rust);transform:translateY(-2px);box-shadow:0 4px 16px var(--shadow)}
+.gc-tag{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:0.15em;text-transform:uppercase;color:var(--rust);margin-bottom:0.5rem;display:block}
+.gc-title{font-family:'Lora',serif;font-size:0.95rem;font-weight:600;color:var(--ink);line-height:1.3;margin-bottom:0.35rem}
+.gc-desc{font-size:0.78rem;color:var(--ink3);line-height:1.55;margin-bottom:0.75rem}
+.gc-read{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:var(--rust)}
+/* FINAL CTA */
+.final-cta{background:var(--ink);padding:7rem 0;text-align:center;position:relative;overflow:hidden}
+.final-cta::before{content:'';position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(196,98,45,0.1) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.fca{position:relative}
+.fca-eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--rust2);margin-bottom:1rem;display:block}
+.fca-title{font-family:'Lora',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:700;line-height:1.08;letter-spacing:-0.025em;color:var(--cream);margin-bottom:1rem;max-width:580px;margin-left:auto;margin-right:auto}
+.fca-title em{font-style:italic;color:var(--rust2)}
+.fca-sub{font-size:0.9rem;color:rgba(249,245,239,0.4);line-height:1.7;max-width:380px;margin:0 auto 2.25rem;font-weight:300}
+.fca-note{font-family:'DM Mono',monospace;font-size:9px;color:rgba(249,245,239,0.2);margin-top:0.875rem;letter-spacing:0.05em;text-transform:uppercase}
+
+@media(max-width:860px){
+  .problem-grid,.features-grid{grid-template-columns:1fr;gap:3rem}
+  .mockup-body{grid-template-columns:1fr}
+  .mockup-panel{border-right:none;border-bottom:1px solid var(--border)}
+  .mockup-panel:last-child{border-bottom:none}
+}
+@media(max-width:640px){
+  .hero{padding:5.5rem 0 3rem}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn{justify-content:center}
+  .hero-proof{gap:0.75rem}
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">Talk<span>Prep</span></a>
+  <div class="nav-center">
+    <a href="how-it-works.html" class="nav-tab">How it works</a>
+    <a href="scenarios.html" class="nav-tab">Scenarios</a>
+    <a href="guides.html" class="nav-tab">Guides</a>
+    <a href="pricing.html" class="nav-tab">Pricing</a>
+    <a href="about.html" class="nav-tab">About</a>
+  </div>
+  <div class="nav-right">
+    <a href="app.html" class="nav-pill nav-pill-filled">Start free →</a>
+    <button class="nav-mobile" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge"><span class="badge-dot"></span>Private · AI-powered · Ready in minutes</div>
+    <h1 class="hero-title">Stop rehearsing alone.<br>Walk into every hard conversation <em>ready.</em></h1>
+    <p class="hero-sub">Get your exact opening script, anticipate every response, and walk in prepared — for resignations, raises, family talks, and anything keeping you up at night.</p>
+    <div class="hero-actions">
+      <a href="app.html" class="btn btn-primary btn-lg">Prepare my conversation <span>→</span></a>
+      <a href="how-it-works.html" class="btn btn-secondary btn-lg">See how it works</a>
+    </div>
+    <div class="hero-proof">
+      <span>🔒 Completely private</span>
+      <span>⚡ Ready in 5 minutes</span>
+      <span>✦ Word-for-word scripts</span>
+      <span>🎯 No generic advice</span>
+    </div>
+
+    <!-- APP MOCKUP -->
+    <div class="mockup-wrap reveal">
+      <div class="mockup-shell">
+        <div class="mockup-bar">
+          <div class="mockup-dots">
+            <div class="mockup-dot" style="background:#FF5F57"></div>
+            <div class="mockup-dot" style="background:#FEBC2E"></div>
+            <div class="mockup-dot" style="background:#28C840"></div>
+          </div>
+          <span class="mockup-title">TalkPrep — Resignation prep guide</span>
+        </div>
+        <div class="mockup-tabs">
+          <span class="mockup-tab on">Prep guide</span>
+          <span class="mockup-tab">Practice</span>
+          <span class="mockup-tab">Review</span>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-panel">
+            <span class="mockup-rs-label">💬 Your opening script</span>
+            <p class="mockup-rs-title">Exactly what to say first</p>
+            <div class="mockup-script">"Hey, do you have a few minutes? There's something important I need to share with you. I've made the decision to resign — I've accepted an opportunity I couldn't turn down, and I wanted to tell you in person rather than over email."</div>
+            <span class="tag tag-rust">Scroll to see more ↓</span>
+          </div>
+          <div class="mockup-panel">
+            <span class="mockup-rs-label">🔄 What they might say</span>
+            <p class="mockup-rs-title">3 responses, handled</p>
+            <div class="mockup-response"><strong>If they offer more money</strong>"I really appreciate that — but this isn't purely about compensation. It's about the direction I need to go next."</div>
+            <div class="mockup-response"><strong>If they get emotional</strong>"I hear how you feel, and I understand. That's part of what makes this hard. This doesn't reflect anything wrong with you or this team."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="section-dark">
+  <div class="container">
+    <div class="problem-grid">
+      <div class="reveal">
+        <span class="section-tag" style="color:var(--rust2)">The problem</span>
+        <h2 class="problem-title">You're going in <em>completely unprepared.</em></h2>
+        <p class="problem-body">You've been rehearsing this in your head for days. But mental rehearsal alone doesn't prepare you for the moment they push back, get emotional, or say something you didn't anticipate. The words you planned evaporate. And the conversation goes sideways.</p>
+      </div>
+      <ul class="pain-list reveal reveal-d1">
+        <li class="pain-item"><div class="pain-icon">😰</div><p class="pain-text"><strong>You freeze when it matters most.</strong> The moment they respond defensively, everything you prepared disappears.</p></li>
+        <li class="pain-item"><div class="pain-icon">🔁</div><p class="pain-text"><strong>You rehearse in an echo chamber.</strong> Your internal practice doesn't anticipate what they'll actually say.</p></li>
+        <li class="pain-item"><div class="pain-icon">💸</div><p class="pain-text"><strong>Good coaching costs $300/hour.</strong> Most people just go in and wing it.</p></li>
+        <li class="pain-item"><div class="pain-icon">🤐</div><p class="pain-text"><strong>You can't tell anyone.</strong> The most personal conversations are the ones you can't practice with a friend.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="section-tag reveal">How it works</span>
+    <h2 class="section-title reveal">Three steps to ready.</h2>
+    <p class="section-hint reveal" style="margin-bottom:2.5rem">From dreading a conversation to walking in prepared — in under five minutes.</p>
+    <div class="card-grid reveal" style="grid-template-columns:repeat(3,1fr)">
+      <div class="cg-item cg-item-white">
+        <div class="step-icon">01</div>
+        <h3 class="step-title">Describe your situation</h3>
+        <p class="step-body">Tell TalkPrep who you're talking to, what's going on, and what a good outcome looks like. The more specific, the more precise your prep.</p>
+        <span class="step-time">2 minutes</span>
+      </div>
+      <div class="cg-item cg-item-white">
+        <div class="step-icon">02</div>
+        <h3 class="step-title">Get your exact script</h3>
+        <p class="step-body">Word-for-word opening lines, 3 anticipated responses with exact replies, a fallback plan, and a grounding thought — tailored to your situation.</p>
+        <span class="step-time">Instant</span>
+      </div>
+      <div class="cg-item cg-item-white">
+        <div class="step-icon">03</div>
+        <h3 class="step-title">Practice the exchange</h3>
+        <p class="step-body">Role-play with AI playing the person you described — realistically. Get an annotated transcript. Score your session. Debrief after the real conversation.</p>
+        <span class="step-time">Optional but powerful</span>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:1.5rem">
+      <a href="how-it-works.html" class="btn btn-secondary">See the full walkthrough →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+  <div class="container">
+    <div class="features-grid">
+      <div>
+        <span class="section-tag reveal">Features</span>
+        <h2 class="section-title reveal">Built for the real conversation.</h2>
+        <div style="margin-top:2rem;display:flex;flex-direction:column;gap:1.75rem" class="reveal">
+          <div class="feature-row">
+            <div class="feature-icon">📝</div>
+            <div><h3 class="feature-title">Exact scripts — not generic advice</h3><p class="feature-desc">Real words for your specific situation. Not "be direct." The actual sentence to say.</p></div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-icon">🎭</div>
+            <div><h3 class="feature-title">Persona-depth role-play</h3><p class="feature-desc">Set their emotional intensity, defensiveness, and communication style. The AI plays them realistically.</p></div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-icon">💡</div>
+            <div><h3 class="feature-title">Live strategy nudges</h3><p class="feature-desc">During practice, coaching tips appear in real time — focused on strategy, not delivery.</p></div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-icon">📊</div>
+            <div><h3 class="feature-title">Progress dashboard</h3><p class="feature-desc">Track your clarity, composure, and outcome scores. See what you're getting better at.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="fp-shell">
+          <div class="fp-bar">
+            <span class="fp-tab">Prep</span>
+            <span class="fp-tab on">Practice</span>
+            <span class="fp-tab">Review</span>
+          </div>
+          <div class="fp-body">
+            <div class="fp-row user">
+              <p class="cb-label" style="text-align:right">You</p>
+              <div class="cb-user">I wanted to speak with you today — I've made the decision to resign. I've accepted an offer I couldn't turn down.</div>
+            </div>
+            <div class="fp-row">
+              <p class="cb-label">Your Manager</p>
+              <div class="cb-ai">This is really surprising. I had no idea you were considering this. Is this because of something that happened here?</div>
+            </div>
+            <div class="fp-row user">
+              <p class="cb-label" style="text-align:right">You</p>
+              <div class="cb-user">Nothing happened here — I've genuinely valued this place. This is about where I need to go next for my own growth.</div>
+            </div>
+            <div class="nudge">
+              <span>💡</span>
+              <span><strong>Coach:</strong> Good — you didn't take the bait. Now redirect to the handover before they probe further.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCENARIOS -->
+<section class="section-dark">
+  <div class="container">
+    <span class="section-tag reveal" style="color:var(--rust2)">Scenarios</span>
+    <h2 class="section-title reveal" style="color:var(--cream)">Every conversation that matters.</h2>
+    <div class="dark-grid reveal" style="grid-template-columns:repeat(3,1fr);margin-top:2rem">
+      <a href="how-to-resign-from-a-job.html" class="dg-item"><span class="dg-icon">🚪</span><h3 class="dg-title">Resigning from a job</h3><p class="dg-desc">Leave gracefully. Handle counter-offers. Keep the relationship.</p></a>
+      <a href="app.html" class="dg-item"><span class="dg-icon">💰</span><h3 class="dg-title">Asking for a raise</h3><p class="dg-desc">Know your worth. Hold your ground. Get what you deserve.</p></a>
+      <a href="app.html" class="dg-item"><span class="dg-icon">👨‍👩‍👧</span><h3 class="dg-title">Family conversations</h3><p class="dg-desc">Boundaries, hard truths, and things left unsaid too long.</p></a>
+      <a href="app.html" class="dg-item"><span class="dg-icon">❤️</span><h3 class="dg-title">Relationship talks</h3><p class="dg-desc">The conversations that could change everything — said with care.</p></a>
+      <a href="app.html" class="dg-item"><span class="dg-icon">💬</span><h3 class="dg-title">Giving hard feedback</h3><p class="dg-desc">Tell someone the truth in a way they can actually hear.</p></a>
+      <a href="scenarios.html" class="dg-item"><span class="dg-icon">→</span><h3 class="dg-title">See all 11 scenarios</h3><p class="dg-desc">Firings, client bad news, landlords, setting boundaries, and more.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="section-tag reveal">What people say</span>
+    <h2 class="section-title reveal">Used before the hardest conversation of their year.</h2>
+    <div class="card-grid reveal" style="grid-template-columns:repeat(3,1fr);margin-top:2rem">
+      <div class="tcard cg-item-white">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-quote">"I used TalkPrep the night before my resignation. My manager tried three different counter-offers and I handled every one. I walked out with the relationship intact. I was shocked how prepared I was."</p>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div class="tcard-av" style="background:var(--rust-light);color:var(--rust)">SK</div>
+          <div><p class="tcard-name">Sarah K.</p><p class="tcard-role">Software engineer · Resigned after 5 years</p></div>
+        </div>
+      </div>
+      <div class="tcard cg-item-white">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-quote">"My mother and I hadn't had an honest conversation in years. TalkPrep gave me words I actually believed in. She cried. Then we talked for three hours. I don't know if that would have happened without this."</p>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div class="tcard-av" style="background:var(--sage-light);color:var(--sage)">MR</div>
+          <div><p class="tcard-name">Marcus R.</p><p class="tcard-role">Used for a family conversation</p></div>
+        </div>
+      </div>
+      <div class="tcard cg-item-white">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-quote">"I'd tried to ask for a raise twice before and always caved. I used role-play mode until I stopped flinching when they pushed back. Got $22k more. The practice made the real thing feel almost easy."</p>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div class="tcard-av" style="background:#e8eeff;color:#185FA5">JL</div>
+          <div><p class="tcard-name">Jordan L.</p><p class="tcard-role">Marketing director · Salary negotiation</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING PREVIEW -->
+<section class="section">
+  <div class="container">
+    <span class="section-tag reveal" style="text-align:center;display:block">Pricing</span>
+    <h2 class="section-title reveal" style="text-align:center">Less than one hour of coaching.</h2>
+    <p class="section-hint reveal" style="text-align:center;margin:0 auto 2rem;max-width:420px">Three options. Start free — no credit card. Less than a single therapy session.</p>
+    <div class="card-grid reveal" style="grid-template-columns:repeat(3,1fr);max-width:780px;margin:0 auto">
+      <div class="pp-card cg-item-white">
+        <span class="pp-plan">Single session</span>
+        <div class="pp-price">$4.99</div>
+        <span class="pp-per">one conversation</span>
+        <ul class="pp-features">
+          <li><span class="pp-check">✓</span> Full prep guide</li>
+          <li><span class="pp-check">✓</span> Role-play practice</li>
+          <li><span class="pp-check">✓</span> Debrief included</li>
+        </ul>
+        <a href="app.html" class="btn btn-secondary btn-sm" style="margin-top:1.5rem;width:100%;justify-content:center">Get started</a>
+      </div>
+      <div class="pp-card cg-item-ink">
+        <span class="pp-plan">Monthly</span>
+        <div class="pp-price">$12.99</div>
+        <span class="pp-per">per month</span>
+        <ul class="pp-features">
+          <li><span class="pp-check">✓</span> Unlimited conversations</li>
+          <li><span class="pp-check">✓</span> Progress dashboard</li>
+          <li><span class="pp-check">✓</span> Annotated transcripts</li>
+          <li><span class="pp-check">✓</span> Cancel anytime</li>
+        </ul>
+        <a href="app.html" class="btn btn-rust btn-sm" style="margin-top:1.5rem;width:100%;justify-content:center">Start free trial →</a>
+      </div>
+      <div class="pp-card cg-item-white">
+        <span class="pp-plan">Annual</span>
+        <div class="pp-price">$79</div>
+        <span class="pp-per">per year · $6.58/mo</span>
+        <ul class="pp-features">
+          <li><span class="pp-check">✓</span> Everything in Monthly</li>
+          <li><span class="pp-check">✓</span> Save 49%</li>
+          <li><span class="pp-check">✓</span> Export history</li>
+        </ul>
+        <a href="pricing.html" class="btn btn-secondary btn-sm" style="margin-top:1.5rem;width:100%;justify-content:center">See full pricing</a>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:1rem;font-family:'DM Mono',monospace;font-size:9px;color:var(--ink4);letter-spacing:0.08em;text-transform:uppercase">First 3 sessions free · No credit card required</p>
+  </div>
+</section>
+
+<!-- GUIDES -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="section-tag reveal">Conversation guides</span>
+    <h2 class="section-title reveal">Scripts for the conversations everyone is Googling.</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem" class="reveal">
+      <a href="how-to-resign-from-a-job.html" class="guide-card"><span class="gc-tag">Career · 12 min read</span><h3 class="gc-title">How to Resign from a Job Gracefully (With Exact Scripts)</h3><p class="gc-desc">The exact words — including how to handle counter-offers, guilt trips, and every manager response.</p><span class="gc-read">Read guide →</span></a>
+      <a href="guides.html" class="guide-card"><span class="gc-tag">Career · Coming soon</span><h3 class="gc-title">How to Ask for a Raise (Word-for-Word Scripts)</h3><p class="gc-desc">Anchor your number, handle "not right now," and know when to hold firm.</p><span class="gc-read" style="color:var(--ink4)">Notify me →</span></a>
+      <a href="guides.html" class="guide-card"><span class="gc-tag">Personal · Coming soon</span><h3 class="gc-title">How to Set a Boundary With a Family Member</h3><p class="gc-desc">What to actually say to someone you love — without the guilt spiral.</p><span class="gc-read" style="color:var(--ink4)">Notify me →</span></a>
+    </div>
+    <div style="text-align:center;margin-top:1.5rem"><a href="guides.html" class="btn btn-secondary">See all guides →</a></div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container fca">
+    <span class="fca-eyebrow">You already know what you need to say.</span>
+    <h2 class="fca-title">Stop rehearsing alone.<br><em>Walk in ready.</em></h2>
+    <p class="fca-sub">The conversation isn't going to get easier by waiting. Prepare in five minutes.</p>
+    <a href="app.html" class="btn btn-rust btn-lg">Prepare my conversation →</a>
+    <p class="fca-note">First 3 sessions free · No credit card required</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div>
+      <a href="index.html" class="footer-logo">Talk<span>Prep</span></a>
+      <p class="footer-tagline">A private thinking partner for conversations that actually matter. AI-powered. Judgment-free.</p>
+    </div>
+    <div>
+      <span class="footer-col-title">Product</span>
+      <ul class="footer-links-list">
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="scenarios.html">Scenarios</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="app.html">Open app</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="footer-col-title">Guides</span>
+      <ul class="footer-links-list">
+        <li><a href="how-to-resign-from-a-job.html">How to resign</a></li>
+        <li><a href="guides.html">Ask for a raise</a></li>
+        <li><a href="guides.html">All guides</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="footer-col-title">Company</span>
+      <ul class="footer-links-list">
+        <li><a href="about.html">About</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 TalkPrep. All rights reserved.</span>
+    <div class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+  </div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('in');obs.unobserve(el.target)}})},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

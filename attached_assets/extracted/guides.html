@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversation Guides — TalkPrep</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.page-hero{padding:4rem 0 3rem;border-bottom:1px solid var(--border)}
+.featured-guide{background:var(--ink);border-radius:4px;overflow:hidden;margin-bottom:2.5rem;display:grid;grid-template-columns:1fr 1fr}
+.fg-body{padding:2.5rem 2.5rem;color:var(--cream)}
+.fg-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;background:rgba(196,98,45,0.2);color:var(--rust2);padding:3px 9px;border-radius:2px;display:inline-block;margin-bottom:0.875rem}
+.fg-title{font-family:'Lora',serif;font-size:1.4rem;font-weight:700;line-height:1.2;margin-bottom:0.75rem;letter-spacing:-0.01em}
+.fg-title em{font-style:italic;color:var(--rust2)}
+.fg-meta{font-family:'DM Mono',monospace;font-size:9px;color:rgba(249,245,239,0.3);margin-bottom:1rem;letter-spacing:0.06em}
+.fg-desc{font-size:0.875rem;color:rgba(249,245,239,0.5);line-height:1.7;margin-bottom:1.5rem}
+.fg-visual{background:var(--cream2);display:flex;align-items:center;justify-content:center;font-size:4rem}
+.guide-card{background:white;border:1px solid var(--border);border-radius:3px;padding:1.75rem;text-decoration:none;transition:all 0.15s;display:block}
+.guide-card:hover{border-color:var(--rust);transform:translateY(-2px);box-shadow:0 4px 16px var(--shadow)}
+.guide-card.disabled{pointer-events:none;opacity:0.6}
+.gc-status{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:0.12em;text-transform:uppercase;color:var(--rust);margin-bottom:0.5rem;display:block}
+.gc-status.soon{color:var(--ink4)}
+.gc-title{font-family:'Lora',serif;font-size:0.95rem;font-weight:600;color:var(--ink);line-height:1.3;margin-bottom:0.35rem}
+.gc-desc{font-size:0.78rem;color:var(--ink3);line-height:1.55;margin-bottom:0.75rem}
+.gc-link{font-family:'DM Mono',monospace;font-size:9px;color:var(--rust);letter-spacing:0.08em;text-transform:uppercase}
+.nl-bar{background:var(--cream2);border:1px solid var(--border);border-radius:4px;padding:2rem;text-align:center;margin-top:2rem}
+.nl-form{display:flex;gap:8px;max-width:380px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.nl-input{flex:1;min-width:180px;padding:9px 13px;border:1px solid var(--border2);border-radius:3px;font-family:'DM Sans',sans-serif;font-size:0.875rem;outline:none}
+.nl-input:focus{border-color:var(--rust)}
+@media(max-width:760px){.featured-guide{grid-template-columns:1fr}.fg-visual{display:none}}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">Talk<span>Prep</span></a>
+  <div class="nav-center">
+    <a href="how-it-works.html" class="nav-tab">How it works</a>
+    <a href="scenarios.html" class="nav-tab">Scenarios</a>
+    <a href="guides.html" class="nav-tab active">Guides</a>
+    <a href="pricing.html" class="nav-tab">Pricing</a>
+    <a href="about.html" class="nav-tab">About</a>
+  </div>
+  <div class="nav-right"><a href="app.html" class="nav-pill nav-pill-filled">Start free →</a><button class="nav-mobile">☰</button></div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="section-tag">Guides</span>
+    <h1 class="section-title" style="font-size:clamp(2rem,4vw,3rem);margin-bottom:0.75rem">Scripts for the conversations everyone is Googling.</h1>
+    <p class="section-hint" style="max-width:500px">Free guides with exact scripts for the hardest conversations. Each one has TalkPrep embedded so you can get a personalized version for your specific situation.</p>
+  </div>
+</section>
+
+<section style="padding:3rem 0 4rem">
+  <div class="container">
+    <div class="featured-guide reveal">
+      <div class="fg-body">
+        <span class="fg-tag">Latest guide</span>
+        <h2 class="fg-title">How to Resign from a Job Gracefully <em>(With Exact Scripts)</em></h2>
+        <p class="fg-meta">Career · 12 min read · May 2026</p>
+        <p class="fg-desc">The exact words to say in the first 60 seconds — and how to handle counter-offers, guilt trips, and every manager response. Includes the resignation email template.</p>
+        <a href="how-to-resign-from-a-job.html" class="btn btn-rust">Read the guide →</a>
+      </div>
+      <div class="fg-visual">🚪</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem" class="reveal">
+      <a href="how-to-resign-from-a-job.html" class="guide-card"><span class="gc-status">Available now</span><h3 class="gc-title">How to Resign from a Job (With Exact Scripts)</h3><p class="gc-desc">Opening script, counter-offer handling, the resignation email, and what to do the day after.</p><span class="gc-link">Read →</span></a>
+      <a href="#" class="guide-card disabled"><span class="gc-status soon">Coming soon</span><h3 class="gc-title">How to Ask for a Raise (Word-for-Word Scripts)</h3><p class="gc-desc">Anchor your number, handle "not right now," and know when to walk away.</p><span class="gc-link" style="color:var(--ink4)">Notify me →</span></a>
+      <a href="#" class="guide-card disabled"><span class="gc-status soon">Coming soon</span><h3 class="gc-title">How to Fire Someone With Dignity</h3><p class="gc-desc">The conversation nobody wants to have — done with clarity, legality, and humanity.</p><span class="gc-link" style="color:var(--ink4)">Notify me →</span></a>
+      <a href="#" class="guide-card disabled"><span class="gc-status soon">Coming soon</span><h3 class="gc-title">How to Set a Boundary With a Family Member</h3><p class="gc-desc">What to actually say to someone you love — without the guilt spiral that usually follows.</p><span class="gc-link" style="color:var(--ink4)">Notify me →</span></a>
+      <a href="#" class="guide-card disabled"><span class="gc-status soon">Coming soon</span><h3 class="gc-title">How to Give a Negative Performance Review</h3><p class="gc-desc">The truth, said directly — honest without being cruel, actionable without being vague.</p><span class="gc-link" style="color:var(--ink4)">Notify me →</span></a>
+      <a href="#" class="guide-card disabled"><span class="gc-status soon">Coming soon</span><h3 class="gc-title">How to Tell Your Partner Something Difficult</h3><p class="gc-desc">The conversation you've been avoiding. Said with care, not fear.</p><span class="gc-link" style="color:var(--ink4)">Notify me →</span></a>
+    </div>
+
+    <div class="nl-bar reveal">
+      <h3 style="font-family:'Lora',serif;font-size:1.15rem;font-weight:600;margin-bottom:0.35rem">New guide every two weeks.</h3>
+      <p style="font-size:0.875rem;color:var(--ink3);margin-bottom:1.1rem">Get notified when the next guide publishes — no spam.</p>
+      <div class="nl-form">
+        <input type="email" class="nl-input" placeholder="your@email.com">
+        <button class="btn btn-rust">Notify me</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="footer-top"><div><a href="index.html" class="footer-logo">Talk<span>Prep</span></a><p class="footer-tagline">A private thinking partner for conversations that actually matter.</p></div><div><span class="footer-col-title">Product</span><ul class="footer-links-list"><li><a href="how-it-works.html">How it works</a></li><li><a href="scenarios.html">Scenarios</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="app.html">Open app</a></li></ul></div><div><span class="footer-col-title">Guides</span><ul class="footer-links-list"><li><a href="how-to-resign-from-a-job.html">How to resign</a></li><li><a href="guides.html">All guides</a></li></ul></div><div><span class="footer-col-title">Company</span><ul class="footer-links-list"><li><a href="about.html">About</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div></div><div class="footer-bottom"><span class="footer-copy">© 2026 TalkPrep</span><div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div></footer>
+<script>const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add("in");obs.unobserve(el.target)}})},{threshold:0.08});document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));</script>
+</body>
+</html>
