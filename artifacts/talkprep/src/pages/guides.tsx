@@ -65,16 +65,36 @@ const liveGuides = [
     desc: "The conversation you've been avoiding. Said with care, not fear — and without it becoming a fight.",
     tag: "Relationships",
   },
+  {
+    href: "/how-to-deliver-bad-news-to-a-client",
+    title: "How to Deliver Bad News to a Client (Without Losing the Relationship)",
+    desc: "Delays, missed targets, mistakes — things go wrong. What matters is how you deliver the news.",
+    tag: "Management",
+  },
+  {
+    href: "/how-to-give-negative-feedback-that-actually-lands",
+    title: "How to Give Negative Feedback That Actually Lands",
+    desc: "The four-part structure that sits between meaningless softness and defensiveness-triggering bluntness.",
+    tag: "Career",
+  },
+  {
+    href: "/how-to-negotiate-anything",
+    title: "How to Negotiate Anything (Without Feeling Like a Jerk)",
+    desc: "Scripts for salary, rent, contractor quotes, and any negotiation where you want better terms.",
+    tag: "Negotiation",
+  },
+  {
+    href: "/why-you-freeze-in-hard-conversations",
+    title: "Why You Freeze in Hard Conversations (And What to Do)",
+    desc: "The neuroscience behind going blank under pressure — and the rehearsal technique that actually works.",
+    tag: "Psychology",
+  },
 ];
 
 const upcomingGuides = [
   {
     title: "How to Ask for a Raise (Word-for-Word Scripts)",
     desc: 'Anchor your number, handle "not right now," and know when to walk away.',
-  },
-  {
-    title: "Why You Freeze in Hard Conversations (And What to Do)",
-    desc: "The neuroscience behind going blank under pressure — and the rehearsal technique that works.",
   },
 ];
 

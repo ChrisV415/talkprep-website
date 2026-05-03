@@ -17,6 +17,10 @@ import DifficultFeedback from "@/pages/difficult-feedback";
 import PerformanceReview from "@/pages/performance-review";
 import BoundaryFamily from "@/pages/boundary-family";
 import PartnerDifficult from "@/pages/partner-difficult";
+import DeliverBadNewsClient from "@/pages/deliver-bad-news-client";
+import NegativeFeedback from "@/pages/negative-feedback";
+import NegotiateAnything from "@/pages/negotiate-anything";
+import FreezeConversations from "@/pages/freeze-conversations";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +35,10 @@ function Router() {
       <Route path="/how-to-have-a-performance-review-conversation" component={PerformanceReview} />
       <Route path="/how-to-set-a-boundary-with-family" component={BoundaryFamily} />
       <Route path="/how-to-tell-partner-something-difficult" component={PartnerDifficult} />
+      <Route path="/how-to-deliver-bad-news-to-a-client" component={DeliverBadNewsClient} />
+      <Route path="/how-to-give-negative-feedback-that-actually-lands" component={NegativeFeedback} />
+      <Route path="/how-to-negotiate-anything" component={NegotiateAnything} />
+      <Route path="/why-you-freeze-in-hard-conversations" component={FreezeConversations} />
       <Route path="/how-it-works" component={HowItWorks} />
       <Route path="/pricing" component={Pricing} />
       <Route path="/scenarios" component={Scenarios} />
