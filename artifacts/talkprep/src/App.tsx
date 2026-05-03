@@ -21,6 +21,9 @@ import DeliverBadNewsClient from "@/pages/deliver-bad-news-client";
 import NegativeFeedback from "@/pages/negative-feedback";
 import NegotiateAnything from "@/pages/negotiate-anything";
 import FreezeConversations from "@/pages/freeze-conversations";
+import Privacy from "@/pages/privacy";
+import Terms from "@/pages/terms";
+import Support from "@/pages/support";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +48,9 @@ function Router() {
       <Route path="/guides" component={Guides} />
       <Route path="/about" component={About} />
       <Route path="/blog" component={Blog} />
+      <Route path="/privacy" component={Privacy} />
+      <Route path="/terms" component={Terms} />
+      <Route path="/support" component={Support} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -177,6 +177,13 @@ export default function Pricing() {
           <p style={{ textAlign: "center", marginTop: "1.25rem", fontFamily: "'DM Mono',monospace", fontSize: "9px", color: "var(--ink4)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
             First 3 sessions free · No credit card required
           </p>
+          <div className="guarantee-badge">
+            <span className="guarantee-icon">🛡️</span>
+            <div>
+              <strong>7-day money-back guarantee</strong>
+              <span>Not happy within 7 days? Full refund, no questions asked.</span>
+            </div>
+          </div>
         </div>
       </section>
 

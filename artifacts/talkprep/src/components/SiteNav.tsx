@@ -4,6 +4,7 @@ import { Link, useLocation } from "wouter";
 export default function SiteNav() {
   const [location] = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [announced, setAnnounced] = useState(true);
 
   const tabs = [
     { label: "How it works", path: "/how-it-works" },
@@ -15,6 +16,13 @@ export default function SiteNav() {
 
   return (
     <>
+      {announced && (
+        <div className="announce-bar">
+          <span>🎉 Negotiation & client conversation prep now live</span>
+          <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer">Try it free →</a>
+          <button className="announce-close" onClick={() => setAnnounced(false)} aria-label="Dismiss">✕</button>
+        </div>
+      )}
       <nav className="site-nav">
         <Link href="/" className="nav-logo">
           Talk<span>Prep</span>

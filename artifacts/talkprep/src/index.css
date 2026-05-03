@@ -523,6 +523,123 @@
 }
 .footer-legal a:hover { color: rgba(249, 245, 239, 0.5); }
 
+/* ANNOUNCEMENT BAR */
+.announce-bar {
+  background: var(--ink); color: var(--cream); text-align: center;
+  padding: 0.55rem 2.5rem; display: flex; align-items: center; justify-content: center;
+  gap: 1rem; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.07em;
+  position: relative;
+}
+.announce-bar a { color: var(--rust2); text-decoration: none; font-weight: 600; white-space: nowrap; }
+.announce-bar a:hover { text-decoration: underline; }
+.announce-close {
+  background: none; border: none; color: rgba(249,245,239,0.35); cursor: pointer;
+  font-size: 13px; padding: 0; position: absolute; right: 1.25rem; transition: color 0.15s;
+  line-height: 1;
+}
+.announce-close:hover { color: var(--cream); }
+
+/* STATS STRIP */
+.stats-strip {
+  background: white; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  padding: 1.5rem 2.5rem; display: flex; align-items: center; justify-content: center;
+  gap: 0; flex-wrap: wrap;
+}
+.stat-item { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; padding: 0 2.5rem; }
+.stat-num {
+  font-family: 'Lora', serif; font-size: 1.6rem; font-weight: 700;
+  color: var(--ink); letter-spacing: -0.02em; line-height: 1;
+}
+.stat-lbl {
+  font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ink4);
+}
+.stat-div { width: 1px; height: 40px; background: var(--border); flex-shrink: 0; }
+
+/* COMPARISON TABLE */
+.compare-wrap { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 2.5rem; }
+.compare-card {
+  border: 1px solid var(--border); border-radius: 4px; padding: 2rem 1.75rem; background: white;
+}
+.compare-card.featured { background: var(--ink); border-color: var(--ink); }
+.compare-tag {
+  display: inline-block; font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px;
+  margin-bottom: 0.75rem; background: var(--cream2); color: var(--ink4);
+}
+.compare-card.featured .compare-tag { background: rgba(196,98,45,0.2); color: var(--rust2); }
+.compare-title { font-family: 'Lora', serif; font-size: 1.3rem; font-weight: 700; color: var(--ink); margin-bottom: 0; }
+.compare-card.featured .compare-title { color: var(--cream); }
+.compare-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; margin-top: 1.25rem; }
+.compare-row { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.82rem; line-height: 1.5; color: var(--ink2); }
+.compare-card.featured .compare-row { color: rgba(249,245,239,0.6); }
+.compare-row.dim { color: var(--ink4); }
+.compare-card.featured .compare-row.dim { color: rgba(249,245,239,0.25); }
+.compare-check { flex-shrink: 0; font-size: 0.8rem; padding-top: 0.05rem; }
+.compare-cost { margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border); }
+.compare-card.featured .compare-cost { border-top-color: rgba(249,245,239,0.1); }
+.compare-cost-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink4); display: block; }
+.compare-card.featured .compare-cost-label { color: rgba(249,245,239,0.35); }
+.compare-cost-val { font-family: 'Lora', serif; font-size: 1.4rem; font-weight: 700; color: var(--ink); margin-top: 0.25rem; display: block; }
+.compare-card.featured .compare-cost-val { color: var(--cream); }
+
+/* TEAMS SECTION */
+.teams-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 4rem; align-items: center; }
+.teams-list { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; margin-top: 1.5rem; }
+.teams-list li { font-size: 0.88rem; color: rgba(249,245,239,0.6); display: flex; align-items: center; gap: 0.6rem; }
+.teams-list li::before { content: '✓'; color: var(--rust2); flex-shrink: 0; font-size: 0.8rem; }
+.teams-pricing-card {
+  background: rgba(249,245,239,0.04); border: 1px solid rgba(249,245,239,0.1);
+  border-radius: 4px; padding: 2.5rem 2rem;
+}
+.tp-price-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(249,245,239,0.35); display: block; margin-bottom: 0.75rem; }
+.tp-price { font-family: 'Lora', serif; font-size: 2.5rem; font-weight: 700; color: var(--cream); letter-spacing: -0.03em; line-height: 1; }
+.tp-price-per { font-size: 0.8rem; color: rgba(249,245,239,0.4); margin-top: 0.25rem; display: block; }
+.tp-price-features { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(249,245,239,0.08); }
+.tp-price-features li { font-size: 0.85rem; color: rgba(249,245,239,0.5); display: flex; align-items: flex-start; gap: 0.6rem; }
+.tp-price-features li::before { content: '✓'; color: var(--rust2); flex-shrink: 0; padding-top: 0.05rem; }
+
+/* GUARANTEE BADGE */
+.guarantee-badge {
+  display: flex; align-items: center; gap: 1rem; max-width: 460px; margin: 1.5rem auto 0;
+  padding: 1rem 1.25rem; background: rgba(196,98,45,0.05); border: 1px solid rgba(196,98,45,0.2);
+  border-radius: 4px; text-align: left;
+}
+.guarantee-icon { font-size: 1.4rem; flex-shrink: 0; }
+.guarantee-badge strong { display: block; font-size: 0.875rem; color: var(--ink); margin-bottom: 0.2rem; font-weight: 700; }
+.guarantee-badge span { font-size: 0.8rem; color: var(--ink3); }
+
+/* LEGAL PAGES */
+.legal-page { padding: 5rem 0 6rem; }
+.legal-header { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+.legal-title { font-family: 'Lora', serif; font-size: clamp(2rem,4vw,2.8rem); font-weight: 700; margin-top: 0.5rem; }
+.legal-date { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink4); margin-top: 0.75rem; }
+.legal-body h2 { font-family: 'Lora', serif; font-size: 1.15rem; font-weight: 700; margin: 2.5rem 0 0.65rem; }
+.legal-body p { font-size: 0.9rem; color: var(--ink2); line-height: 1.85; margin-bottom: 1rem; }
+.legal-body ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+.legal-body ul li { font-size: 0.9rem; color: var(--ink2); line-height: 1.85; margin-bottom: 0.4rem; }
+.legal-body a { color: var(--rust); text-decoration: none; }
+.legal-body a:hover { text-decoration: underline; }
+
+/* SUPPORT PAGE */
+.support-hero { padding: 5rem 0 3rem; text-align: center; }
+.support-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 2rem; }
+.support-card { padding: 1.75rem; border: 1px solid var(--border); border-radius: 4px; background: white; }
+.support-card-icon { font-size: 1.5rem; margin-bottom: 1rem; }
+.support-card h3 { font-family: 'Lora', serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.support-card p { font-size: 0.85rem; color: var(--ink3); line-height: 1.65; }
+.support-accordion { display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.support-acc-item { border-bottom: 1px solid var(--border); }
+.support-acc-item:last-child { border-bottom: none; }
+.support-acc-btn { width: 100%; text-align: left; padding: 1.1rem 1.5rem; background: white; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 0.875rem; font-weight: 600; color: var(--ink); transition: background 0.15s; }
+.support-acc-btn:hover { background: var(--cream2); }
+.support-acc-body { padding: 0 1.5rem 1.25rem; font-size: 0.875rem; color: var(--ink2); line-height: 1.8; }
+.support-acc-body p { margin: 0 0 0.75rem; }
+.contact-strip { background: var(--ink); padding: 5rem 0; text-align: center; }
+.contact-strip h2 { font-family: 'Lora', serif; font-size: 2rem; font-weight: 700; color: var(--cream); margin-bottom: 0.75rem; }
+.contact-strip p { color: rgba(249,245,239,0.5); font-size: 0.9rem; margin-bottom: 2rem; }
+.contact-options { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; }
+
 /* ---- HOME PAGE ---- */
 .tp-page .hero {
   padding: 7rem 0 4rem; text-align: center; position: relative; overflow: hidden;

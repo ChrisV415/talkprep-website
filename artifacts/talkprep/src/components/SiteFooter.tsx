@@ -102,16 +102,17 @@ export default function SiteFooter() {
           <span className="footer-col-title">Company</span>
           <ul className="footer-links-list">
             <li><Link href="/about">About</Link></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms</a></li>
+            <li><Link href="/support">Support</Link></li>
+            <li><Link href="/privacy">Privacy</Link></li>
+            <li><Link href="/terms">Terms</Link></li>
           </ul>
         </div>
       </div>
       <div className="footer-bottom">
         <span className="footer-copy">© 2026 TalkPrep. All rights reserved.</span>
         <div className="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/terms">Terms of Service</Link>
         </div>
       </div>
     </footer>
