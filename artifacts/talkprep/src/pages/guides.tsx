@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import SEO from "@/components/SEO";
 
 function useReveal() {
   useEffect(() => {
@@ -51,6 +52,11 @@ export default function Guides() {
 
   return (
     <div className="tp-page">
+      <SEO
+        title="Conversation Scripts & Guides — How to Say the Hard Thing"
+        description="Free guides with word-for-word scripts for the hardest conversations: how to resign, ask for a raise, set a boundary, fire someone, and more. New guide every two weeks."
+        canonical="/guides"
+      />
       <SiteNav />
 
       <section className="page-hero" style={{ textAlign: "left" }}>

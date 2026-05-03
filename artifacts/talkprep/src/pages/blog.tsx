@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import SEO from "@/components/SEO";
 
 function useReveal() {
   useEffect(() => {
@@ -113,6 +114,11 @@ export default function Blog() {
 
   return (
     <div className="tp-page">
+      <SEO
+        title="TalkPrep Blog — Scripts and Thinking for Hard Conversations"
+        description="Practical guides on how to say the hard thing — word for word, with the psychology behind why it works. Resignations, raises, boundaries, feedback, and more."
+        canonical="/blog"
+      />
       <SiteNav />
 
       {/* HERO */}

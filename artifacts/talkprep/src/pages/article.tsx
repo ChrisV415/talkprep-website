@@ -1,5 +1,35 @@
 import { useState, useRef, useEffect, ReactNode } from "react";
 import { Link } from "wouter";
+import SEO from "@/components/SEO";
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "How to Resign from a Job Gracefully (With Exact Scripts)",
+  description:
+    "The exact words to say in the first 60 seconds of your resignation conversation — and how to handle counter-offers, guilt trips, and every manager response.",
+  image: "https://talkprep.co/opengraph.jpg",
+  datePublished: "2026-05-01",
+  dateModified: "2026-05-03",
+  author: {
+    "@type": "Organization",
+    name: "TalkPrep Editorial",
+    url: "https://talkprep.co",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "TalkPrep",
+    url: "https://talkprep.co",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://talkprep.co/favicon.svg",
+    },
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://talkprep.co/how-to-resign-from-a-job",
+  },
+};
 
 function AnimatedSection({ children, className = "" }: { children: ReactNode, className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -116,15 +146,24 @@ export default function Article() {
 
   return (
     <div className="min-h-screen bg-paper font-sans">
+      <SEO
+        title="How to Resign from a Job Gracefully (With Exact Scripts)"
+        description="The exact words to say in your resignation conversation — and how to handle counter-offers, guilt trips, and every manager response. Includes the resignation email template."
+        canonical="/how-to-resign-from-a-job"
+        type="article"
+        publishedAt="2026-05-01T00:00:00Z"
+        modifiedAt="2026-05-03T00:00:00Z"
+        schema={articleSchema}
+      />
       {/* Sticky Nav */}
       <nav className="sticky top-0 z-50 bg-ink text-white h-[52px] flex items-center justify-between px-6">
         <Link href="/" className="font-serif font-bold text-xl tracking-wide flex items-center">
           <span>Talk</span><span className="text-rust">Prep</span>
         </Link>
         <div className="hidden md:flex items-center gap-6 font-mono text-sm text-ink-4">
-          <Link href="#" className="hover:text-white transition-colors">How it works</Link>
-          <Link href="#" className="hover:text-white transition-colors">Pricing</Link>
-          <Link href="#" className="hover:text-white transition-colors">Guides</Link>
+          <Link href="/how-it-works" className="hover:text-white transition-colors">How it works</Link>
+          <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
+          <Link href="/guides" className="hover:text-white transition-colors">Guides</Link>
         </div>
         <Link href="#" className="bg-rust hover:bg-rust-2 text-white px-4 py-1.5 rounded text-sm font-medium transition-colors">
           Start free &rarr;

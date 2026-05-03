@@ -2,6 +2,38 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import SEO from "@/components/SEO";
+
+const homeSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is TalkPrep?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "TalkPrep is an AI-powered conversation preparation tool that gives you word-for-word scripts, anticipates likely responses, and lets you practice with AI role-play before difficult conversations like resignations, salary negotiations, and family talks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does TalkPrep work?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You describe your situation, who you're talking to, and what a good outcome looks like. TalkPrep generates an exact opening script, three anticipated responses with replies, a fallback plan, and a grounding thought — all tailored to your specific situation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is TalkPrep free?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — your first 3 sessions are completely free, no credit card required. After that, plans start at $4.99 per session or $12.99/month for unlimited conversations.",
+      },
+    },
+  ],
+};
 
 function useReveal() {
   useEffect(() => {
@@ -26,6 +58,12 @@ export default function Home() {
 
   return (
     <div className="tp-page">
+      <SEO
+        title="TalkPrep — Walk Into Every Hard Conversation Ready"
+        description="Get word-for-word scripts, anticipate every response, and practice with AI before the real conversation. Resignations, raises, family talks — prepared in 5 minutes."
+        canonical="/"
+        schema={homeSchema}
+      />
       <SiteNav />
 
       {/* HERO */}

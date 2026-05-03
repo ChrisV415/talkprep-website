@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import SEO from "@/components/SEO";
 
 function useReveal() {
   useEffect(() => {
@@ -45,6 +46,11 @@ export default function HowItWorks() {
 
   return (
     <div className="tp-page">
+      <SEO
+        title="How TalkPrep Works — From Dreading a Conversation to Walking in Ready"
+        description="Five steps: describe your situation, get your exact script, practice with AI role-play, review your annotated transcript, and debrief after the real conversation."
+        canonical="/how-it-works"
+      />
       <SiteNav />
 
       <section className="page-hero">

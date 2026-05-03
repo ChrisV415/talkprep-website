@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import SEO from "@/components/SEO";
 
 function useReveal() {
   useEffect(() => {
@@ -25,6 +26,11 @@ export default function About() {
 
   return (
     <div className="tp-page">
+      <SEO
+        title="About TalkPrep — Built for the Conversation You Keep Putting Off"
+        description="TalkPrep is a private, AI-powered preparation tool for difficult conversations. We built it because the most important conversations in people's lives are the ones they're least prepared for."
+        canonical="/about"
+      />
       <SiteNav />
 
       <section className="about-page-hero">

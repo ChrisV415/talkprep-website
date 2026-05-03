@@ -2,6 +2,42 @@ import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import SEO from "@/components/SEO";
+
+const pricingSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "TalkPrep Pricing Plans",
+  itemListElement: [
+    {
+      "@type": "Offer",
+      position: 1,
+      name: "Single Session",
+      description: "Full prep guide, role-play, and debrief for one conversation.",
+      price: "4.99",
+      priceCurrency: "USD",
+      url: "https://talkprep.co/pricing",
+    },
+    {
+      "@type": "Offer",
+      position: 2,
+      name: "Monthly",
+      description: "Unlimited conversations, progress dashboard, and session history.",
+      price: "12.99",
+      priceCurrency: "USD",
+      url: "https://talkprep.co/pricing",
+    },
+    {
+      "@type": "Offer",
+      position: 3,
+      name: "Annual",
+      description: "Everything in Monthly. Save 49%. Export history. Priority speed.",
+      price: "79",
+      priceCurrency: "USD",
+      url: "https://talkprep.co/pricing",
+    },
+  ],
+};
 
 function useReveal() {
   useEffect(() => {
@@ -56,6 +92,12 @@ export default function Pricing() {
 
   return (
     <div className="tp-page">
+      <SEO
+        title="TalkPrep Pricing — Less Than One Hour of Coaching"
+        description="Single session $4.99 · Monthly $12.99 · Annual $79. First 3 sessions free, no credit card required. Cancel anytime."
+        canonical="/pricing"
+        schema={pricingSchema}
+      />
       <SiteNav />
 
       <section className="page-hero">

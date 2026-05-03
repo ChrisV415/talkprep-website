@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import SEO from "@/components/SEO";
 
 function useReveal() {
   useEffect(() => {
@@ -107,6 +108,11 @@ export default function Scenarios() {
 
   return (
     <div className="tp-page">
+      <SEO
+        title="Hard Conversation Scenarios — Resignation, Raise, Family & More"
+        description="TalkPrep covers 11 conversation types: resigning, asking for a raise, giving feedback, family boundaries, relationship talks, firing someone, and more. Get your exact script."
+        canonical="/scenarios"
+      />
       <SiteNav />
 
       <section className="page-hero">
