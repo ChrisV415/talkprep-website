@@ -26,7 +26,9 @@ export default function SiteFooter() {
           <span className="footer-col-title">Guides</span>
           <ul className="footer-links-list">
             <li><Link href="/how-to-resign-from-a-job">How to resign</Link></li>
-            <li><Link href="/guides">Ask for a raise</Link></li>
+            <li><Link href="/how-to-fire-someone">How to fire someone</Link></li>
+            <li><Link href="/how-to-set-a-boundary-with-family">Set a family boundary</Link></li>
+            <li><Link href="/how-to-give-difficult-feedback">Give difficult feedback</Link></li>
             <li><Link href="/guides">All guides</Link></li>
           </ul>
         </div>

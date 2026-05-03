@@ -22,26 +22,59 @@ function useReveal() {
   }, []);
 }
 
+const liveGuides = [
+  {
+    href: "/how-to-resign-from-a-job",
+    title: "How to Resign from a Job (With Exact Scripts)",
+    desc: "Opening script, counter-offer handling, the resignation email, and what to do the day after.",
+    tag: "Career",
+  },
+  {
+    href: "/how-to-confront-a-friend",
+    title: "How to Confront a Friend (Without Losing the Friendship)",
+    desc: "Most friendships don't end in fights — they fade because no one was willing to say the thing.",
+    tag: "Friendship",
+  },
+  {
+    href: "/how-to-set-a-boundary-with-family",
+    title: "How to Set a Boundary With a Family Member",
+    desc: "What to actually say to someone you love — without the guilt spiral that usually follows.",
+    tag: "Family",
+  },
+  {
+    href: "/how-to-fire-someone",
+    title: "How to Fire Someone With Dignity",
+    desc: "The conversation nobody wants to have — done with clarity, legality, and humanity.",
+    tag: "Management",
+  },
+  {
+    href: "/how-to-give-difficult-feedback",
+    title: "How to Give Difficult Feedback That Actually Lands",
+    desc: "The truth, said directly — honest without being cruel, actionable without being vague.",
+    tag: "Management",
+  },
+  {
+    href: "/how-to-have-a-performance-review-conversation",
+    title: "How to Have a Performance Review Conversation",
+    desc: "Make reviews honest, motivating, and actually useful to the person sitting across from you.",
+    tag: "Management",
+  },
+  {
+    href: "/how-to-tell-partner-something-difficult",
+    title: "How to Tell Your Partner Something Difficult",
+    desc: "The conversation you've been avoiding. Said with care, not fear — and without it becoming a fight.",
+    tag: "Relationships",
+  },
+];
+
 const upcomingGuides = [
   {
     title: "How to Ask for a Raise (Word-for-Word Scripts)",
-    desc: 'Anchor your number, handle \u201cnot right now,\u201d and know when to walk away.',
+    desc: 'Anchor your number, handle "not right now," and know when to walk away.',
   },
   {
-    title: "How to Fire Someone With Dignity",
-    desc: "The conversation nobody wants to have — done with clarity, legality, and humanity.",
-  },
-  {
-    title: "How to Set a Boundary With a Family Member",
-    desc: "What to actually say to someone you love — without the guilt spiral that usually follows.",
-  },
-  {
-    title: "How to Give a Negative Performance Review",
-    desc: "The truth, said directly — honest without being cruel, actionable without being vague.",
-  },
-  {
-    title: "How to Tell Your Partner Something Difficult",
-    desc: "The conversation you've been avoiding. Said with care, not fear.",
+    title: "Why You Freeze in Hard Conversations (And What to Do)",
+    desc: "The neuroscience behind going blank under pressure — and the rehearsal technique that works.",
   },
 ];
 
@@ -89,17 +122,26 @@ export default function Guides() {
               </p>
               <Link href="/how-to-resign-from-a-job" className="btn btn-rust">Read the guide →</Link>
             </div>
-            <div className="fg-visual">🚪</div>
+            <div className="fg-visual" style={{ overflow: "hidden", padding: 0 }}>
+              <img
+                className="fg-img"
+                src="https://images.pexels.com/photos/7581040/pexels-photo-7581040.jpeg?auto=compress&cs=tinysrgb&w=900"
+                alt="How to resign from a job"
+                loading="lazy"
+              />
+            </div>
           </div>
 
-          {/* Guide grid */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.5rem" }} className="reveal">
-            <Link href="/how-to-resign-from-a-job" className="guide-card">
-              <span className="gc-status">Available now</span>
-              <h3 className="gc-title">How to Resign from a Job (With Exact Scripts)</h3>
-              <p className="gc-desc">Opening script, counter-offer handling, the resignation email, and what to do the day after.</p>
-              <span className="gc-link">Read →</span>
-            </Link>
+          {/* Guide grid — live */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.5rem", marginBottom: "1.5rem" }} className="reveal">
+            {liveGuides.map((g) => (
+              <Link key={g.href} href={g.href} className="guide-card">
+                <span className="gc-status">{g.tag} · Available now</span>
+                <h3 className="gc-title">{g.title}</h3>
+                <p className="gc-desc">{g.desc}</p>
+                <span className="gc-link">Read →</span>
+              </Link>
+            ))}
             {upcomingGuides.map((g, i) => (
               <a key={i} href="#" className="guide-card disabled">
                 <span className="gc-status soon">Coming soon</span>

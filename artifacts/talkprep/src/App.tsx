@@ -11,6 +11,12 @@ import Scenarios from "@/pages/scenarios";
 import Guides from "@/pages/guides";
 import About from "@/pages/about";
 import Blog from "@/pages/blog";
+import ConfrontFriend from "@/pages/confront-friend";
+import FireSomeone from "@/pages/fire-someone";
+import DifficultFeedback from "@/pages/difficult-feedback";
+import PerformanceReview from "@/pages/performance-review";
+import BoundaryFamily from "@/pages/boundary-family";
+import PartnerDifficult from "@/pages/partner-difficult";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +25,12 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/how-to-resign-from-a-job" component={Article} />
+      <Route path="/how-to-confront-a-friend" component={ConfrontFriend} />
+      <Route path="/how-to-fire-someone" component={FireSomeone} />
+      <Route path="/how-to-give-difficult-feedback" component={DifficultFeedback} />
+      <Route path="/how-to-have-a-performance-review-conversation" component={PerformanceReview} />
+      <Route path="/how-to-set-a-boundary-with-family" component={BoundaryFamily} />
+      <Route path="/how-to-tell-partner-something-difficult" component={PartnerDifficult} />
       <Route path="/how-it-works" component={HowItWorks} />
       <Route path="/pricing" component={Pricing} />
       <Route path="/scenarios" component={Scenarios} />
