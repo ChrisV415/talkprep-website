@@ -298,7 +298,7 @@ export default function Support() {
           <p className="text-[#1b1815]">We're a small team and we read every email. Usually reply within a few hours.</p>
           <div className="contact-options">
             <a href="mailto:hello@talkprep.co" className="btn btn-rust btn-lg">Email us →</a>
-            <Link href="/how-it-works" className="btn btn-secondary btn-lg" style={{ color: "rgba(249,245,239,0.9)", borderColor: "rgba(249,245,239,0.35)" }}>How it works</Link>
+            <Link href="/how-it-works" className="btn btn-secondary btn-lg text-[#1b1815]" style={{ color: "rgba(249,245,239,0.9)", borderColor: "rgba(249,245,239,0.35)" }}>How it works</Link>
           </div>
         </div>
       </div>
