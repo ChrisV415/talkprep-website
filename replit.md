@@ -58,3 +58,8 @@ See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and pa
 
 ### `artifacts/api-server` — Express API server
 - Serves `/api/resignation-script` (SSE streaming endpoint)
+
+## GitHub
+- **Website repo**: https://github.com/ChrisV415/talkprep-website
+- Always push to `ChrisV415/talkprep-website` (not `talkprep`)
+- Push command: `git push "https://ChrisV415:$GITHUB_PERSONAL_ACCESS_TOKEN@github.com/ChrisV415/talkprep-website.git" HEAD:main`
