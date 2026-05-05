@@ -103,6 +103,7 @@ export default function SiteFooter() {
           <ul className="footer-links-list">
             <li><Link href="/about">About</Link></li>
             <li><Link href="/support">Support</Link></li>
+            <li><Link href="/faq-and-guides">FAQ & Guides</Link></li>
             <li><Link href="/privacy">Privacy</Link></li>
             <li><Link href="/terms">Terms</Link></li>
           </ul>

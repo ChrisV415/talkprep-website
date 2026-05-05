@@ -618,6 +618,31 @@
 .legal-body a { color: var(--rust); text-decoration: none; }
 .legal-body a:hover { text-decoration: underline; }
 
+/* FAQ & GUIDES PAGE */
+.fag-guide-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.fag-guide-card {
+  display: flex; align-items: flex-start; gap: 1rem; padding: 1.5rem 1.75rem;
+  border-bottom: 1px solid var(--border); border-right: 1px solid var(--border);
+  text-decoration: none; color: var(--ink); background: white; position: relative;
+  transition: background 0.15s;
+}
+.fag-guide-card:nth-child(even) { border-right: none; }
+.fag-guide-card:nth-last-child(-n+2) { border-bottom: none; }
+.fag-guide-card:hover { background: var(--cream2); }
+.fag-guide-card--soon { opacity: 0.5; pointer-events: none; }
+.fag-guide-icon { flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; }
+.fag-guide-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rust); display: block; margin-bottom: 0.25rem; }
+.fag-guide-title { font-family: 'Lora', serif; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.3rem; line-height: 1.4; color: var(--ink); }
+.fag-guide-desc { font-size: 0.8rem; color: var(--ink3); line-height: 1.6; }
+.fag-guide-arrow { position: absolute; right: 1.25rem; top: 50%; transform: translateY(-50%); font-size: 0.85rem; color: var(--ink4); opacity: 0; transition: opacity 0.15s; }
+.fag-guide-card:hover .fag-guide-arrow { opacity: 1; }
+@media (max-width: 680px) {
+  .fag-guide-grid { grid-template-columns: 1fr; }
+  .fag-guide-card { border-right: none; }
+  .fag-guide-card:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
+  .fag-guide-card:last-child { border-bottom: none; }
+}
+
 /* SUPPORT PAGE */
 .support-hero { padding: 5rem 0 3rem; text-align: center; }
 .support-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 2rem; }

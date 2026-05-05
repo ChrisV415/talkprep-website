@@ -24,6 +24,7 @@ import FreezeConversations from "@/pages/freeze-conversations";
 import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
 import Support from "@/pages/support";
+import FaqGuides from "@/pages/faq-guides";
 
 const queryClient = new QueryClient();
 
@@ -51,6 +52,7 @@ function Router() {
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/support" component={Support} />
+      <Route path="/faq-and-guides" component={FaqGuides} />
       <Route component={NotFound} />
     </Switch>
   );
