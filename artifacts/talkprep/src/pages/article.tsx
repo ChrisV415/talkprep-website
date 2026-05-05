@@ -493,11 +493,11 @@ export default function Article() {
           <h2 className="font-serif text-2xl font-bold text-ink mb-10 text-center">More conversation guides</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { tag: "Career", title: "How to Ask for a Raise", hint: "The exact script to prove your value." },
-              { tag: "Leadership", title: "How to Fire Someone With Dignity", hint: "Compassionate offboarding scripts." },
-              { tag: "Personal", title: "How to Set a Boundary With a Family Member", hint: "Firm but loving responses." }
+              { tag: "Management", title: "How to Fire Someone With Dignity", hint: "Compassionate offboarding scripts.", href: "/how-to-fire-someone" },
+              { tag: "Management", title: "How to Give Difficult Feedback That Actually Lands", hint: "The truth, said directly — honest without being cruel.", href: "/how-to-give-difficult-feedback" },
+              { tag: "Personal", title: "How to Set a Boundary With a Family Member", hint: "Firm but loving responses.", href: "/how-to-set-a-boundary-with-family" }
             ].map((article, i) => (
-              <Link href="#" key={i} className="block group">
+              <Link href={article.href} key={i} className="block group">
                 <div className="bg-white border border-border p-6 rounded-lg h-full transition-transform transform hover:-translate-y-1 hover:shadow-md">
                   <div className="text-rust font-mono text-xs uppercase tracking-wider mb-3">{article.tag}</div>
                   <h3 className="font-serif text-xl font-bold text-ink mb-2 group-hover:text-rust transition-colors">{article.title}</h3>
@@ -517,8 +517,8 @@ export default function Article() {
           </div>
           <div className="flex gap-6 font-mono text-sm text-ink-4">
             <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
-            <Link href="#" className="hover:text-white transition-colors">Privacy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Terms</Link>
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
             <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Open app</a>
           </div>
           <div className="font-mono text-xs text-ink-4 opacity-50">
