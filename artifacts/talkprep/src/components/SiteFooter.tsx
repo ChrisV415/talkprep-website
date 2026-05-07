@@ -57,7 +57,7 @@ export default function SiteFooter() {
       <div className="footer-top">
         <div>
           <Link href="/" className="footer-logo">
-            <img src="/talkprep-logo.png" alt="TalkPrep" height="32" style={{ display: "block", filter: "brightness(0) invert(1)" }} />
+            <img src="/talkprep-logo.png" alt="TalkPrep" height="52" style={{ display: "block", filter: "brightness(0) invert(1)" }} />
           </Link>
           <p className="footer-tagline">
             A private thinking partner for conversations that actually matter.
