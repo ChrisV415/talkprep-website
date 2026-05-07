@@ -54,7 +54,7 @@ const supportFaqSchema = {
       name: "Does TalkPrep offer a money-back guarantee?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes — 7 days, full refund, no questions asked. If you subscribe and aren't satisfied within 7 days, email hello@talkprep.co and we'll refund you immediately.",
+        text: "Yes — 7 days, full refund, no questions asked. If you subscribe and aren't satisfied within 7 days, email talkprep.info@gmail.com and we'll refund you immediately.",
       },
     },
     {
@@ -78,7 +78,7 @@ const supportFaqSchema = {
       name: "Does TalkPrep offer team or HR pricing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. TalkPrep offers team plans at $6–8 per manager per month. Email hello@talkprep.co to discuss your team's needs.",
+        text: "Yes. TalkPrep offers team plans at $6–8 per manager per month. Email talkprep.info@gmail.com to discuss your team's needs.",
       },
     },
     {
@@ -164,11 +164,11 @@ const faqs = [
       },
       {
         q: "Is there a money-back guarantee?",
-        a: "Yes — 7 days, full refund, no questions asked. If you subscribe and aren't satisfied within 7 days, email hello@talkprep.co and we'll refund you immediately.",
+        a: "Yes — 7 days, full refund, no questions asked. If you subscribe and aren't satisfied within 7 days, email talkprep.info@gmail.com and we'll refund you immediately.",
       },
       {
         q: "Do you offer team or HR pricing?",
-        a: "Yes. We offer team plans at $6–8 per manager per month. Email hello@talkprep.co to discuss your team's needs.",
+        a: "Yes. We offer team plans at $6–8 per manager per month. Email talkprep.info@gmail.com to discuss your team's needs.",
       },
     ],
   },
@@ -216,7 +216,7 @@ export default function Support() {
           <h1 className="section-title" style={{ marginBottom: "0.75rem" }}>How can we help?</h1>
           <p className="section-hint" style={{ maxWidth: "440px", margin: "0 auto" }}>
             Answers to the most common questions. Can't find what you need?{" "}
-            <a href="mailto:hello@talkprep.co" style={{ color: "var(--rust)", textDecoration: "none" }}>Email us directly.</a>
+            <a href="mailto:talkprep.info@gmail.com" style={{ color: "var(--rust)", textDecoration: "none" }}>Email us directly.</a>
           </p>
         </div>
       </section>
@@ -297,7 +297,7 @@ export default function Support() {
           <h2 className="text-[#1b1815]">Still have questions?</h2>
           <p className="text-[#1b1815]">We're a small team and we read every email. Usually reply within a few hours.</p>
           <div className="contact-options">
-            <a href="mailto:hello@talkprep.co" className="btn btn-rust btn-lg">Email us →</a>
+            <a href="mailto:talkprep.info@gmail.com" className="btn btn-rust btn-lg">Email us →</a>
             <Link href="/how-it-works" className="btn btn-secondary btn-lg text-[#1b1815]" style={{ color: "rgba(249,245,239,0.9)", borderColor: "rgba(249,245,239,0.35)" }}>How it works</Link>
           </div>
         </div>

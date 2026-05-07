@@ -563,7 +563,7 @@ export default function Home() {
                 <li>Onboarding and expectation-setting talks</li>
                 <li>Client and stakeholder difficult calls</li>
               </ul>
-              <a href="mailto:hello@talkprep.co" className="btn btn-rust" style={{ marginTop: "2rem", display: "inline-flex" }}>Talk to us about teams →</a>
+              <a href="mailto:talkprep.info@gmail.com" className="btn btn-rust" style={{ marginTop: "2rem", display: "inline-flex" }}>Talk to us about teams →</a>
             </div>
             <div className="teams-pricing-card">
               <span className="tp-price-label">Team pricing</span>

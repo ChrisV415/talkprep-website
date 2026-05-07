@@ -62,8 +62,8 @@ const faqs = [
     items: [
       { q: "Do I need a credit card to start?", a: "No. Your first 3 sessions are completely free with no card required. You only need to add payment when you want to continue after your free sessions." },
       { q: "How do I cancel my subscription?", a: "You can cancel anytime from your account settings. No cancellation fee, no questions asked. You keep access until the end of your current billing period." },
-      { q: "Is there a money-back guarantee?", a: "Yes — 7 days, full refund, no questions asked. If you subscribe and aren't satisfied within 7 days, email hello@talkprep.co and we'll refund you immediately." },
-      { q: "Do you offer team or HR pricing?", a: "Yes. We offer team plans at $6–8 per manager per month. Email hello@talkprep.co to discuss your team's needs." },
+      { q: "Is there a money-back guarantee?", a: "Yes — 7 days, full refund, no questions asked. If you subscribe and aren't satisfied within 7 days, email talkprep.info@gmail.com and we'll refund you immediately." },
+      { q: "Do you offer team or HR pricing?", a: "Yes. We offer team plans at $6–8 per manager per month. Email talkprep.info@gmail.com to discuss your team's needs." },
     ],
   },
   {
@@ -171,7 +171,7 @@ export default function FaqGuides() {
             <h2 className="section-title reveal" style={{ fontSize: "1.6rem", marginBottom: "0.5rem" }}>Frequently asked questions</h2>
             <p className="section-hint reveal">
               Can't find what you need?{" "}
-              <a href="mailto:hello@talkprep.co" style={{ color: "var(--rust)", textDecoration: "none" }}>Email us directly</a> — we read every one.
+              <a href="mailto:talkprep.info@gmail.com" style={{ color: "var(--rust)", textDecoration: "none" }}>Email us directly</a> — we read every one.
             </p>
           </div>
 
