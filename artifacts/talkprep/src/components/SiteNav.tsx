@@ -25,7 +25,7 @@ export default function SiteNav() {
       )}
       <nav className="site-nav">
         <Link href="/" className="nav-logo">
-          <img src="/talkprep-logo.png" alt="TalkPrep" height="28" style={{ display: "block" }} />
+          <img src="/talkprep-logo.png" alt="TalkPrep" height="44" style={{ display: "block" }} />
         </Link>
         <div className={`nav-center${mobileOpen ? " nav-center-open" : ""}`}>
           {tabs.map((t) => (
