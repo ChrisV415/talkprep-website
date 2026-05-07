@@ -136,12 +136,12 @@ const posts = [
   {
     tag: "Negotiation",
     readTime: "10 min read",
-    date: "Coming soon",
+    date: "May 2026",
     title: "How to Ask for a Raise Without Feeling Awkward",
     desc: "Most people undersell themselves before the conversation even starts. Here's how to anchor your number and hold it when they push back.",
-    href: "#",
-    img: null,
-    soon: true,
+    href: "/how-to-ask-for-a-raise-without-feeling-awkward",
+    img: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=600",
+    soon: false,
   },
 ];
 

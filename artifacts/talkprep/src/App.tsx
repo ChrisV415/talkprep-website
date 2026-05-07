@@ -25,6 +25,7 @@ import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
 import Support from "@/pages/support";
 import FaqGuides from "@/pages/faq-guides";
+import AskForRaise from "@/pages/ask-for-raise";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ function Router() {
       <Route path="/how-to-give-negative-feedback-that-actually-lands" component={NegativeFeedback} />
       <Route path="/how-to-negotiate-anything" component={NegotiateAnything} />
       <Route path="/why-you-freeze-in-hard-conversations" component={FreezeConversations} />
+      <Route path="/how-to-ask-for-a-raise-without-feeling-awkward" component={AskForRaise} />
       <Route path="/how-it-works" component={HowItWorks} />
       <Route path="/pricing" component={Pricing} />
       <Route path="/scenarios" component={Scenarios} />
