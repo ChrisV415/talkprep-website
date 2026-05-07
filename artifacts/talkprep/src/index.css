@@ -830,21 +830,26 @@
   text-transform: uppercase; color: var(--ink3); margin-bottom: 0.75rem; display: block;
 }
 .tp-page .pp-card.featured .pp-plan { color: rgba(249, 245, 239, 0.35); }
+.tp-page .cg-item-ink .pp-plan { color: rgba(249, 245, 239, 0.5); }
 .tp-page .pp-price {
   font-family: 'Lora', serif; font-size: 2.2rem; font-weight: 700;
   line-height: 1; color: var(--ink); margin-bottom: 0.25rem;
 }
 .tp-page .pp-card.featured .pp-price { color: var(--cream); }
+.tp-page .cg-item-ink .pp-price { color: var(--cream); }
 .tp-page .pp-per {
   font-family: 'DM Mono', monospace; font-size: 10px; color: var(--ink4);
   margin-bottom: 1.25rem; display: block;
 }
 .tp-page .pp-card.featured .pp-per { color: rgba(249, 245, 239, 0.35); }
+.tp-page .cg-item-ink .pp-per { color: rgba(249, 245, 239, 0.5); }
 .tp-page .pp-features { list-style: none; font-size: 0.8rem; color: var(--ink3); line-height: 2; }
 .tp-page .pp-card.featured .pp-features { color: rgba(249, 245, 239, 0.55); }
+.tp-page .cg-item-ink .pp-features { color: rgba(249, 245, 239, 0.7); }
 .tp-page .pp-features li { display: flex; align-items: baseline; gap: 6px; }
 .tp-page .pp-check { color: var(--sage); font-size: 0.75rem; }
 .tp-page .pp-card.featured .pp-check { color: var(--rust2); }
+.tp-page .cg-item-ink .pp-check { color: var(--rust2); }
 .tp-page .guide-card {
   background: white; border: 1px solid var(--border); border-radius: 3px; padding: 1.75rem;
   text-decoration: none; transition: all 0.15s; display: block;
