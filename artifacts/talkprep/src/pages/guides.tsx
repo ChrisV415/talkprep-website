@@ -112,10 +112,38 @@ const guidesSchema = {
   })),
 };
 
+async function subscribeEmail(email: string): Promise<{ success: boolean; error?: string }> {
+  try {
+    const res = await fetch("/api/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+    const data = await res.json();
+    if (res.ok) return { success: true };
+    return { success: false, error: data.error ?? "Something went wrong" };
+  } catch {
+    return { success: false, error: "Network error — please try again" };
+  }
+}
+
 export default function Guides() {
   useReveal();
   const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  async function handleSubscribe() {
+    if (!email) return;
+    setStatus("loading");
+    const result = await subscribeEmail(email);
+    if (result.success) {
+      setStatus("done");
+    } else {
+      setStatus("error");
+      setErrorMsg(result.error ?? "Something went wrong");
+    }
+  }
 
   return (
     <div className="tp-page">
@@ -196,26 +224,34 @@ export default function Guides() {
             <p style={{ fontSize: "0.875rem", color: "var(--ink3)", marginBottom: "1.1rem" }}>
               Get notified when the next guide publishes — no spam.
             </p>
-            {submitted ? (
+            {status === "done" ? (
               <p style={{ fontFamily: "'DM Mono',monospace", fontSize: "11px", color: "var(--rust)", letterSpacing: "0.06em" }}>
                 ✓ You're on the list.
               </p>
             ) : (
-              <div className="nl-form">
-                <input
-                  type="email"
-                  className="nl-input"
-                  placeholder="your@email.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <button
-                  className="btn btn-rust"
-                  onClick={() => { if (email) setSubmitted(true); }}
-                >
-                  Notify me
-                </button>
-              </div>
+              <>
+                <div className="nl-form">
+                  <input
+                    type="email"
+                    className="nl-input"
+                    placeholder="your@email.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && handleSubscribe()}
+                    disabled={status === "loading"}
+                  />
+                  <button
+                    className="btn btn-rust"
+                    onClick={handleSubscribe}
+                    disabled={status === "loading"}
+                  >
+                    {status === "loading" ? "..." : "Notify me"}
+                  </button>
+                </div>
+                {status === "error" && (
+                  <p style={{ fontFamily: "'DM Mono',monospace", fontSize: "11px", color: "var(--rust)", letterSpacing: "0.06em", marginTop: "0.5rem" }}>{errorMsg}</p>
+                )}
+              </>
             )}
           </div>
         </div>

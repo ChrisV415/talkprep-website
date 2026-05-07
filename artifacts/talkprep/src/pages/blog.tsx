@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
@@ -161,8 +161,38 @@ const blogSchema = {
   },
 };
 
+async function subscribeEmail(email: string): Promise<{ success: boolean; error?: string }> {
+  try {
+    const res = await fetch("/api/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+    const data = await res.json();
+    if (res.ok) return { success: true };
+    return { success: false, error: data.error ?? "Something went wrong" };
+  } catch {
+    return { success: false, error: "Network error — please try again" };
+  }
+}
+
 export default function Blog() {
   useReveal();
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  async function handleSubscribe() {
+    if (!email) return;
+    setStatus("loading");
+    const result = await subscribeEmail(email);
+    if (result.success) {
+      setStatus("done");
+    } else {
+      setStatus("error");
+      setErrorMsg(result.error ?? "Something went wrong");
+    }
+  }
 
   return (
     <div className="tp-page">
@@ -298,10 +328,29 @@ export default function Blog() {
             <p style={{ fontSize: "0.875rem", color: "var(--ink3)", marginBottom: "1.1rem" }}>
               Practical scripts for the conversations everyone is avoiding. No noise.
             </p>
-            <div className="nl-form">
-              <input type="email" className="nl-input" placeholder="your@email.com" />
-              <button className="btn btn-rust">Subscribe</button>
-            </div>
+            {status === "done" ? (
+              <p style={{ fontFamily: "'DM Mono',monospace", fontSize: "11px", color: "var(--rust)", letterSpacing: "0.06em" }}>✓ You're on the list.</p>
+            ) : (
+              <>
+                <div className="nl-form">
+                  <input
+                    type="email"
+                    className="nl-input"
+                    placeholder="your@email.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && handleSubscribe()}
+                    disabled={status === "loading"}
+                  />
+                  <button className="btn btn-rust" onClick={handleSubscribe} disabled={status === "loading"}>
+                    {status === "loading" ? "..." : "Subscribe"}
+                  </button>
+                </div>
+                {status === "error" && (
+                  <p style={{ fontFamily: "'DM Mono',monospace", fontSize: "11px", color: "var(--rust)", letterSpacing: "0.06em", marginTop: "0.5rem" }}>{errorMsg}</p>
+                )}
+              </>
+            )}
           </div>
         </div>
       </section>
