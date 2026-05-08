@@ -73,25 +73,39 @@ export default function Home() {
         <div className="container">
           <div className="hero-badge">
             <span className="badge-dot" />
-            Private · AI-powered · Ready in minutes
+            Private · AI-powered · Ready in 60 seconds
           </div>
           <h1 className="hero-title">
-            Stop rehearsing alone.<br />
-            Walk into every hard conversation <em>ready.</em>
+            Type your situation.<br />
+            Get your <em>exact script</em> in 60 seconds.
           </h1>
           <p className="hero-sub">
-            Get your exact opening script, anticipate every response, and walk in prepared — for
-            resignations, raises, family talks, and anything keeping you up at night.
+            TalkPrep gives you word-for-word opening lines, every likely response handled, and a way to practice before the real thing — for any hard conversation you're facing.
           </p>
+
+          {/* Scenario pills */}
+          <div className="hero-scenarios">
+            <span className="hs-label">Works for:</span>
+            <div className="hs-pills">
+              <span className="hs-pill">Resigning from a job</span>
+              <span className="hs-pill">Asking for a raise</span>
+              <span className="hs-pill">Setting a boundary</span>
+              <span className="hs-pill">Firing someone</span>
+              <span className="hs-pill">Difficult feedback</span>
+              <span className="hs-pill">Family talks</span>
+              <span className="hs-pill">+ 5 more</span>
+            </div>
+          </div>
+
           <div className="hero-actions">
-            <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">Prepare my conversation <span>→</span></a>
+            <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">Get my script now <span>→</span></a>
             <Link href="/how-it-works" className="btn btn-secondary btn-lg">See how it works</Link>
           </div>
           <div className="hero-proof">
             <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}><Lock weight="duotone" size={14} color="var(--ink)" /> Completely private</span>
-            <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}><Lightning weight="duotone" size={14} color="var(--ink)" /> Ready in 5 minutes</span>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}><Lightning weight="duotone" size={14} color="var(--ink)" /> Ready in 60 seconds</span>
             <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}><Sparkle weight="duotone" size={14} color="var(--ink)" /> Word-for-word scripts</span>
-            <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}><Target weight="duotone" size={14} color="var(--ink)" /> No generic advice</span>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}><Target weight="duotone" size={14} color="var(--ink)" /> Free to start</span>
           </div>
 
           <div className="mockup-wrap reveal">
@@ -102,7 +116,7 @@ export default function Home() {
                   <div className="mockup-dot" style={{ background: "#FEBC2E" }} />
                   <div className="mockup-dot" style={{ background: "#28C840" }} />
                 </div>
-                <span className="mockup-title">TalkPrep — Resignation prep guide</span>
+                <span className="mockup-title">TalkPrep — Raise conversation prep</span>
               </div>
               <div className="mockup-tabs">
                 <span className="mockup-tab on">Prep guide</span>
@@ -114,23 +128,20 @@ export default function Home() {
                   <span className="mockup-rs-label" style={{ display: "inline-flex", alignItems: "center", gap: 4 }}><ChatCircle weight="duotone" size={13} /> Your opening script</span>
                   <p className="mockup-rs-title">Exactly what to say first</p>
                   <div className="mockup-script">
-                    "Hey, do you have a few minutes? There's something important I need to share
-                    with you. I've made the decision to resign — I've accepted an opportunity I
-                    couldn't turn down, and I wanted to tell you in person rather than over email."
+                    "I wanted to talk about my compensation. I've researched market rates and looked at what I've delivered this year — and I'd like to discuss a raise to $115k. I'd like to walk you through my reasoning."
                   </div>
-                  <span className="tag tag-rust">Scroll to see more ↓</span>
+                  <span className="tag tag-rust">Tailored to your exact situation</span>
                 </div>
                 <div className="mockup-panel">
                   <span className="mockup-rs-label" style={{ display: "inline-flex", alignItems: "center", gap: 4 }}><ArrowsClockwise weight="duotone" size={13} /> What they might say</span>
-                  <p className="mockup-rs-title">3 responses, handled</p>
+                  <p className="mockup-rs-title">3 pushbacks, handled</p>
                   <div className="mockup-response">
-                    <strong>If they offer more money</strong>
-                    "I really appreciate that — but this isn't purely about compensation. It's about
-                    the direction I need to go next."
+                    <strong>If they say "budget is tight"</strong>
+                    "I hear that — what can you do? I'd like to understand what's actually possible before we discuss timing."
                   </div>
                   <div className="mockup-response">
-                    <strong>If they get emotional</strong>
-                    "I hear how you feel, and I understand. That's part of what makes this hard."
+                    <strong>If they say "let's revisit later"</strong>
+                    "Can we set a specific date now — not just a general later — and confirm the number we're working toward?"
                   </div>
                 </div>
               </div>
@@ -138,16 +149,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Hero image strip */}
-      <div style={{ width: "100%", height: "440px", overflow: "hidden", borderTop: "1px solid var(--border)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-        <img
-          src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1440"
-          alt="Professionals having a serious conversation"
-          loading="lazy"
-          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 35%" }}
-        />
-      </div>
 
       {/* STATS STRIP */}
       <div className="stats-strip">
@@ -528,17 +529,17 @@ export default function Home() {
               <p className="gc-desc">The exact words — including how to handle counter-offers, guilt trips, and every manager response.</p>
               <span className="gc-read">Read guide →</span>
             </Link>
-            <Link href="/guides" className="guide-card">
-              <span className="gc-tag">Career · Coming soon</span>
-              <h3 className="gc-title">How to Ask for a Raise (Word-for-Word Scripts)</h3>
-              <p className="gc-desc">Anchor your number, handle "not right now," and know when to hold firm.</p>
-              <span className="gc-read" style={{ color: "var(--ink4)" }}>Notify me →</span>
+            <Link href="/how-to-ask-for-a-raise-without-feeling-awkward" className="guide-card">
+              <span className="gc-tag">Negotiation · 13 min read</span>
+              <h3 className="gc-title">How to Ask for a Raise Without Feeling Awkward</h3>
+              <p className="gc-desc">Anchor your number, sit in the silence, and handle every manager pushback word for word.</p>
+              <span className="gc-read">Read guide →</span>
             </Link>
-            <Link href="/guides" className="guide-card">
-              <span className="gc-tag">Personal · Coming soon</span>
+            <Link href="/how-to-set-a-boundary-with-family" className="guide-card">
+              <span className="gc-tag">Personal · 10 min read</span>
               <h3 className="gc-title">How to Set a Boundary With a Family Member</h3>
               <p className="gc-desc">What to actually say to someone you love — without the guilt spiral.</p>
-              <span className="gc-read" style={{ color: "var(--ink4)" }}>Notify me →</span>
+              <span className="gc-read">Read guide →</span>
             </Link>
           </div>
           <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
