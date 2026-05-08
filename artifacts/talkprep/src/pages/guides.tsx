@@ -103,12 +103,12 @@ const guidesSchema = {
   "@type": "ItemList",
   name: "TalkPrep Guides — Scripts for Hard Conversations",
   description: "Free guides with exact scripts for the hardest conversations — how to resign, fire someone, set a boundary, give feedback, and more.",
-  url: "https://talkprep.co/guides",
+  url: "https://talk-prep.cloud/guides",
   itemListElement: liveGuides.map((guide, i) => ({
     "@type": "ListItem",
     position: i + 1,
     name: guide.title,
-    url: `https://talkprep.co${guide.href}`,
+    url: `https://talk-prep.cloud${guide.href}`,
   })),
 };
 

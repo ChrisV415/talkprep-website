@@ -11,9 +11,9 @@ const schema = {
   image: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=1200",
   datePublished: "2026-05-03T00:00:00Z",
   dateModified: "2026-05-03T00:00:00Z",
-  author: { "@type": "Organization", name: "TalkPrep Editorial", url: "https://talkprep.co" },
-  publisher: { "@type": "Organization", name: "TalkPrep", url: "https://talkprep.co" },
-  mainEntityOfPage: { "@type": "WebPage", "@id": "https://talkprep.co/why-you-freeze-in-hard-conversations" },
+  author: { "@type": "Organization", name: "TalkPrep Editorial", url: "https://talk-prep.cloud" },
+  publisher: { "@type": "Organization", name: "TalkPrep", url: "https://talk-prep.cloud" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://talk-prep.cloud/why-you-freeze-in-hard-conversations" },
 };
 
 export default function FreezeConversations() {

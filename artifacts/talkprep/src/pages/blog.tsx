@@ -152,12 +152,12 @@ const blogSchema = {
   "@type": "Blog",
   name: "TalkPrep Blog",
   description: "Scripts and thinking for the conversations that matter — word for word, with the psychology behind why it works.",
-  url: "https://talkprep.co/blog",
+  url: "https://talk-prep.cloud/blog",
   publisher: {
     "@type": "Organization",
     name: "TalkPrep",
-    url: "https://talkprep.co",
-    logo: { "@type": "ImageObject", url: "https://talkprep.co/favicon.svg" },
+    url: "https://talk-prep.cloud",
+    logo: { "@type": "ImageObject", url: "https://talk-prep.cloud/favicon.svg" },
   },
 };
 

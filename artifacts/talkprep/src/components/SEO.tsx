@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 const SITE_NAME = "TalkPrep";
-const SITE_URL = "https://talkprep.co";
+const SITE_URL = "https://talk-prep.cloud";
 const DEFAULT_DESCRIPTION =
   "TalkPrep is an AI-powered conversation prep tool. Get word-for-word scripts, anticipate every response, and walk into hard conversations ready — resignations, raises, family talks, and more.";
 const DEFAULT_IMAGE = `${SITE_URL}/opengraph.jpg`;

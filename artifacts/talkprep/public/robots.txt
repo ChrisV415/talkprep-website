@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://talkprep.co/sitemap.xml
+Sitemap: https://talk-prep.cloud/sitemap.xml

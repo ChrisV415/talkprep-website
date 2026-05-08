@@ -8,11 +8,11 @@ const privacySchema = {
   name: "Privacy Policy — TalkPrep",
   description:
     "TalkPrep's privacy policy. We collect only what's necessary. Your conversations are never stored on our servers and are never shared.",
-  url: "https://talkprep.co/privacy",
+  url: "https://talk-prep.cloud/privacy",
   publisher: {
     "@type": "Organization",
     name: "TalkPrep",
-    url: "https://talkprep.co",
+    url: "https://talk-prep.cloud",
   },
   dateModified: "2026-05-03",
   inLanguage: "en-US",
@@ -80,7 +80,7 @@ export default function Privacy() {
             <p>Account data (your email, subscription status) is retained for as long as your account is active. You can request deletion at any time by emailing us. We will delete your account and associated data within 30 days.</p>
 
             <h2>Your rights</h2>
-            <p>You have the right to access, correct, or delete any personal data we hold about you. You can also request a copy of your data in a portable format. To exercise any of these rights, contact us at <a href="mailto:privacy@talkprep.co">privacy@talkprep.co</a>.</p>
+            <p>You have the right to access, correct, or delete any personal data we hold about you. You can also request a copy of your data in a portable format. To exercise any of these rights, contact us at <a href="mailto:privacy@talk-prep.cloud">privacy@talk-prep.cloud</a>.</p>
 
             <h2>Children</h2>
             <p>TalkPrep is not intended for users under 13. We do not knowingly collect data from children.</p>
@@ -89,7 +89,7 @@ export default function Privacy() {
             <p>If we make material changes to this policy, we will notify you by email at least 14 days before the changes take effect. Continued use of TalkPrep after the effective date constitutes acceptance of the updated policy.</p>
 
             <h2>Contact</h2>
-            <p>Questions about this policy? Email us at <a href="mailto:privacy@talkprep.co">privacy@talkprep.co</a>. We aim to respond within 2 business days.</p>
+            <p>Questions about this policy? Email us at <a href="mailto:privacy@talk-prep.cloud">privacy@talk-prep.cloud</a>. We aim to respond within 2 business days.</p>
           </div>
         </div>
       </article>

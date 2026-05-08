@@ -11,9 +11,9 @@ const schema = {
   image: "https://images.pexels.com/photos/6632536/pexels-photo-6632536.jpeg?auto=compress&cs=tinysrgb&w=1200",
   datePublished: "2026-05-01T00:00:00Z",
   dateModified: "2026-05-03T00:00:00Z",
-  author: { "@type": "Organization", name: "TalkPrep Editorial", url: "https://talkprep.co" },
-  publisher: { "@type": "Organization", name: "TalkPrep", url: "https://talkprep.co" },
-  mainEntityOfPage: { "@type": "WebPage", "@id": "https://talkprep.co/how-to-fire-someone" },
+  author: { "@type": "Organization", name: "TalkPrep Editorial", url: "https://talk-prep.cloud" },
+  publisher: { "@type": "Organization", name: "TalkPrep", url: "https://talk-prep.cloud" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://talk-prep.cloud/how-to-fire-someone" },
 };
 
 export default function FireSomeone() {

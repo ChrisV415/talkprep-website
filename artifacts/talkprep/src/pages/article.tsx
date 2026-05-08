@@ -14,20 +14,20 @@ const articleSchema = {
   author: {
     "@type": "Organization",
     name: "TalkPrep Editorial",
-    url: "https://talkprep.co",
+    url: "https://talk-prep.cloud",
   },
   publisher: {
     "@type": "Organization",
     name: "TalkPrep",
-    url: "https://talkprep.co",
+    url: "https://talk-prep.cloud",
     logo: {
       "@type": "ImageObject",
-      url: "https://talkprep.co/favicon.svg",
+      url: "https://talk-prep.cloud/favicon.svg",
     },
   },
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://talkprep.co/how-to-resign-from-a-job",
+    "@id": "https://talk-prep.cloud/how-to-resign-from-a-job",
   },
 };
 

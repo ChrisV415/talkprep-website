@@ -54,7 +54,7 @@ const faqs = [
       { q: "Who can see my conversations?", a: "Nobody. Your prep guides and role-play transcripts are stored locally in your browser — not on our servers. We never see your conversation content and we never share it.", link: { label: "Read our full Privacy Policy", href: "/privacy" } },
       { q: "Is my data used to train AI?", a: "No. We use a reputable AI provider under a data processing agreement that explicitly prohibits using your data to train AI models." },
       { q: "What happens to my history if I cancel?", a: "Your session history is stored in your browser's local storage — it stays on your device regardless of your subscription status. Annual subscribers can export their history before cancelling." },
-      { q: "Can I delete my account and data?", a: "Yes. Email privacy@talkprep.co and we will delete your account and any associated data within 30 days." },
+      { q: "Can I delete my account and data?", a: "Yes. Email privacy@talk-prep.cloud and we will delete your account and any associated data within 30 days." },
     ],
   },
   {

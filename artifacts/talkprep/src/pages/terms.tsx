@@ -8,11 +8,11 @@ const termsSchema = {
   name: "Terms of Service — TalkPrep",
   description:
     "TalkPrep's terms of service. Simple, plain language. Covers subscriptions, refunds, acceptable use, and your rights.",
-  url: "https://talkprep.co/terms",
+  url: "https://talk-prep.cloud/terms",
   publisher: {
     "@type": "Organization",
     name: "TalkPrep",
-    url: "https://talkprep.co",
+    url: "https://talk-prep.cloud",
   },
   dateModified: "2026-05-03",
   inLanguage: "en-US",
@@ -47,7 +47,7 @@ export default function Terms() {
           </div>
           <div className="legal-body">
             <p>
-              These Terms of Service govern your use of TalkPrep (talkprep.co) and the TalkPrep application. By using TalkPrep, you agree to these terms. If you don't agree, please don't use the service.
+              These Terms of Service govern your use of TalkPrep (talk-prep.cloud) and the TalkPrep application. By using TalkPrep, you agree to these terms. If you don't agree, please don't use the service.
             </p>
 
             <h2>The service</h2>

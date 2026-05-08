@@ -16,7 +16,7 @@ const pricingSchema = {
       description: "Full prep guide, role-play, and debrief for one conversation.",
       price: "4.99",
       priceCurrency: "USD",
-      url: "https://talkprep.co/pricing",
+      url: "https://talk-prep.cloud/pricing",
     },
     {
       "@type": "Offer",
@@ -25,7 +25,7 @@ const pricingSchema = {
       description: "Unlimited conversations, progress dashboard, and session history.",
       price: "12.99",
       priceCurrency: "USD",
-      url: "https://talkprep.co/pricing",
+      url: "https://talk-prep.cloud/pricing",
     },
     {
       "@type": "Offer",
@@ -34,7 +34,7 @@ const pricingSchema = {
       description: "Everything in Monthly. Save 49%. Export history. Priority speed.",
       price: "79",
       priceCurrency: "USD",
-      url: "https://talkprep.co/pricing",
+      url: "https://talk-prep.cloud/pricing",
     },
   ],
 };

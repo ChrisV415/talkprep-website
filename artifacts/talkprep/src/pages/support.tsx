@@ -98,11 +98,11 @@ const supportPageSchema = {
   name: "TalkPrep Help Center — Support & FAQ",
   description:
     "Answers to common questions about TalkPrep — getting started, privacy, billing, and using the product.",
-  url: "https://talkprep.co/support",
+  url: "https://talk-prep.cloud/support",
   publisher: {
     "@type": "Organization",
     name: "TalkPrep",
-    url: "https://talkprep.co",
+    url: "https://talk-prep.cloud",
   },
   inLanguage: "en-US",
 };
@@ -147,7 +147,7 @@ const faqs = [
       },
       {
         q: "Can I delete my account and data?",
-        a: "Yes. Email privacy@talkprep.co and we will delete your account and any associated data within 30 days.",
+        a: "Yes. Email privacy@talk-prep.cloud and we will delete your account and any associated data within 30 days.",
       },
     ],
   },

@@ -109,14 +109,14 @@ const scenariosSchema = {
   "@type": "ItemList",
   name: "TalkPrep Conversation Scenarios",
   description: "TalkPrep covers 11 conversation types — resignations, raises, feedback, family boundaries, relationship talks, and more.",
-  url: "https://talkprep.co/scenarios",
+  url: "https://talk-prep.cloud/scenarios",
   itemListElement: scenarios
     .filter((sc) => sc.href && sc.href !== "#")
     .map((sc, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: sc.title,
-      url: `https://talkprep.co${sc.href}`,
+      url: `https://talk-prep.cloud${sc.href}`,
     })),
 };
 

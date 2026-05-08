@@ -11,9 +11,9 @@ const schema = {
   image: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200",
   datePublished: "2026-05-07T00:00:00Z",
   dateModified: "2026-05-07T00:00:00Z",
-  author: { "@type": "Organization", name: "TalkPrep Editorial", url: "https://talkprep.co" },
-  publisher: { "@type": "Organization", name: "TalkPrep", url: "https://talkprep.co" },
-  mainEntityOfPage: { "@type": "WebPage", "@id": "https://talkprep.co/how-to-ask-for-a-raise-without-feeling-awkward" },
+  author: { "@type": "Organization", name: "TalkPrep Editorial", url: "https://talk-prep.cloud" },
+  publisher: { "@type": "Organization", name: "TalkPrep", url: "https://talk-prep.cloud" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://talk-prep.cloud/how-to-ask-for-a-raise-without-feeling-awkward" },
 };
 
 export default function AskForRaise() {
