@@ -398,7 +398,7 @@ export default function Home() {
             <h2 className="section-title" style={{ marginBottom: 0 }}>Used before the hardest conversation of their year.</h2>
             <span style={{ fontFamily: "'DM Mono',monospace", fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--ink4)", whiteSpace: "nowrap" }}>★★★★★ 4.9 · 840+ ratings</span>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "1.25rem", marginTop: "2rem" }} className="reveal">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "1.25rem", marginTop: "2rem" }} className="card-grid reveal">
             <div className="tcard cg-item-white">
               <div className="tcard-stars">★★★★★</div>
               <p className="tcard-quote">"I used TalkPrep the night before my resignation. My manager tried three different counter-offers and I handled every one. Walked out with the relationship intact."</p>
@@ -534,7 +534,7 @@ export default function Home() {
         <div className="container">
           <span className="section-tag reveal">Conversation guides</span>
           <h2 className="section-title reveal">Scripts for the conversations everyone is Googling.</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.5rem", marginTop: "2rem" }} className="reveal">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.5rem", marginTop: "2rem" }} className="card-grid reveal">
             <Link href="/how-to-resign-from-a-job" className="guide-card">
               <span className="gc-tag">Career · 12 min read</span>
               <h3 className="gc-title">How to Resign from a Job Gracefully (With Exact Scripts)</h3>

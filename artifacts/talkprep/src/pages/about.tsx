@@ -38,7 +38,7 @@ export default function About() {
 
       <section className="about-page-hero">
         <div className="container-md">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 420px", gap: "4rem", alignItems: "center" }}>
+          <div className="about-hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr 420px", gap: "4rem", alignItems: "center" }}>
             <div>
               <span className="section-tag">About TalkPrep</span>
               <h1 className="section-title" style={{ fontSize: "clamp(2rem,4vw,3rem)", maxWidth: "680px", marginBottom: "1rem" }}>

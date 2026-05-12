@@ -1138,7 +1138,8 @@
   .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; padding: 3rem 1.5rem 2rem; }
   .tp-page .problem-grid,
   .tp-page .features-grid,
-  .tp-page .story-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .tp-page .story-grid,
+  .tp-page .teams-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .tp-page .mockup-body { grid-template-columns: 1fr; }
   .tp-page .mockup-panel { border-right: none; border-bottom: 1px solid var(--border); }
   .tp-page .mockup-panel:last-child { border-bottom: none; }
@@ -1146,18 +1147,51 @@
   .tp-page .fg-visual { display: none; }
   .tp-page .step-block { grid-template-columns: 1fr; gap: 1rem; }
   .tp-page .step-num { text-align: left; }
+  /* 3-col grids → 2 col on tablet */
+  .tp-page .card-grid,
+  .tp-page .dark-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .tp-page .compare-wrap { grid-template-columns: 1fr !important; }
+  .tp-page .about-hero-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  .tp-page .about-hero-grid > div:last-child { height: 280px !important; }
 }
 @media (max-width: 640px) {
   .tp-page .container, .tp-page .container-md, .tp-page .container-sm { padding: 0 1.25rem; }
   .site-nav { padding: 0.875rem 1.25rem; }
   .footer-bottom { padding: 1rem 1.25rem; flex-direction: column; align-items: flex-start; }
-  .footer-top { padding: 2.5rem 1.25rem 2rem; }
+  .footer-top { padding: 2.5rem 1.25rem 2rem; grid-template-columns: 1fr; }
   .tp-page .hero { padding: 5.5rem 0 3rem; }
+  .tp-page .hero-title { font-size: clamp(2rem, 10vw, 3.5rem); }
   .tp-page .hero-actions { flex-direction: column; align-items: stretch; }
   .tp-page .hero-actions .btn { justify-content: center; }
   .tp-page .hero-proof { gap: 0.75rem; }
+  .tp-page .hero-scenarios { flex-direction: column; align-items: flex-start; }
   .tp-page .enterprise-row { flex-direction: column; align-items: flex-start; }
   .tp-page .contact-strip { flex-direction: column; align-items: flex-start; }
+  .tp-page .stats-strip { grid-template-columns: 1fr 1fr; gap: 1.5rem; padding: 2rem 1.25rem; }
+  .tp-page .stat-div { display: none; }
+  /* All multi-col grids → single column on mobile */
+  .tp-page .card-grid,
+  .tp-page .dark-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  .tp-page .compare-wrap { grid-template-columns: 1fr !important; }
+  .tp-page .about-hero-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  .tp-page .about-hero-grid > div:last-child { height: 240px !important; }
+  /* Pricing plan cards single col */
+  .tp-page .plan-card { border-right: none; border-bottom: 1px solid var(--border); }
+  /* Compare table — scrollable */
+  .tp-page .compare-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tp-page .compare-table { min-width: 480px; }
+  /* Section padding reduction */
+  .tp-page .section, .tp-page .section-alt, .tp-page .section-dark { padding: 3rem 0; }
+  .tp-page .page-hero { padding: 4rem 0 3rem; }
+  /* Testimonial cards */
+  .tp-page .tcard { padding: 1.25rem; }
+  /* Free trial banner stacks on very small screens */
+  .tp-page .ftb-inner { flex-direction: column; align-items: flex-start; }
+  .tp-page .ftb-inner .btn { width: 100%; justify-content: center; }
+  /* Mockup hidden on mobile to reduce clutter */
+  .tp-page .mockup-wrap { display: none; }
+  /* Section title sizing */
+  .tp-page .section-title { font-size: clamp(1.5rem, 7vw, 2.5rem); }
 }
 
 /* ============================================================

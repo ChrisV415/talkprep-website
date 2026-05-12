@@ -203,7 +203,8 @@ export default function Pricing() {
         <div className="container-md">
           <span className="section-tag reveal" style={{ textAlign: "center", display: "block" }}>Compare plans</span>
           <h2 className="section-title reveal" style={{ textAlign: "center", marginBottom: "2rem" }}>Everything in one place.</h2>
-          <div style={{ background: "white", border: "1px solid var(--border)", borderRadius: "4px", overflow: "hidden" }} className="reveal">
+          <div className="compare-table-wrap reveal">
+          <div style={{ background: "white", border: "1px solid var(--border)", borderRadius: "4px", overflow: "hidden" }}>
             <table className="compare-table">
               <thead>
                 <tr>
@@ -224,6 +225,7 @@ export default function Pricing() {
                 ))}
               </tbody>
             </table>
+          </div>
           </div>
         </div>
       </section>

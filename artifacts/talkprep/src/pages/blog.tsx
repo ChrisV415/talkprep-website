@@ -266,7 +266,7 @@ export default function Blog() {
           </div>
 
           {/* Post grid */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.5rem" }} className="reveal">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.5rem" }} className="card-grid reveal">
             {posts.map((post, i) => (
               post.soon ? (
                 <div

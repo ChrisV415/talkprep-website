@@ -159,7 +159,7 @@ export default function Scenarios() {
 
       <section style={{ padding: "3rem 0 4rem" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.5rem" }} className="reveal">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.5rem" }} className="card-grid reveal">
             {scenarios.map((sc, i) =>
               sc.internal ? (
                 <Link key={i} href={sc.href} className="sc-full">

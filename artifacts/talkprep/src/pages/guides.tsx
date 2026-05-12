@@ -197,7 +197,7 @@ export default function Guides() {
           </div>
 
           {/* Guide grid — live */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.5rem", marginBottom: "1.5rem" }} className="reveal">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.5rem", marginBottom: "1.5rem" }} className="card-grid reveal">
             {liveGuides.map((g) => (
               <Link key={g.href} href={g.href} className="guide-card">
                 <span className="gc-status">{g.tag} · Available now</span>
