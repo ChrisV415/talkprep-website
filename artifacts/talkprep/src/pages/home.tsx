@@ -475,7 +475,19 @@ export default function Home() {
           <p className="section-hint reveal" style={{ textAlign: "center", margin: "0 auto 2rem", maxWidth: "420px" }}>
             Three options. Start free — no credit card. Less than a single therapy session.
           </p>
-          <div className="card-grid reveal" style={{ gridTemplateColumns: "repeat(3,1fr)", maxWidth: "780px", margin: "0 auto" }}>
+          {/* Free trial banner */}
+          <div className="free-trial-banner reveal">
+            <div className="ftb-inner">
+              <span className="ftb-emoji">🎁</span>
+              <div>
+                <p className="ftb-title">Your first prep session is completely free</p>
+                <p className="ftb-sub">Sign up, describe your situation, and get your exact script — no credit card, no commitment. See if it works before you spend a cent.</p>
+              </div>
+              <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="btn btn-rust" style={{ whiteSpace: "nowrap", flexShrink: 0 }}>Try it free →</a>
+            </div>
+          </div>
+
+          <div className="card-grid reveal" style={{ gridTemplateColumns: "repeat(3,1fr)", maxWidth: "780px", margin: "2rem auto 0" }}>
             <div className="pp-card cg-item-white">
               <span className="pp-plan">Single session</span>
               <div className="pp-price">$4.99</div>

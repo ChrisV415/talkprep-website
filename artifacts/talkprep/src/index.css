@@ -839,6 +839,22 @@
 }
 .tp-page .tcard-name { font-size: 12px; font-weight: 500; color: var(--ink); }
 .tp-page .tcard-role { font-size: 11px; color: var(--ink4); }
+.tp-page .free-trial-banner {
+  max-width: 780px; margin: 0 auto 0; background: var(--rust-light);
+  border: 1.5px solid rgba(185,90,60,0.2); border-radius: 4px; overflow: hidden;
+}
+.tp-page .ftb-inner {
+  display: flex; align-items: center; gap: 1.25rem; padding: 1.25rem 1.75rem;
+  flex-wrap: wrap;
+}
+.tp-page .ftb-emoji { font-size: 1.75rem; flex-shrink: 0; }
+.tp-page .ftb-title {
+  font-family: 'Lora', serif; font-size: 1rem; font-weight: 700;
+  color: var(--ink); margin: 0 0 0.2rem;
+}
+.tp-page .ftb-sub {
+  font-size: 0.85rem; color: var(--ink2); margin: 0; line-height: 1.5;
+}
 .tp-page .pp-card { padding: 2.25rem 1.75rem; }
 .tp-page .pp-card.featured { background: var(--ink); color: var(--cream); }
 .tp-page .pp-plan {
