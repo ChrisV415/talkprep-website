@@ -56,7 +56,7 @@ export default function Terms() {
             </p>
 
             <h2>Your account</h2>
-            <p>You must provide accurate information when creating your account. You are responsible for maintaining the security of your account and for all activity that occurs under it. Notify us immediately at <a href="mailto:talkprep.info@gmail.com">talkprep.info@gmail.com</a> if you suspect unauthorised access.</p>
+            <p>You must provide accurate information when creating your account. You are responsible for maintaining the security of your account and for all activity that occurs under it. Notify us immediately at <a href="mailto:info@talk-prep.cloud">info@talk-prep.cloud</a> if you suspect unauthorised access.</p>
 
             <h2>Acceptable use</h2>
             <p>You agree not to use TalkPrep to:</p>
@@ -78,7 +78,7 @@ export default function Terms() {
 
             <h2>Refunds</h2>
             <p>
-              We offer a 7-day money-back guarantee on all paid plans. If you are not satisfied within 7 days of your first payment, contact us at <a href="mailto:talkprep.info@gmail.com">talkprep.info@gmail.com</a> and we will refund you in full. After 7 days, payments are non-refundable except where required by law.
+              We offer a 7-day money-back guarantee on all paid plans. If you are not satisfied within 7 days of your first payment, contact us at <a href="mailto:info@talk-prep.cloud">info@talk-prep.cloud</a> and we will refund you in full. After 7 days, payments are non-refundable except where required by law.
             </p>
 
             <h2>Your content</h2>
@@ -108,7 +108,7 @@ export default function Terms() {
             <p>These terms are governed by the laws of the jurisdiction in which TalkPrep is incorporated. Any disputes shall be resolved through binding arbitration, except where prohibited by applicable law.</p>
 
             <h2>Contact</h2>
-            <p>Questions about these terms? Email <a href="mailto:talkprep.info@gmail.com">talkprep.info@gmail.com</a>.</p>
+            <p>Questions about these terms? Email <a href="mailto:info@talk-prep.cloud">info@talk-prep.cloud</a>.</p>
           </div>
         </div>
       </article>

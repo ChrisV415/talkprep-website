@@ -128,7 +128,7 @@ export default function About() {
               <h3 className="cs-title">Want to talk to us?</h3>
               <p className="cs-desc">For HR partnerships, press inquiries, or general questions — we read everything.</p>
             </div>
-            <a href="mailto:talkprep.info@gmail.com" className="btn btn-secondary">talkprep.info@gmail.com</a>
+            <a href="mailto:info@talk-prep.cloud" className="btn btn-secondary">info@talk-prep.cloud</a>
           </div>
         </div>
       </section>
