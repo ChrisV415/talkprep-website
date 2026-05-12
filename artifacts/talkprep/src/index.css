@@ -847,6 +847,7 @@
   display: flex; align-items: center; gap: 1.25rem; padding: 1.25rem 1.75rem;
   flex-wrap: wrap;
 }
+.tp-page .ftb-inner > div { flex: 1; min-width: 200px; }
 .tp-page .ftb-emoji { font-size: 1.75rem; flex-shrink: 0; }
 .tp-page .ftb-title {
   font-family: 'Lora', serif; font-size: 1rem; font-weight: 700;

@@ -181,6 +181,21 @@ export default function Scenarios() {
         </div>
       </section>
 
+      <div className="tp-page" style={{ background: "var(--cream)" }}>
+        <div className="container" style={{ padding: "3rem var(--col)" }}>
+          <div className="free-trial-banner">
+            <div className="ftb-inner">
+              <span className="ftb-emoji">🎁</span>
+              <div>
+                <p className="ftb-title">Your first prep session is completely free</p>
+                <p className="ftb-sub">Sign up, describe your situation, and get your exact script — no credit card, no commitment. See if it works before you spend a cent.</p>
+              </div>
+              <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="btn btn-rust" style={{ whiteSpace: "nowrap", flexShrink: 0 }}>Try it free →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="cta-dark">
         <h2 style={{ fontFamily: "'Lora',serif", fontSize: "clamp(1.8rem,3.5vw,2.4rem)", fontWeight: 700, color: "var(--cream)", marginBottom: "0.75rem", letterSpacing: "-0.02em" }}>
           Pick your scenario. <em style={{ fontStyle: "italic", color: "var(--rust2)" }}>Get your script.</em>

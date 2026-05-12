@@ -122,7 +122,19 @@ export default function Pricing() {
             Three options. Start completely free — no credit card required for your first 3 sessions.
           </p>
 
-          <div className="card-grid reveal" style={{ gridTemplateColumns: "repeat(3,1fr)", maxWidth: "820px", margin: "2.5rem auto 0" }}>
+          {/* Free trial banner */}
+          <div className="free-trial-banner reveal" style={{ maxWidth: "820px" }}>
+            <div className="ftb-inner">
+              <span className="ftb-emoji">🎁</span>
+              <div>
+                <p className="ftb-title">Your first prep session is completely free</p>
+                <p className="ftb-sub">Sign up, describe your situation, and get your exact script — no credit card, no commitment. See if it works before you spend a cent.</p>
+              </div>
+              <a href="https://talk-prep.replit.app/" target="_blank" rel="noopener noreferrer" className="btn btn-rust" style={{ whiteSpace: "nowrap", flexShrink: 0 }}>Try it free →</a>
+            </div>
+          </div>
+
+          <div className="card-grid reveal" style={{ gridTemplateColumns: "repeat(3,1fr)", maxWidth: "820px", margin: "2rem auto 0" }}>
             <div className="plan-card cg-item-white">
               <span className="plan-badge">Pay as you go</span>
               <h2 className="plan-name">Single Session</h2>
