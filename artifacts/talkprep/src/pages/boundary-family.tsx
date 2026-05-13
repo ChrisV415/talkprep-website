@@ -16,6 +16,18 @@ const schema = {
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talk-prep.cloud/how-to-set-a-boundary-with-family" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "What should I say when setting a boundary with a family member?", acceptedAnswer: { "@type": "Answer", text: "Name the boundary directly without over-explaining. \"I'm not going to be available for calls after 9pm anymore\" is a boundary. A long build-up with qualifications is not. Say it once, clearly." } },
+    { "@type": "Question", name: "How do I respond when a family member guilt-trips me for setting a boundary?", acceptedAnswer: { "@type": "Answer", text: "Acknowledge the feeling without reversing the boundary. \"I know this isn't what you were hoping to hear, and I do love you — this is just what I need.\" You don't owe an agreement, only honesty. Repeating your position calmly is not cruelty." } },
+    { "@type": "Question", name: "What if a family member refuses to accept my boundary?", acceptedAnswer: { "@type": "Answer", text: "You can't force acceptance — only communicate clearly and then follow through. If they cross the boundary, respond consistently with the stated consequence. Inconsistency is what trains people to keep pushing." } },
+    { "@type": "Question", name: "Is it possible to set firm boundaries without damaging the relationship?", acceptedAnswer: { "@type": "Answer", text: "Yes — most relationships that end over boundaries were already strained before the boundary was named. A well-stated boundary actually creates the conditions for a healthier relationship by making the terms clear." } },
+    { "@type": "Question", name: "What is TalkPrep?", acceptedAnswer: { "@type": "Answer", text: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." } },
+  ],
+};
+
 export default function BoundaryFamily() {
   return (
     <div className="art-wrap">
@@ -30,7 +42,7 @@ export default function BoundaryFamily() {
         imageAlt="Family members having a difficult but caring conversation"
         articleSection="Family"
         keywords="how to set a boundary with family, family boundary script, setting limits with parents, saying no to family, family boundary conversation"
-        schema={schema}
+        schema={[schema, faqSchema]}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
           { name: "How to Set a Boundary With Family", path: "/how-to-set-a-boundary-with-family" },
@@ -249,6 +261,26 @@ export default function BoundaryFamily() {
               <div className="rc-title">How to Resign from a Job Gracefully</div>
               <div className="rc-hint">12 min read</div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="art-faq">
+        <div className="art-faq-in">
+          <h2 className="art-faq-title">Frequently asked questions</h2>
+          <div className="art-faq-list">
+            {[
+              { q: "What should I say when setting a boundary with a family member?", a: "Name the boundary directly without over-explaining. \"I'm not going to be available for calls after 9pm anymore\" is a boundary. A long build-up with qualifications is not. Say it once, clearly." },
+              { q: "How do I respond when a family member guilt-trips me for setting a boundary?", a: "Acknowledge the feeling without reversing the boundary. \"I know this isn't what you were hoping to hear, and I do love you — this is just what I need.\" You don't owe an agreement, only honesty. Repeating your position calmly is not cruelty." },
+              { q: "What if a family member refuses to accept my boundary?", a: "You can't force acceptance — only communicate clearly and then follow through. If they cross the boundary, respond consistently with the stated consequence. Inconsistency is what trains people to keep pushing." },
+              { q: "Is it possible to set firm boundaries without damaging the relationship?", a: "Yes — most relationships that end over boundaries were already strained before the boundary was named. A well-stated boundary actually creates the conditions for a healthier relationship by making the terms clear." },
+              { q: "What is TalkPrep?", a: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." },
+            ].map((item, i) => (
+              <div key={i} className="art-faq-item">
+                <div className="art-faq-q">{item.q}</div>
+                <div className="art-faq-a">{item.a}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

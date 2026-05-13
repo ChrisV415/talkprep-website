@@ -16,6 +16,18 @@ const schema = {
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talk-prep.cloud/how-to-confront-a-friend" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "What's the best way to open a conversation confronting a friend?", acceptedAnswer: { "@type": "Answer", text: "Start with your relationship, not the problem. \"There's something I've been sitting with and I care about us too much to not say it.\" Then say the thing directly — one sentence, no preamble. The longer you build up, the more defensive they become before you've said anything." } },
+    { "@type": "Question", name: "How do I stop a friend confrontation from turning into a fight?", acceptedAnswer: { "@type": "Answer", text: "Stick to what you observed and how it landed — not character judgments. \"When you did X, I felt Y\" is much harder to argue with than \"you always do this.\" If it starts to escalate, name it: \"I don't want to fight about this, I just wanted to be honest with you.\"" } },
+    { "@type": "Question", name: "What if my friend denies what happened or gets defensive?", acceptedAnswer: { "@type": "Answer", text: "Don't push for admission. Your goal is to say the thing, not to win. If they deny it, you can say \"I hear you — I just needed you to know how it landed for me.\" That closes the loop without requiring them to agree." } },
+    { "@type": "Question", name: "Is it too late to bring something up if it happened weeks ago?", acceptedAnswer: { "@type": "Answer", text: "No — but acknowledge the gap. \"I've been sitting with this for a while because I wasn't sure how to say it.\" That's honest, and it signals you've thought carefully. Most people respect that more than an immediate reaction." } },
+    { "@type": "Question", name: "What is TalkPrep?", acceptedAnswer: { "@type": "Answer", text: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." } },
+  ],
+};
+
 export default function ConfrontFriend() {
   return (
     <div className="art-wrap">
@@ -30,7 +42,7 @@ export default function ConfrontFriend() {
         imageAlt="Two friends having a difficult but honest conversation"
         articleSection="Friendship"
         keywords="how to confront a friend, friendship confrontation, difficult friend conversation, say hard thing to friend, friendship conflict script"
-        schema={schema}
+        schema={[schema, faqSchema]}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
           { name: "How to Confront a Friend", path: "/how-to-confront-a-friend" },
@@ -249,6 +261,26 @@ export default function ConfrontFriend() {
               <div className="rc-title">How to Give Difficult Feedback</div>
               <div className="rc-hint">9 min read</div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="art-faq">
+        <div className="art-faq-in">
+          <h2 className="art-faq-title">Frequently asked questions</h2>
+          <div className="art-faq-list">
+            {[
+              { q: "What's the best way to open a conversation confronting a friend?", a: "Start with your relationship, not the problem. \"There's something I've been sitting with and I care about us too much to not say it.\" Then say the thing directly — one sentence, no preamble. The longer you build up, the more defensive they become before you've said anything." },
+              { q: "How do I stop a friend confrontation from turning into a fight?", a: "Stick to what you observed and how it landed — not character judgments. \"When you did X, I felt Y\" is much harder to argue with than \"you always do this.\" If it starts to escalate, name it: \"I don't want to fight about this, I just wanted to be honest with you.\"" },
+              { q: "What if my friend denies what happened or gets defensive?", a: "Don't push for admission. Your goal is to say the thing, not to win. If they deny it, you can say \"I hear you — I just needed you to know how it landed for me.\" That closes the loop without requiring them to agree." },
+              { q: "Is it too late to bring something up if it happened weeks ago?", a: "No — but acknowledge the gap. \"I've been sitting with this for a while because I wasn't sure how to say it.\" That's honest, and it signals you've thought carefully. Most people respect that more than an immediate reaction." },
+              { q: "What is TalkPrep?", a: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." },
+            ].map((item, i) => (
+              <div key={i} className="art-faq-item">
+                <div className="art-faq-q">{item.q}</div>
+                <div className="art-faq-a">{item.a}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

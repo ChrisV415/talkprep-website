@@ -16,6 +16,18 @@ const schema = {
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talk-prep.cloud/how-to-give-negative-feedback-that-actually-lands" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "What's the best opening for a conversation where I need to give negative feedback?", acceptedAnswer: { "@type": "Answer", text: "Be direct but not cold. \"I want to share some feedback that's been on my mind — it's not easy to say, but I think it's important.\" Then give the feedback in one or two specific sentences. Don't use a sandwich structure — it buries the message and signals dishonesty." } },
+    { "@type": "Question", name: "How do I give negative feedback without making it feel personal?", acceptedAnswer: { "@type": "Answer", text: "Stick to observable behavior, not inferred character. \"The report had several errors that needed correcting before it went out\" is about the work. \"You're careless\" is about the person. Even when the problem is persistent, frame it as a pattern of behavior, not a trait." } },
+    { "@type": "Question", name: "What if the person becomes emotional after receiving negative feedback?", acceptedAnswer: { "@type": "Answer", text: "Give them space and don't rush to fill the silence. \"Take a moment if you need it\" is enough. Resist the urge to soften the feedback immediately — that can muddy the message. You can follow up after they've had time to process." } },
+    { "@type": "Question", name: "How do I make sure negative feedback actually leads to change?", acceptedAnswer: { "@type": "Answer", text: "Be specific about what change looks like. Vague feedback gives people nowhere to go. Concrete feedback — \"I'd like to see you proofread reports before sending\" — gives them something to act on. Then follow up, because most feedback lands only when it's revisited." } },
+    { "@type": "Question", name: "What is TalkPrep?", acceptedAnswer: { "@type": "Answer", text: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." } },
+  ],
+};
+
 export default function NegativeFeedback() {
   return (
     <div className="art-wrap">
@@ -30,7 +42,7 @@ export default function NegativeFeedback() {
         imageAlt="Professional giving clear and actionable negative feedback"
         articleSection="Career"
         keywords="how to give negative feedback, negative feedback that lands, feedback script, constructive criticism that works, honest feedback"
-        schema={schema}
+        schema={[schema, faqSchema]}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
           { name: "How to Give Negative Feedback That Actually Lands", path: "/how-to-give-negative-feedback-that-actually-lands" },
@@ -237,6 +249,26 @@ export default function NegativeFeedback() {
               <div className="rc-title">How to Fire Someone With Dignity</div>
               <div className="rc-hint">For when feedback hasn't led to change.</div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="art-faq">
+        <div className="art-faq-in">
+          <h2 className="art-faq-title">Frequently asked questions</h2>
+          <div className="art-faq-list">
+            {[
+              { q: "What's the best opening for a conversation where I need to give negative feedback?", a: "Be direct but not cold. \"I want to share some feedback that's been on my mind — it's not easy to say, but I think it's important.\" Then give the feedback in one or two specific sentences. Don't use a sandwich structure — it buries the message and signals dishonesty." },
+              { q: "How do I give negative feedback without making it feel personal?", a: "Stick to observable behavior, not inferred character. \"The report had several errors that needed correcting before it went out\" is about the work. \"You're careless\" is about the person. Even when the problem is persistent, frame it as a pattern of behavior, not a trait." },
+              { q: "What if the person becomes emotional after receiving negative feedback?", a: "Give them space and don't rush to fill the silence. \"Take a moment if you need it\" is enough. Resist the urge to soften the feedback immediately — that can muddy the message. You can follow up after they've had time to process." },
+              { q: "How do I make sure negative feedback actually leads to change?", a: "Be specific about what change looks like. Vague feedback gives people nowhere to go. Concrete feedback — \"I'd like to see you proofread reports before sending\" — gives them something to act on. Then follow up, because most feedback lands only when it's revisited." },
+              { q: "What is TalkPrep?", a: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." },
+            ].map((item, i) => (
+              <div key={i} className="art-faq-item">
+                <div className="art-faq-q">{item.q}</div>
+                <div className="art-faq-a">{item.a}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

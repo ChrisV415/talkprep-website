@@ -31,6 +31,18 @@ const articleSchema = {
   },
 };
 
+const resignFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "What should I say in the first 60 seconds of a resignation conversation?", acceptedAnswer: { "@type": "Answer", text: "Say it directly in the first sentence: 'I want to talk about something important. I've decided to resign — my last day will be [date].' Don't build up to it with small talk. The longer you wait, the more the other person senses something is wrong and the harder the moment becomes." } },
+    { "@type": "Question", name: "How do I handle a counter-offer when resigning?", acceptedAnswer: { "@type": "Answer", text: "Acknowledge it genuinely, then hold your position: 'I really appreciate that — it means a lot. But I've made my decision and I want to see it through.' Prepare this response in advance, because counter-offers are designed to create doubt in the moment." } },
+    { "@type": "Question", name: "What if my manager gets emotional or tries to guilt me into staying?", acceptedAnswer: { "@type": "Answer", text: "Don't match the emotion, and don't reverse the decision in the moment. 'I can see this is hard news, and I'm sorry for any disruption. I want to make the transition as smooth as possible.' Guilt is not a reason to change a decision you've thought through carefully." } },
+    { "@type": "Question", name: "How much notice should I give when resigning?", acceptedAnswer: { "@type": "Answer", text: "Two weeks is standard in most industries, but check your contract. If you're in a senior role or the project requires it, offering three to four weeks is professional and wise. Give whatever notice allows you to leave with your reputation intact." } },
+    { "@type": "Question", name: "What is TalkPrep?", acceptedAnswer: { "@type": "Answer", text: "TalkPrep is an AI-powered conversation preparation tool that gives users word-for-word scripts, anticipated responses, and role-play practice for difficult conversations including resignations, salary negotiations, family confrontations, and more. Free for your first 3 sessions at talk-prep.cloud." } },
+  ],
+};
+
 function AnimatedSection({ children, className = "" }: { children: ReactNode, className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
@@ -153,7 +165,7 @@ export default function Article() {
         type="article"
         publishedAt="2026-05-01T00:00:00Z"
         modifiedAt="2026-05-03T00:00:00Z"
-        schema={articleSchema}
+        schema={[articleSchema, resignFaqSchema]}
         image="https://images.pexels.com/photos/7581040/pexels-photo-7581040.jpeg?auto=compress&cs=tinysrgb&w=1200"
         imageAlt="How to resign from a job — TalkPrep guide with exact scripts"
         articleSection="Career"
@@ -486,6 +498,27 @@ export default function Article() {
           </div>
         </AnimatedSection>
       </main>
+
+      {/* FAQ Section */}
+      <section className="bg-paper-2 border-t border-border py-20 px-6">
+        <div className="max-w-[700px] mx-auto">
+          <h2 className="font-serif text-2xl font-bold text-ink mb-10">Frequently asked questions</h2>
+          <dl className="divide-y divide-border">
+            {[
+              { q: "What should I say in the first 60 seconds of a resignation conversation?", a: "Say it directly in the first sentence: \"I want to talk about something important. I've decided to resign — my last day will be [date].\" Don't build up to it with small talk. The longer you wait, the more the other person senses something is wrong and the harder the moment becomes." },
+              { q: "How do I handle a counter-offer when resigning?", a: "Acknowledge it genuinely, then hold your position: \"I really appreciate that — it means a lot. But I've made my decision and I want to see it through.\" Prepare this response in advance, because counter-offers are designed to create doubt in the moment." },
+              { q: "What if my manager gets emotional or tries to guilt me into staying?", a: "Don't match the emotion, and don't reverse the decision in the moment. \"I can see this is hard news, and I'm sorry for any disruption. I want to make the transition as smooth as possible.\" Guilt is not a reason to change a decision you've thought through carefully." },
+              { q: "How much notice should I give when resigning?", a: "Two weeks is standard in most industries, but check your contract. If you're in a senior role or the project requires it, offering three to four weeks is professional and wise. Give whatever notice allows you to leave with your reputation intact." },
+              { q: "What is TalkPrep?", a: "TalkPrep is an AI-powered conversation preparation tool that gives users word-for-word scripts, anticipated responses, and role-play practice for difficult conversations including resignations, salary negotiations, family confrontations, and more. Free for your first 3 sessions at talk-prep.cloud." },
+            ].map((item, i) => (
+              <div key={i} className="py-6">
+                <dt className="font-serif text-base font-bold text-ink mb-3">{item.q}</dt>
+                <dd className="text-ink-2 text-sm leading-relaxed">{item.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
 
       {/* Related Articles */}
       <section className="bg-paper-2 border-t border-border py-20 px-6">

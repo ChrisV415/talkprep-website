@@ -36,6 +36,16 @@ const homeSchema = {
   ],
 };
 
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "TalkPrep",
+  url: "https://talk-prep.cloud",
+  description: "AI-powered conversation preparation tool. Get word-for-word scripts for difficult conversations — resignations, salary negotiations, family talks, feedback, and more.",
+  applicationCategory: "Productivity",
+  operatingSystem: "Web",
+};
+
 function useReveal() {
   useEffect(() => {
     const obs = new IntersectionObserver(
@@ -64,7 +74,7 @@ export default function Home() {
         description="Get word-for-word scripts, anticipate every response, and practice with AI before the real conversation. Resignations, raises, family talks — prepared in 5 minutes."
         canonical="/"
         keywords="conversation prep, difficult conversations, resignation script, salary negotiation script, AI conversation coach, hard conversation preparation"
-        schema={homeSchema}
+        schema={[homeSchema, orgSchema]}
       />
       <SiteNav />
 

@@ -16,6 +16,18 @@ const schema = {
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talk-prep.cloud/how-to-tell-partner-something-difficult" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How do I bring up something difficult with my partner without starting a fight?", acceptedAnswer: { "@type": "Answer", text: "Choose the moment carefully — not when either of you is tired, hungry, or already stressed. Open with what you need the conversation to accomplish: \"I want to talk about something that's been bothering me. I'm not looking for a fight — I just need you to hear me.\"" } },
+    { "@type": "Question", name: "What do I say if my partner gets defensive or shuts down?", acceptedAnswer: { "@type": "Answer", text: "Name what you're seeing without attacking it. \"I notice you've gone quiet — I want to make sure we stay in this together.\" If they shut down completely, give them time and come back. Forcing the conversation when someone is flooded rarely goes anywhere useful." } },
+    { "@type": "Question", name: "What's the best time and place to have a difficult conversation with a partner?", acceptedAnswer: { "@type": "Answer", text: "Not in the car, not in public, not at the end of a long day. At home, sitting face to face, with enough time that neither of you has to rush somewhere. Block the time if you need to." } },
+    { "@type": "Question", name: "How do I stay calm during an emotionally charged conversation with my partner?", acceptedAnswer: { "@type": "Answer", text: "Slow your breathing deliberately — it's one of the few things you can control. If you feel yourself escalating, say \"I need a moment\" before you say something you'll regret. A five-minute pause is better than a 20-minute argument that ends in neither of you being heard." } },
+    { "@type": "Question", name: "What is TalkPrep?", acceptedAnswer: { "@type": "Answer", text: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." } },
+  ],
+};
+
 export default function PartnerDifficult() {
   return (
     <div className="art-wrap">
@@ -30,7 +42,7 @@ export default function PartnerDifficult() {
         imageAlt="Couple having an honest and caring difficult conversation"
         articleSection="Relationships"
         keywords="how to tell your partner something difficult, difficult relationship conversation, couples communication script, relationship talk, saying hard things to partner"
-        schema={schema}
+        schema={[schema, faqSchema]}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
           { name: "Tell Your Partner Something Difficult", path: "/how-to-tell-partner-something-difficult" },
@@ -249,6 +261,26 @@ export default function PartnerDifficult() {
               <div className="rc-title">How to Resign from a Job Gracefully</div>
               <div className="rc-hint">12 min read</div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="art-faq">
+        <div className="art-faq-in">
+          <h2 className="art-faq-title">Frequently asked questions</h2>
+          <div className="art-faq-list">
+            {[
+              { q: "How do I bring up something difficult with my partner without starting a fight?", a: "Choose the moment carefully — not when either of you is tired, hungry, or already stressed. Open with what you need the conversation to accomplish: \"I want to talk about something that's been bothering me. I'm not looking for a fight — I just need you to hear me.\"" },
+              { q: "What do I say if my partner gets defensive or shuts down?", a: "Name what you're seeing without attacking it. \"I notice you've gone quiet — I want to make sure we stay in this together.\" If they shut down completely, give them time and come back. Forcing the conversation when someone is flooded rarely goes anywhere useful." },
+              { q: "What's the best time and place to have a difficult conversation with a partner?", a: "Not in the car, not in public, not at the end of a long day. At home, sitting face to face, with enough time that neither of you has to rush somewhere. Block the time if you need to." },
+              { q: "How do I stay calm during an emotionally charged conversation with my partner?", a: "Slow your breathing deliberately — it's one of the few things you can control. If you feel yourself escalating, say \"I need a moment\" before you say something you'll regret. A five-minute pause is better than a 20-minute argument that ends in neither of you being heard." },
+              { q: "What is TalkPrep?", a: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." },
+            ].map((item, i) => (
+              <div key={i} className="art-faq-item">
+                <div className="art-faq-q">{item.q}</div>
+                <div className="art-faq-a">{item.a}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -16,6 +16,18 @@ const schema = {
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talk-prep.cloud/how-to-give-difficult-feedback" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How do I open a difficult feedback conversation without sounding harsh?", acceptedAnswer: { "@type": "Answer", text: "Lead with your intent. \"I want to give you some feedback because I think it matters for where you're headed.\" Then say the observation — one specific, concrete thing — not a pattern, not a character judgment. Specificity signals fairness." } },
+    { "@type": "Question", name: "What if the person gets defensive when I give feedback?", acceptedAnswer: { "@type": "Answer", text: "Don't back down, but don't escalate either. Acknowledge their reaction — \"I hear that this is hard to hear\" — then gently restate the observation. \"I'm not trying to attack you. What I'm seeing is X, and I think it's worth addressing.\"" } },
+    { "@type": "Question", name: "What's the difference between difficult feedback and criticism?", acceptedAnswer: { "@type": "Answer", text: "Feedback is forward-looking: it addresses a specific behavior and points toward a different outcome. Criticism is backward-looking and character-based. \"Your presentation was unclear in the second half\" is feedback. \"You're not a good communicator\" is criticism. One is useful, the other just hurts." } },
+    { "@type": "Question", name: "How do I follow up after giving difficult feedback?", acceptedAnswer: { "@type": "Answer", text: "Circle back within a week. A short \"how are you feeling about our conversation last week?\" shows you meant it as support, not as a hit. Most people need time to process feedback — the follow-up is often where the actual change begins." } },
+    { "@type": "Question", name: "What is TalkPrep?", acceptedAnswer: { "@type": "Answer", text: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." } },
+  ],
+};
+
 export default function DifficultFeedback() {
   return (
     <div className="art-wrap">
@@ -30,7 +42,7 @@ export default function DifficultFeedback() {
         imageAlt="Two colleagues having a direct and honest feedback conversation"
         articleSection="Management"
         keywords="how to give difficult feedback, giving hard feedback, difficult feedback script, constructive criticism, honest feedback conversation"
-        schema={schema}
+        schema={[schema, faqSchema]}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
           { name: "How to Give Difficult Feedback", path: "/how-to-give-difficult-feedback" },
@@ -245,6 +257,26 @@ export default function DifficultFeedback() {
               <div className="rc-title">How to Resign from a Job Gracefully</div>
               <div className="rc-hint">12 min read</div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="art-faq">
+        <div className="art-faq-in">
+          <h2 className="art-faq-title">Frequently asked questions</h2>
+          <div className="art-faq-list">
+            {[
+              { q: "How do I open a difficult feedback conversation without sounding harsh?", a: "Lead with your intent. \"I want to give you some feedback because I think it matters for where you're headed.\" Then say the observation — one specific, concrete thing — not a pattern, not a character judgment. Specificity signals fairness." },
+              { q: "What if the person gets defensive when I give feedback?", a: "Don't back down, but don't escalate either. Acknowledge their reaction — \"I hear that this is hard to hear\" — then gently restate the observation. \"I'm not trying to attack you. What I'm seeing is X, and I think it's worth addressing.\"" },
+              { q: "What's the difference between difficult feedback and criticism?", a: "Feedback is forward-looking: it addresses a specific behavior and points toward a different outcome. Criticism is backward-looking and character-based. \"Your presentation was unclear in the second half\" is feedback. \"You're not a good communicator\" is criticism. One is useful, the other just hurts." },
+              { q: "How do I follow up after giving difficult feedback?", a: "Circle back within a week. A short \"how are you feeling about our conversation last week?\" shows you meant it as support, not as a hit. Most people need time to process feedback — the follow-up is often where the actual change begins." },
+              { q: "What is TalkPrep?", a: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." },
+            ].map((item, i) => (
+              <div key={i} className="art-faq-item">
+                <div className="art-faq-q">{item.q}</div>
+                <div className="art-faq-a">{item.a}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

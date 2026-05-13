@@ -16,6 +16,18 @@ const schema = {
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talk-prep.cloud/how-to-ask-for-a-raise-without-feeling-awkward" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "What should I say in the first 60 seconds when asking for a raise?", acceptedAnswer: { "@type": "Answer", text: "State your intention directly. \"I'd like to talk about my compensation — I've been thinking about it carefully and I want to make a case for an increase.\" Don't soften it into a question. You're having a professional conversation, not asking a favour." } },
+    { "@type": "Question", name: "How do I handle it if my manager says the timing isn't right?", acceptedAnswer: { "@type": "Answer", text: "Ask for a specific timeline. \"I understand — when would be the right time to revisit this?\" If they can't give you a date, that's information. A vague \"maybe later\" is often a soft no, and you'll want to know that sooner rather than later." } },
+    { "@type": "Question", name: "What if my manager says there's no budget for a raise?", acceptedAnswer: { "@type": "Answer", text: "Ask what the path looks like when budget becomes available. Then explore other forms of compensation — additional time off, remote flexibility, a title change, or a one-time bonus. \"Budget\" often means \"not this quarter\" rather than \"never.\"" } },
+    { "@type": "Question", name: "How do I decide what salary number to ask for?", acceptedAnswer: { "@type": "Answer", text: "Research the market using Glassdoor, LinkedIn Salary, and Levels.fyi if relevant. Know the range for your role and level, and ask for the top of that range if your performance supports it. Ask for a specific number — not a range — to anchor the conversation in your favour." } },
+    { "@type": "Question", name: "What is TalkPrep?", acceptedAnswer: { "@type": "Answer", text: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." } },
+  ],
+};
+
 export default function AskForRaise() {
   return (
     <div className="art-wrap">
@@ -30,7 +42,7 @@ export default function AskForRaise() {
         imageAlt="Professional having a salary negotiation conversation"
         articleSection="Negotiation"
         keywords="how to ask for a raise without feeling awkward, salary negotiation confidence, how to ask for raise without being awkward, anchoring salary negotiation, ask for raise confidently"
-        schema={schema}
+        schema={[schema, faqSchema]}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
           { name: "How to Ask for a Raise Without Feeling Awkward", path: "/how-to-ask-for-a-raise-without-feeling-awkward" },
@@ -340,6 +352,26 @@ export default function AskForRaise() {
               <div className="rc-title">How to Have a Performance Review Conversation</div>
               <div className="rc-hint">10 min read</div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="art-faq">
+        <div className="art-faq-in">
+          <h2 className="art-faq-title">Frequently asked questions</h2>
+          <div className="art-faq-list">
+            {[
+              { q: "What should I say in the first 60 seconds when asking for a raise?", a: "State your intention directly. \"I'd like to talk about my compensation — I've been thinking about it carefully and I want to make a case for an increase.\" Don't soften it into a question. You're having a professional conversation, not asking a favour." },
+              { q: "How do I handle it if my manager says the timing isn't right?", a: "Ask for a specific timeline. \"I understand — when would be the right time to revisit this?\" If they can't give you a date, that's information. A vague \"maybe later\" is often a soft no, and you'll want to know that sooner rather than later." },
+              { q: "What if my manager says there's no budget for a raise?", a: "Ask what the path looks like when budget becomes available. Then explore other forms of compensation — additional time off, remote flexibility, a title change, or a one-time bonus. \"Budget\" often means \"not this quarter\" rather than \"never.\"" },
+              { q: "How do I decide what salary number to ask for?", a: "Research the market using Glassdoor, LinkedIn Salary, and Levels.fyi if relevant. Know the range for your role and level, and ask for the top of that range if your performance supports it. Ask for a specific number — not a range — to anchor the conversation in your favour." },
+              { q: "What is TalkPrep?", a: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." },
+            ].map((item, i) => (
+              <div key={i} className="art-faq-item">
+                <div className="art-faq-q">{item.q}</div>
+                <div className="art-faq-a">{item.a}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

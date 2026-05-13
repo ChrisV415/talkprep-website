@@ -16,6 +16,18 @@ const schema = {
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talk-prep.cloud/how-to-have-a-performance-review-conversation" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How do I open a performance conversation with someone who is struggling?", acceptedAnswer: { "@type": "Answer", text: "Don't lead with the rating. Open with a question: \"How do you think things have been going over the past few months?\" It surfaces their self-awareness and gives you information about how to frame what comes next." } },
+    { "@type": "Question", name: "What do I say if the employee disagrees with their performance rating?", acceptedAnswer: { "@type": "Answer", text: "Acknowledge the disagreement without abandoning the rating. \"I hear that you see it differently — can you help me understand your perspective?\" Listen fully, then share what you've observed specifically. Don't be pressured into inflating a rating to avoid discomfort." } },
+    { "@type": "Question", name: "How do I give feedback that motivates rather than discourages?", acceptedAnswer: { "@type": "Answer", text: "Tie feedback to potential, not failure. \"I'm raising this because I think you're capable of more\" lands differently than \"this isn't good enough.\" Be specific about what change looks like — vague feedback leaves people nowhere to go." } },
+    { "@type": "Question", name: "What should I prepare before a performance review conversation?", acceptedAnswer: { "@type": "Answer", text: "Three specific examples — one strength you'll reinforce, one area for development with a concrete observation, and one thing you'll do to support them. And a clear sense of the rating before you walk in, so you're not deciding in the room." } },
+    { "@type": "Question", name: "What is TalkPrep?", acceptedAnswer: { "@type": "Answer", text: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." } },
+  ],
+};
+
 export default function PerformanceReview() {
   return (
     <div className="art-wrap">
@@ -30,7 +42,7 @@ export default function PerformanceReview() {
         imageAlt="Manager conducting a productive performance review conversation"
         articleSection="Management"
         keywords="performance review conversation, how to give performance feedback, performance review script, employee performance discussion, management feedback"
-        schema={schema}
+        schema={[schema, faqSchema]}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
           { name: "Performance Review Conversation", path: "/how-to-have-a-performance-review-conversation" },
@@ -232,6 +244,26 @@ export default function PerformanceReview() {
               <div className="rc-title">How to Resign from a Job Gracefully</div>
               <div className="rc-hint">12 min read</div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="art-faq">
+        <div className="art-faq-in">
+          <h2 className="art-faq-title">Frequently asked questions</h2>
+          <div className="art-faq-list">
+            {[
+              { q: "How do I open a performance conversation with someone who is struggling?", a: "Don't lead with the rating. Open with a question: \"How do you think things have been going over the past few months?\" It surfaces their self-awareness and gives you information about how to frame what comes next." },
+              { q: "What do I say if the employee disagrees with their performance rating?", a: "Acknowledge the disagreement without abandoning the rating. \"I hear that you see it differently — can you help me understand your perspective?\" Listen fully, then share what you've observed specifically. Don't be pressured into inflating a rating to avoid discomfort." },
+              { q: "How do I give feedback that motivates rather than discourages?", a: "Tie feedback to potential, not failure. \"I'm raising this because I think you're capable of more\" lands differently than \"this isn't good enough.\" Be specific about what change looks like — vague feedback leaves people nowhere to go." },
+              { q: "What should I prepare before a performance review conversation?", a: "Three specific examples — one strength you'll reinforce, one area for development with a concrete observation, and one thing you'll do to support them. And a clear sense of the rating before you walk in, so you're not deciding in the room." },
+              { q: "What is TalkPrep?", a: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." },
+            ].map((item, i) => (
+              <div key={i} className="art-faq-item">
+                <div className="art-faq-q">{item.q}</div>
+                <div className="art-faq-a">{item.a}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

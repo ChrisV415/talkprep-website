@@ -16,6 +16,18 @@ const schema = {
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talk-prep.cloud/how-to-fire-someone" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "What should I say in the first sentence when firing someone?", acceptedAnswer: { "@type": "Answer", text: "Say it in the first 30 seconds. \"I have some difficult news — we're letting you go. Your last day is [date].\" Don't build up to it with small talk. The delay only makes it harder for both of you, and they will sense something is wrong immediately." } },
+    { "@type": "Question", name: "How long should a termination conversation last?", acceptedAnswer: { "@type": "Answer", text: "10 to 20 minutes. Enough time to be human, explain the basics, and cover next steps — not so long that it becomes drawn out or gives the impression you're open to reversing the decision. If you have decided, the conversation should reflect that certainty." } },
+    { "@type": "Question", name: "What do I say if the employee cries or gets angry?", acceptedAnswer: { "@type": "Answer", text: "Give them space. If they cry, a simple \"take a moment\" and silence is more respectful than filler words. If they get angry, don't match the energy — \"I understand this is really hard news\" keeps you anchored. If it escalates, it's okay to say \"I think we should pause and come back to the details.\"" } },
+    { "@type": "Question", name: "What should I prepare before a termination conversation?", acceptedAnswer: { "@type": "Answer", text: "Know your first sentence. Have the severance and logistics details ready in writing. Arrange for someone from HR to be present if possible. And be clear in your own head that the decision is final before you walk in." } },
+    { "@type": "Question", name: "What is TalkPrep?", acceptedAnswer: { "@type": "Answer", text: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." } },
+  ],
+};
+
 export default function FireSomeone() {
   return (
     <div className="art-wrap">
@@ -30,7 +42,7 @@ export default function FireSomeone() {
         imageAlt="Manager having a difficult conversation about employee termination"
         articleSection="Management"
         keywords="how to fire someone, termination conversation, letting someone go, firing an employee, employee dismissal script"
-        schema={schema}
+        schema={[schema, faqSchema]}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
           { name: "How to Fire Someone", path: "/how-to-fire-someone" },
@@ -256,6 +268,26 @@ export default function FireSomeone() {
               <div className="rc-title">How to Resign from a Job Gracefully</div>
               <div className="rc-hint">12 min read</div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="art-faq">
+        <div className="art-faq-in">
+          <h2 className="art-faq-title">Frequently asked questions</h2>
+          <div className="art-faq-list">
+            {[
+              { q: "What should I say in the first sentence when firing someone?", a: "Say it in the first 30 seconds. \"I have some difficult news — we're letting you go. Your last day is [date].\" Don't build up to it with small talk. The delay only makes it harder for both of you, and they will sense something is wrong immediately." },
+              { q: "How long should a termination conversation last?", a: "10 to 20 minutes. Enough time to be human, explain the basics, and cover next steps — not so long that it becomes drawn out or gives the impression you're open to reversing the decision. If you have decided, the conversation should reflect that certainty." },
+              { q: "What do I say if the employee cries or gets angry?", a: "Give them space. If they cry, a simple \"take a moment\" and silence is more respectful than filler words. If they get angry, don't match the energy — \"I understand this is really hard news\" keeps you anchored. If it escalates, it's okay to say \"I think we should pause and come back to the details.\"" },
+              { q: "What should I prepare before a termination conversation?", a: "Know your first sentence. Have the severance and logistics details ready in writing. Arrange for someone from HR to be present if possible. And be clear in your own head that the decision is final before you walk in." },
+              { q: "What is TalkPrep?", a: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." },
+            ].map((item, i) => (
+              <div key={i} className="art-faq-item">
+                <div className="art-faq-q">{item.q}</div>
+                <div className="art-faq-a">{item.a}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

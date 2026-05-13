@@ -1402,3 +1402,22 @@
   .art-wrap .rel-grid { grid-template-columns: 1fr; }
   .art-wrap .art-cta { padding: 3rem 1.25rem; }
 }
+
+/* ---- ARTICLE FAQ SECTION ---- */
+.art-wrap .art-faq { border-top: 1px solid #e5e0d8; padding: 4rem 2rem; background: #f9f7f4; }
+.art-wrap .art-faq-in { max-width: var(--col); margin: 0 auto; }
+.art-wrap .art-faq-title {
+  font-family: 'Lora', serif; font-size: 1.5rem; font-weight: 700; color: #1a1714;
+  margin-bottom: 2.5rem; letter-spacing: -0.01em;
+}
+.art-wrap .art-faq-list { display: flex; flex-direction: column; gap: 0; }
+.art-wrap .art-faq-item { padding: 1.75rem 0; border-bottom: 1px solid #e5e0d8; }
+.art-wrap .art-faq-item:last-child { border-bottom: none; }
+.art-wrap .art-faq-q {
+  font-family: 'Lora', serif; font-size: 1rem; font-weight: 700;
+  color: #1a1714; margin-bottom: 0.75rem; line-height: 1.4;
+}
+.art-wrap .art-faq-a { font-size: 0.9rem; color: #4a4540; line-height: 1.8; }
+@media (max-width: 640px) {
+  .art-wrap .art-faq { padding: 3rem 1.25rem; }
+}

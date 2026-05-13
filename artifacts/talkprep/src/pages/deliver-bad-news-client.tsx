@@ -16,6 +16,18 @@ const schema = {
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talk-prep.cloud/how-to-deliver-bad-news-to-a-client" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How do I open a conversation where I need to deliver bad news to a client?", acceptedAnswer: { "@type": "Answer", text: "Don't bury the news. Open with the headline — \"I need to share some difficult news about [project/timeline/outcome]\" — within the first 60 seconds. Clients forgive bad news delivered promptly much more readily than bad news they discover themselves." } },
+    { "@type": "Question", name: "What should I do if a client gets angry when I deliver bad news?", acceptedAnswer: { "@type": "Answer", text: "Let them be heard before you say anything. \"I completely understand why this is frustrating\" — and mean it. Defending yourself or explaining before they've finished speaking almost always makes it worse. After they've expressed it, move to what you're doing about it." } },
+    { "@type": "Question", name: "Should I apologize when delivering bad news to a client?", acceptedAnswer: { "@type": "Answer", text: "Apologize for the impact, not necessarily the outcome. \"I'm sorry this has put you in a difficult position\" is appropriate even when the cause was outside your control. Avoid over-apologizing — it can make clients less confident in your ability to handle what comes next." } },
+    { "@type": "Question", name: "How do I maintain client trust after delivering bad news?", acceptedAnswer: { "@type": "Answer", text: "Come with a plan. Clients lose trust not from the problem itself, but from the sense that you don't know what to do about it. \"Here's what happened, here's what we're doing, and here's what you can expect from us over the next [timeline]\" is the structure that keeps relationships intact." } },
+    { "@type": "Question", name: "What is TalkPrep?", acceptedAnswer: { "@type": "Answer", text: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." } },
+  ],
+};
+
 export default function DeliverBadNewsClient() {
   return (
     <div className="art-wrap">
@@ -30,7 +42,7 @@ export default function DeliverBadNewsClient() {
         imageAlt="Professional delivering difficult news to a client with composure"
         articleSection="Management"
         keywords="how to deliver bad news to a client, client communication script, project delays conversation, bad news client call, client relationship management"
-        schema={schema}
+        schema={[schema, faqSchema]}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
           { name: "How to Deliver Bad News to a Client", path: "/how-to-deliver-bad-news-to-a-client" },
@@ -241,6 +253,26 @@ export default function DeliverBadNewsClient() {
               <div className="rc-title">How to Fire Someone With Dignity</div>
               <div className="rc-hint">Another high-stakes professional conversation.</div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="art-faq">
+        <div className="art-faq-in">
+          <h2 className="art-faq-title">Frequently asked questions</h2>
+          <div className="art-faq-list">
+            {[
+              { q: "How do I open a conversation where I need to deliver bad news to a client?", a: "Don't bury the news. Open with the headline — \"I need to share some difficult news about [project/timeline/outcome]\" — within the first 60 seconds. Clients forgive bad news delivered promptly much more readily than bad news they discover themselves." },
+              { q: "What should I do if a client gets angry when I deliver bad news?", a: "Let them be heard before you say anything. \"I completely understand why this is frustrating\" — and mean it. Defending yourself or explaining before they've finished speaking almost always makes it worse. After they've expressed it, move to what you're doing about it." },
+              { q: "Should I apologize when delivering bad news to a client?", a: "Apologize for the impact, not necessarily the outcome. \"I'm sorry this has put you in a difficult position\" is appropriate even when the cause was outside your control. Avoid over-apologizing — it can make clients less confident in your ability to handle what comes next." },
+              { q: "How do I maintain client trust after delivering bad news?", a: "Come with a plan. Clients lose trust not from the problem itself, but from the sense that you don't know what to do about it. \"Here's what happened, here's what we're doing, and here's what you can expect\" is the structure that keeps relationships intact." },
+              { q: "What is TalkPrep?", a: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." },
+            ].map((item, i) => (
+              <div key={i} className="art-faq-item">
+                <div className="art-faq-q">{item.q}</div>
+                <div className="art-faq-a">{item.a}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -16,6 +16,18 @@ const schema = {
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talk-prep.cloud/why-you-freeze-in-hard-conversations" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Why do people freeze up during difficult conversations?", acceptedAnswer: { "@type": "Answer", text: "Freezing is a stress response — your brain perceives social threat the same way it processes physical danger, and the result is the same: fight, flight, or freeze. It's not a character flaw. It's what happens when stakes feel high and you haven't pre-loaded what to say." } },
+    { "@type": "Question", name: "What can I do in the moment when my mind goes blank?", acceptedAnswer: { "@type": "Answer", text: "Buy time with an honest pause. \"Give me a moment to think about that\" is a complete, professional sentence. You don't have to respond immediately. Buying yourself 10 seconds of silence often breaks the freeze and lets your actual thoughts surface." } },
+    { "@type": "Question", name: "How do I prepare so I don't freeze during a hard conversation?", acceptedAnswer: { "@type": "Answer", text: "Rehearse your opening sentence out loud — not in your head. Most freezing happens in the first 30 seconds. If you know exactly how you're going to open, you get past the hardest part on autopilot, and the rest of the conversation follows naturally." } },
+    { "@type": "Question", name: "Does anxiety cause conversation freezing?", acceptedAnswer: { "@type": "Answer", text: "Yes — social anxiety, fear of conflict, and low frustration tolerance all increase the likelihood of freezing. But the fix isn't to reduce anxiety before the conversation; it's to over-prepare the words so you don't need to generate them under pressure." } },
+    { "@type": "Question", name: "What is TalkPrep?", acceptedAnswer: { "@type": "Answer", text: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." } },
+  ],
+};
+
 export default function FreezeConversations() {
   return (
     <div className="art-wrap">
@@ -30,7 +42,7 @@ export default function FreezeConversations() {
         imageAlt="Person experiencing anxiety before a difficult conversation"
         articleSection="Psychology"
         keywords="why you freeze in conversations, conversation anxiety, mind goes blank, fight or flight conversation, how to stop freezing, conversation preparation psychology"
-        schema={schema}
+        schema={[schema, faqSchema]}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
           { name: "Why You Freeze in Hard Conversations", path: "/why-you-freeze-in-hard-conversations" },
@@ -221,6 +233,26 @@ export default function FreezeConversations() {
               <div className="rc-title">How to Set a Boundary With a Family Member</div>
               <div className="rc-hint">For when the conversation really matters.</div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="art-faq">
+        <div className="art-faq-in">
+          <h2 className="art-faq-title">Frequently asked questions</h2>
+          <div className="art-faq-list">
+            {[
+              { q: "Why do people freeze up during difficult conversations?", a: "Freezing is a stress response — your brain perceives social threat the same way it processes physical danger, and the result is the same: fight, flight, or freeze. It's not a character flaw. It's what happens when stakes feel high and you haven't pre-loaded what to say." },
+              { q: "What can I do in the moment when my mind goes blank?", a: "Buy time with an honest pause. \"Give me a moment to think about that\" is a complete, professional sentence. You don't have to respond immediately. Buying yourself 10 seconds of silence often breaks the freeze and lets your actual thoughts surface." },
+              { q: "How do I prepare so I don't freeze during a hard conversation?", a: "Rehearse your opening sentence out loud — not in your head. Most freezing happens in the first 30 seconds. If you know exactly how you're going to open, you get past the hardest part on autopilot, and the rest of the conversation follows naturally." },
+              { q: "Does anxiety cause conversation freezing?", a: "Yes — social anxiety, fear of conflict, and low frustration tolerance all increase the likelihood of freezing. But the fix isn't to reduce anxiety before the conversation; it's to over-prepare the words so you don't need to generate them under pressure." },
+              { q: "What is TalkPrep?", a: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." },
+            ].map((item, i) => (
+              <div key={i} className="art-faq-item">
+                <div className="art-faq-q">{item.q}</div>
+                <div className="art-faq-a">{item.a}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

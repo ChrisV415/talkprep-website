@@ -16,6 +16,18 @@ const schema = {
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://talk-prep.cloud/how-to-negotiate-anything" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How do I open a negotiation without sounding aggressive or greedy?", acceptedAnswer: { "@type": "Answer", text: "Anchor to shared interest, not your position. \"I want to make sure we get to something that works for both of us — here's where I'm starting.\" That frames you as collaborative, not adversarial, even before you've named a number." } },
+    { "@type": "Question", name: "What should I do if the other person says no immediately?", acceptedAnswer: { "@type": "Answer", text: "A first no is almost always a reflexive no. Ask a question instead of countering: \"What would need to be true for this to work for you?\" That keeps the conversation open and surfaces what you're actually negotiating against." } },
+    { "@type": "Question", name: "How do I know what number to open with in a negotiation?", acceptedAnswer: { "@type": "Answer", text: "Start higher than your target — but not absurdly so. Your opening number sets the anchor, and final agreements tend to sit between the two starting positions. Research the market, know your floor, and open at the high end of defensible." } },
+    { "@type": "Question", name: "What's the single most important thing to do before any negotiation?", acceptedAnswer: { "@type": "Answer", text: "Know your BATNA — your Best Alternative to a Negotiated Agreement. If you don't know what you'll do if this falls through, you'll accept worse terms than you should. Strong alternatives give you real leverage and let you walk away without panic." } },
+    { "@type": "Question", name: "What is TalkPrep?", acceptedAnswer: { "@type": "Answer", text: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." } },
+  ],
+};
+
 export default function NegotiateAnything() {
   return (
     <div className="art-wrap">
@@ -30,7 +42,7 @@ export default function NegotiateAnything() {
         imageAlt="Two professionals negotiating effectively and collaboratively"
         articleSection="Negotiation"
         keywords="how to negotiate, negotiation scripts, salary negotiation, how to negotiate a raise, negotiation tips, negotiation conversation"
-        schema={schema}
+        schema={[schema, faqSchema]}
         breadcrumbs={[
           { name: "Blog", path: "/blog" },
           { name: "How to Negotiate Anything", path: "/how-to-negotiate-anything" },
@@ -243,6 +255,26 @@ export default function NegotiateAnything() {
               <div className="rc-title">Why You Freeze in Hard Conversations</div>
               <div className="rc-hint">What happens in your brain under pressure — and how to stop it.</div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="art-faq">
+        <div className="art-faq-in">
+          <h2 className="art-faq-title">Frequently asked questions</h2>
+          <div className="art-faq-list">
+            {[
+              { q: "How do I open a negotiation without sounding aggressive or greedy?", a: "Anchor to shared interest, not your position. \"I want to make sure we get to something that works for both of us — here's where I'm starting.\" That frames you as collaborative, not adversarial, even before you've named a number." },
+              { q: "What should I do if the other person says no immediately?", a: "A first no is almost always a reflexive no. Ask a question instead of countering: \"What would need to be true for this to work for you?\" That keeps the conversation open and surfaces what you're actually negotiating against." },
+              { q: "How do I know what number to open with in a negotiation?", a: "Start higher than your target — but not absurdly so. Your opening number sets the anchor, and final agreements tend to sit between the two starting positions. Research the market, know your floor, and open at the high end of defensible." },
+              { q: "What's the single most important thing to do before any negotiation?", a: "Know your BATNA — your Best Alternative to a Negotiated Agreement. If you don't know what you'll do if this falls through, you'll accept worse terms than you should. Strong alternatives give you real leverage and let you walk away without panic." },
+              { q: "What is TalkPrep?", a: "TalkPrep is an AI-powered conversation preparation tool. You describe your situation, and TalkPrep generates a word-for-word opening script, the most likely responses from the other person, and what to say to each one. You can also practice in AI role-play mode. Free for your first 3 sessions at talk-prep.cloud." },
+            ].map((item, i) => (
+              <div key={i} className="art-faq-item">
+                <div className="art-faq-q">{item.q}</div>
+                <div className="art-faq-a">{item.a}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
