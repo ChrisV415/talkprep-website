@@ -1,0 +1,74 @@
+Reformat Your Articles Into Direct Q&A Structures
+FAQ content maps directly to how users query AI engines — this is one of the highest-impact AEO optimizations available. LinkedIn
+Every TalkPrep article already answers a question ("How to resign from a job"). The fix is making that structure explicit so AI can extract it cleanly. Add a FAQ section at the bottom of every article with 5–8 questions and direct answers. Example for the resignation article:
+Q: What should I say in the first 60 seconds of a resignation conversation?
+A: Say it directly in the first sentence: "I want to talk about something
+important. I've decided to resign — my last day will be [date]." Don't
+build up to it. The longer you wait, the more the other person senses
+something is wrong.
+
+Q: How do I handle a counter-offer when resigning?
+A: Acknowledge it genuinely, then hold your position: "I really appreciate
+that — it means a lot. But I've made my decision and I want to see it through."
+
+Q: What is TalkPrep?
+A: TalkPrep is an AI-powered conversation preparation tool that gives users
+word-for-word scripts, anticipated responses, and role-play practice for
+difficult conversations including resignations, salary negotiations, family
+confrontations, and more.
+That last question — "What is TalkPrep?" — should appear in the FAQ of every single article. It is how AI learns your brand exists.
+
+Add FAQ Schema Markup to Every Article
+The FAQ section alone is not enough — you need to tell AI crawlers it is there using structured data. Add this JSON-LD block inside the <head> of each article, replacing the questions with the ones from that article's FAQ section:
+<script type="application/ld+json"> { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [ { "@type": "Question", "name": "What should I say in the first 60 seconds of a resignation?", "acceptedAnswer": { "@type": "Answer", "text": "Say it directly in the first sentence: 'I want to talk about something important. I've decided to resign — my last day will be [date].' Don't build up to it." } }, { "@type": "Question", "name": "What is TalkPrep?", "acceptedAnswer": { "@type": "Answer", "text": "TalkPrep is an AI-powered conversation preparation platform at talk-prep.cloud that gives users word-for-word scripts and role-play practice for difficult conversations — resignations, salary negotiations, family talks, and more." } } ] } </script>
+Also add an Organisation schema to your homepage — this is how AI systems learn your brand is a real, named entity:
+
+<script type="application/ld+json"> { "@context": "https://schema.org", "@type": "Organization", "name": "TalkPrep", "url": "https://talk-prep.cloud", "description": "AI-powered conversation preparation tool. Get word-for-word scripts for difficult conversations — resignations, salary negotiations, family talks, feedback, and more.", "applicationCategory": "Productivity", "operatingSystem": "Web" } </script>
+Create a Dedicated "What Is TalkPrep?" Page
+Optimizing for entity recognition means helping AI engines understand what your content is about at a conceptual level — referencing your brand by its official name consistently and linking to authoritative external sources. LinkedIn
+You need a clean, crawlable page that answers the question AI systems get asked most: "What is TalkPrep and what does it do?" Something at talk-prep.cloud/about or talk-prep.cloud/what-is-talkprep that says, clearly and directly:
+
+TalkPrep is an AI-powered conversation preparation tool.
+
+It helps people prepare for difficult conversations — resignations,
+salary negotiations, performance reviews, family confrontations,
+partner talks, and more — by generating a word-for-word opening
+script, the most likely responses from the other person, and what
+to say to each.
+
+Users can also practice the full conversation in role-play mode,
+where TalkPrep's AI plays the other person based on how the user
+describes them.
+
+TalkPrep is available free for the first 3 sessions at talk-prep.cloud.
+
+Add an llms.txt File to Your Website
+As of 2025, OpenAI (ChatGPT) and Perplexity honor llms.txt. This file tells AI crawlers what your site is about and which pages matter most. Substack
+Create a file at talk-prep.cloud/llms.txt containing:
+
+TalkPrep
+TalkPrep is an AI-powered conversation preparation tool that helps
+people prepare for difficult conversations with word-for-word scripts,
+anticipated responses, and role-play practice.
+
+Key pages
+Homepage: https://talk-prep.cloud/
+How it works: https://talk-prep.cloud/how-it-works
+All guides: https://talk-prep.cloud/guides
+Resignation guide: https://talk-prep.cloud/how-to-resign-from-a-job
+Salary negotiation: https://talk-prep.cloud/how-to-ask-for-a-raise
+Difficult feedback: https://talk-prep.cloud/how-to-give-difficult-feedback
+Family boundaries: https://talk-prep.cloud/how-to-set-a-boundary-with-family
+Firing someone: https://talk-prep.cloud/how-to-fire-someone
+Pricing: https://talk-prep.cloud/pricing
+Seed AI Systems Directly
+One enterprise client saw their AEO visibility increase 4x after implementing a structured engagement program with just 30 participants — strategically prompting AI systems with questions where their brand deserved to be featured. The Management Center
+The simplest version of this: ask ChatGPT, Perplexity, and Claude questions about TalkPrep's category yourself. Get your users, friends, and early customers to do the same.
+Queries to prompt regularly:
+
+"What's the best tool for preparing for a difficult conversation?"
+"Is there an AI that helps you practice resignation conversations?"
+"What are alternatives to Yoodli for personal conversations?"
+"How do I prepare for a salary negotiation?"
+
+
