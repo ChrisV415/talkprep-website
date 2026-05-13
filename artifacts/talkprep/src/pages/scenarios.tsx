@@ -181,7 +181,7 @@ export default function Scenarios() {
         </div>
       </section>
 
-      <div className="tp-page" style={{ background: "var(--cream)" }}>
+      <div style={{ background: "var(--cream)" }}>
         <div className="container" style={{ padding: "3rem var(--col)" }}>
           <div className="free-trial-banner">
             <div className="ftb-inner">
