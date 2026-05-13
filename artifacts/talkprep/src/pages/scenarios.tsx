@@ -182,7 +182,7 @@ export default function Scenarios() {
       </section>
 
       <div style={{ background: "var(--cream)" }}>
-        <div className="container" style={{ padding: "3rem var(--col)" }}>
+        <div className="container" style={{ padding: "2rem 0" }}>
           <div className="free-trial-banner">
             <div className="ftb-inner">
               <span className="ftb-emoji">🎁</span>
