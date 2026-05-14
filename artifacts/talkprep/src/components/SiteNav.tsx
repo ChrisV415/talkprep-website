@@ -51,21 +51,21 @@ export default function SiteNav() {
             {mobileOpen ? "✕" : "☰"}
           </button>
         </div>
+        {mobileOpen && (
+          <div className="mobile-menu">
+            {tabs.map((t) => (
+              <Link
+                key={t.path}
+                href={t.path}
+                className={`mobile-menu-link${location === t.path ? " active" : ""}`}
+                onClick={() => setMobileOpen(false)}
+              >
+                {t.label}
+              </Link>
+            ))}
+          </div>
+        )}
       </nav>
-      {mobileOpen && (
-        <div className="mobile-menu">
-          {tabs.map((t) => (
-            <Link
-              key={t.path}
-              href={t.path}
-              className={`mobile-menu-link${location === t.path ? " active" : ""}`}
-              onClick={() => setMobileOpen(false)}
-            >
-              {t.label}
-            </Link>
-          ))}
-        </div>
-      )}
     </>
   );
 }

@@ -307,9 +307,10 @@
   color: var(--ink); font-size: 1.3rem; padding: 4px;
 }
 .mobile-menu {
-  position: fixed; top: 57px; left: 0; right: 0; z-index: 99;
+  position: absolute; top: 100%; left: 0; right: 0; z-index: 101;
   background: var(--cream); border-bottom: 1px solid var(--border);
   display: flex; flex-direction: column; padding: 0.5rem 1.25rem 1rem;
+  box-shadow: 0 4px 16px rgba(28,24,20,0.08);
 }
 .mobile-menu-link {
   font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--ink3);
